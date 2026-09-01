@@ -1,3 +1,205 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+:root {
+  --family-self-defence: #a45c9b;
+  --family-half-guard: #d5b532;
+  --family-passing: #3f85c7;
+  --family-sweep: #56a45b;
+  --family-takedown: #2f9a98;
+  --family-transition: #d47a3f;
+  --mat-line: color-mix(in srgb, var(--secondary) 16%, transparent);
+}
+
+body {
+  background-image:
+    linear-gradient(var(--mat-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-attachment: fixed;
+}
+
+.page > #quartz-body {
+  background: color-mix(in srgb, var(--light) 94%, transparent);
+  box-shadow: 0 0 70px color-mix(in srgb, var(--dark) 7%, transparent);
+}
+
+.page-title a {
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+.explorer-content,
+.graph,
+.toc,
+.backlinks {
+  border-radius: 14px;
+}
+
+.graph {
+  border: 1px solid var(--lightgray);
+  background: color-mix(in srgb, var(--light) 92%, var(--secondary) 8%);
+  padding: 0.75rem;
+}
+
+.grapple-home {
+  > p:first-of-type {
+    margin-top: 0.25rem;
+  }
+
+  > p:first-of-type img {
+    width: 88px;
+    margin: 0.25rem 0 0.5rem;
+    border-radius: 22px;
+    box-shadow: 0 14px 34px color-mix(in srgb, var(--dark) 22%, transparent);
+  }
+
+  > h2:first-of-type {
+    margin-top: 0.5rem;
+    max-width: 18ch;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+  }
+
+  > h2:first-of-type + p {
+    max-width: 64ch;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  table {
+    width: 100%;
+    margin: 0;
+    border: 1px solid var(--lightgray);
+    border-radius: 14px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--light) 90%, var(--secondary) 10%);
+  }
+
+  tbody tr {
+    transition:
+      background 160ms ease,
+      transform 160ms ease;
+  }
+
+  tbody tr:hover {
+    background: color-mix(in srgb, var(--highlight) 70%, transparent);
+  }
+}
+
+.technique-card {
+  > h2:first-of-type + p {
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--lightgray);
+    border-left: 5px solid var(--family-sweep);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--light) 90%, var(--family-sweep) 10%);
+    font-family: var(--headerFont);
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  h3 {
+    letter-spacing: -0.015em;
+  }
+}
+
+.family-self-defence > h2:first-of-type + p {
+  border-left-color: var(--family-self-defence);
+  background: color-mix(in srgb, var(--light) 90%, var(--family-self-defence) 10%);
+}
+
+.family-half-guard > h2:first-of-type + p {
+  border-left-color: var(--family-half-guard);
+  background: color-mix(in srgb, var(--light) 90%, var(--family-half-guard) 10%);
+}
+
+.family-guard-passing > h2:first-of-type + p {
+  border-left-color: var(--family-passing);
+  background: color-mix(in srgb, var(--light) 90%, var(--family-passing) 10%);
+}
+
+.family-takedown > h2:first-of-type + p {
+  border-left-color: var(--family-takedown);
+  background: color-mix(in srgb, var(--light) 90%, var(--family-takedown) 10%);
+}
+
+.family-guard-transition > h2:first-of-type + p {
+  border-left-color: var(--family-transition);
+  background: color-mix(in srgb, var(--light) 90%, var(--family-transition) 10%);
+}
+
+.family-self-defence > h2:first-of-type::before,
+.family-half-guard > h2:first-of-type::before,
+.family-guard-passing > h2:first-of-type::before,
+.family-takedown > h2:first-of-type::before,
+.family-guard-transition > h2:first-of-type::before {
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--codeFont);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.family-self-defence > h2:first-of-type::before {
+  content: "SELF-DEFENCE";
+  background: color-mix(in srgb, var(--family-self-defence) 18%, var(--light));
+  color: color-mix(in srgb, var(--family-self-defence) 76%, var(--dark));
+}
+
+.family-half-guard > h2:first-of-type::before {
+  content: "HALF GUARD";
+  background: color-mix(in srgb, var(--family-half-guard) 18%, var(--light));
+  color: color-mix(in srgb, var(--family-half-guard) 72%, var(--dark));
+}
+
+.family-guard-passing > h2:first-of-type::before {
+  content: "GUARD PASSING";
+  background: color-mix(in srgb, var(--family-passing) 18%, var(--light));
+  color: color-mix(in srgb, var(--family-passing) 76%, var(--dark));
+}
+
+.family-takedown > h2:first-of-type::before {
+  content: "TAKEDOWN";
+  background: color-mix(in srgb, var(--family-takedown) 18%, var(--light));
+  color: color-mix(in srgb, var(--family-takedown) 76%, var(--dark));
+}
+
+.family-guard-transition > h2:first-of-type::before {
+  content: "GUARD ATTACK / TRANSITION";
+  background: color-mix(in srgb, var(--family-transition) 18%, var(--light));
+  color: color-mix(in srgb, var(--family-transition) 76%, var(--dark));
+}
+
+.family-sweep > h2:first-of-type::before {
+  content: "SWEEP";
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--family-sweep) 18%, var(--light));
+  color: color-mix(in srgb, var(--family-sweep) 76%, var(--dark));
+  font-family: var(--codeFont);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.callout[data-callout="note"] {
+  border-radius: 12px;
+  border-color: var(--secondary);
+  background: color-mix(in srgb, var(--light) 88%, var(--secondary) 12%);
+}
+
+@media (max-width: 800px) {
+  .grapple-home > h2:first-of-type {
+    font-size: 2.25rem;
+  }
+
+  .grapple-home table {
+    font-size: 0.9rem;
+  }
+}

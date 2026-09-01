@@ -1,17 +1,38 @@
-# Quartz v4
+# GrappleGraph
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+An interactive map of Brazilian Jiu-Jitsu techniques, positions, and transitions.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+GrappleGraph turns a 30-technique white-to-blue-belt exam into a connected study atlas. Every exam technique is a Markdown note linked to its starting position, primary movements, landing position, submission, related techniques, and provisional video references.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+## What is included
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+- All 30 exam sequences with permanent exam IDs
+- Six colour-coded study families
+- Connected notes for positions, movements, transitions, and submissions
+- Local and global graph views
+- Search, backlinks, dark mode, and mobile layouts
+- Practice checklists and instructor-verification fields
+- GitHub Pages deployment through GitHub Actions
 
-## Sponsors
+## Work locally
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Requirements: Node.js 22 or later and npm 10.9.2 or later.
+
+```bash
+npm ci
+npx quartz build --serve
+```
+
+The local site is served at `http://localhost:8080`.
+
+## Edit the atlas
+
+Site content lives in `content/` and can be edited as ordinary Markdown or opened as an Obsidian vault. Technique cards are stored in `content/techniques/`; shared concepts are under `positions/`, `movements/`, and `submissions/`.
+
+All video matches and technical details should remain marked as provisional until verified against the academy-specific version.
+
+## Publishing
+
+Pushes to the `v4` branch build and deploy the site to GitHub Pages automatically.
+
+Built with [Quartz](https://quartz.jzhao.xyz/).

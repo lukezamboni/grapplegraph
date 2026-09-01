@@ -184,6 +184,12 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     "--dark",
     "--darkgray",
     "--bodyFont",
+    "--family-self-defence",
+    "--family-half-guard",
+    "--family-passing",
+    "--family-sweep",
+    "--family-takedown",
+    "--family-transition",
   ] as const
   const computedStyleMap = cssVars.reduce(
     (acc, key) => {
@@ -196,8 +202,19 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   // calculate color
   const color = (d: NodeData) => {
     const isCurrent = d.id === slug
+    const familyColors: Record<string, string> = {
+      "family/self-defence": computedStyleMap["--family-self-defence"],
+      "family/half-guard": computedStyleMap["--family-half-guard"],
+      "family/guard-passing": computedStyleMap["--family-passing"],
+      "family/sweep": computedStyleMap["--family-sweep"],
+      "family/takedown": computedStyleMap["--family-takedown"],
+      "family/guard-transition": computedStyleMap["--family-transition"],
+    }
+    const familyColor = d.tags.map((tag) => familyColors[tag]).find(Boolean)
     if (isCurrent) {
       return computedStyleMap["--secondary"]
+    } else if (familyColor) {
+      return familyColor
     } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
       return computedStyleMap["--tertiary"]
     } else {
