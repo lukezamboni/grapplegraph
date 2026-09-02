@@ -1,10 +1,12 @@
 ---
 title: Deep half guard
-tags: [concept/position]
+tags:
+  - concept/position
+description: Deep half guard reference for the academy exam sequences.
 ---
 
 The starting guard for [[techniques/09-deep-half-flower-sweep-to-kimura|BLU-09 · Deep-half flower sweep to Kimura]].
 
 ## Video study
 
-[Search YouTube: Deep half guard](https://www.youtube.com/results?search_query=BJJ%20Deep%20half%20guard%20technique)
+![Deep-half guard sweep reference](https://www.youtube.com/watch?v=FsJ6JbGk-oU) · **Reference:** compare details and sequence order with your professor.

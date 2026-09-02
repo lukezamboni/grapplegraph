@@ -1,10 +1,13 @@
 ---
 title: Front bear-hug escape
-tags: [concept/movement, self-defence]
+tags:
+  - concept/movement
+  - self-defence
+description: Front bear-hug escape reference for the academy exam sequences.
 ---
 
 The escape movement practised in [[techniques/21-front-bear-hug-escape|BLU-21 · Front bear-hug escape]].
 
 ## Video study
 
-[Search YouTube: Front bear-hug escape](https://www.youtube.com/results?search_query=BJJ%20Front%20bear-hug%20escape%20technique)
+![Front bear-hug escape](https://www.youtube.com/watch?v=wMa1YbtyX0I) · **Reference:** compare details and sequence order with your professor.

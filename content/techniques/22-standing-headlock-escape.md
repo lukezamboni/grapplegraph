@@ -1,14 +1,23 @@
 ---
 title: BLU-22 · Standing headlock escape
 description: Self-defence escape from a standing “bouncer's headlock.”
-tags: [exam/blue-belt, family/self-defence, position/standing]
-cssclasses: [technique-card, belt-blue, family-self-defence]
+tags:
+  - exam/blue-belt
+  - family/self-defence
+  - position/standing
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-self-defence
 exam_id: 22
 family: self-defence
 start: standing
 finish: escape
 instructor_verified: false
 video_match: closest
+source_exam_id: 22
+belt: blue
+landing: standing
 ---
 
 ## Sequence
@@ -32,7 +41,7 @@ video_match: closest
 - [ ] Escape to the left
 - [ ] Escape to the right
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

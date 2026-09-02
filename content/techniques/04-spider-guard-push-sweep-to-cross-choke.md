@@ -1,8 +1,15 @@
 ---
 title: BLU-04 · Spider-guard push sweep to cross choke
 description: Spider-guard push sweep to mount, finishing with a cross choke.
-tags: [exam/blue-belt, family/sweep, position/spider-guard, finish/cross-choke]
-cssclasses: [technique-card, belt-blue, family-sweep]
+tags:
+  - exam/blue-belt
+  - family/sweep
+  - position/spider-guard
+  - finish/cross-choke
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-sweep
 exam_id: 4
 family: sweep
 start: spider-guard
@@ -10,6 +17,8 @@ landing: mount
 finish: cross-choke
 instructor_verified: false
 video_match: parts
+source_exam_id: 4
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Spider-guard sweep to mount](https://www.youtube.com/watch?v=W2h2SC7d-Ks)
 - ![Cross choke from mount](https://www.youtube.com/watch?v=8wLWTw8G0c0)

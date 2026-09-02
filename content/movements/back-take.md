@@ -1,10 +1,13 @@
 ---
 title: Back take
-tags: [concept/movement, transition]
+tags:
+  - concept/movement
+  - transition
+description: Back take reference for the academy exam sequences.
 ---
 
 A positional transition shared by exam techniques 3, 14, 16, and 29.
 
 ## Video study
 
-[Search YouTube: Back take](https://www.youtube.com/results?search_query=BJJ%20Back%20take%20technique)
+![Back-take mechanics](https://www.youtube.com/watch?v=9P-HrHcpT7Q) · **Reference:** compare details and sequence order with your professor.

@@ -1,15 +1,24 @@
 ---
 title: BLU-13 · Guard-pass reaction to clock choke
 description: Continue a guard pass when the opponent turtles, finishing with a clock choke.
-tags: [exam/blue-belt, family/guard-passing, position/turtle, finish/clock-choke]
-cssclasses: [technique-card, belt-blue, family-guard-passing]
+tags:
+  - exam/blue-belt
+  - family/guard-passing
+  - position/turtle
+  - finish/clock-choke
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-passing
 exam_id: 13
 family: guard-passing
-start: guard-passing
+start: guard
 landing: turtle
 finish: clock-choke
 instructor_verified: false
 video_match: finish-only
+source_exam_id: 13
+belt: blue
 ---
 
 ## Sequence
@@ -33,8 +42,8 @@ video_match: finish-only
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 
-![Clock choke against the turtle](https://www.youtube.com/watch?v=jAGbvarXopw) · **Match:** finish only; verify the pass reaction with your instructor
+![Clock choke against the turtle](https://www.youtube.com/watch?v=jAGbvarXopw) · **Match:** finish only; verify the pass reaction with your professor

@@ -19,6 +19,8 @@ npm install
 npx quartz build --serve
 ```
 
+Run `npm run audit:content` after editing catalogue data. The validation rules and outstanding academy questions are recorded in [DATA_REVIEW.md](./DATA_REVIEW.md).
+
 The site is published to GitHub Pages by the workflow in `.github/workflows/deploy.yml` when the `v5` branch is updated.
 
-> GrappleGraph is an unofficial study aid. Confirm grips, details, and sequence order with a Renzo Gracie Niagara instructor.
+> GrappleGraph is an unofficial study aid. Confirm grips, details, and sequence order with your professor.

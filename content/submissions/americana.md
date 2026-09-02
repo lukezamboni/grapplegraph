@@ -2,10 +2,11 @@
 title: Americana
 tags:
   - concept/submission
+description: Americana reference for the academy exam sequences.
 ---
 
 The finishing submission in [[techniques/07-knee-kick-scissor-sweep-to-americana|BLU-07 · Knee-kick scissor sweep to Americana]].
 
 ## Video study
 
-[Search YouTube: Americana](https://www.youtube.com/results?search_query=BJJ%20Americana%20technique)
+![Americana](https://www.youtube.com/watch?v=WTHGaAuim60) · **Reference:** compare details and sequence order with your professor.

@@ -1,14 +1,24 @@
 ---
 title: BLU-27 · Loop choke from butterfly guard
 description: Apply and finish a loop choke from butterfly guard.
-tags: [exam/blue-belt, family/guard-transition, position/butterfly-guard, finish/loop-choke]
-cssclasses: [technique-card, belt-blue, family-guard-transition]
+tags:
+  - exam/blue-belt
+  - family/guard-transition
+  - position/butterfly-guard
+  - finish/loop-choke
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-transition
 exam_id: 27
-family: guard-attacks-and-transitions
+family: guard-transition
 start: butterfly-guard
 finish: loop-choke
 instructor_verified: false
 video_match: full
+source_exam_id: 27
+belt: blue
+landing: butterfly-guard
 ---
 
 ## Sequence
@@ -32,7 +42,7 @@ video_match: full
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

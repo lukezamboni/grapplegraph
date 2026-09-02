@@ -1,14 +1,24 @@
 ---
 title: BLU-05 · Standing guard pass to straight ankle lock
 description: Standing guard pass transitioning directly into a straight ankle lock.
-tags: [exam/blue-belt, family/guard-passing, position/closed-guard, finish/ankle-lock]
-cssclasses: [technique-card, belt-blue, family-guard-passing]
+tags:
+  - exam/blue-belt
+  - family/guard-passing
+  - position/closed-guard
+  - finish/ankle-lock
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-passing
 exam_id: 5
 family: guard-passing
 start: closed-guard
 finish: straight-ankle-lock
 instructor_verified: false
 video_match: full
+source_exam_id: 5
+belt: blue
+landing: leg-entanglement
 ---
 
 ## Sequence
@@ -32,7 +42,7 @@ video_match: full
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

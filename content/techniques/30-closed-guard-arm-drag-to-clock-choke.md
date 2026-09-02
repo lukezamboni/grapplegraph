@@ -1,15 +1,24 @@
 ---
 title: BLU-30 · Closed-guard arm drag to clock choke
 description: Arm drag from closed guard to turtle-side control, finishing with a clock choke.
-tags: [exam/blue-belt, family/guard-transition, position/closed-guard, finish/clock-choke]
-cssclasses: [technique-card, belt-blue, family-guard-transition]
+tags:
+  - exam/blue-belt
+  - family/guard-transition
+  - position/closed-guard
+  - finish/clock-choke
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-transition
 exam_id: 30
-family: guard-attacks-and-transitions
+family: guard-transition
 start: closed-guard
 landing: turtle-side-control
 finish: clock-choke
 instructor_verified: false
 video_match: parts
+source_exam_id: 30
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Closed-guard arm drag](https://www.youtube.com/watch?v=nnzXF5xntE0)
 - ![Clock choke from turtle](https://www.youtube.com/watch?v=Hmz6VXltm9E)

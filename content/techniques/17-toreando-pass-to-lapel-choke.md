@@ -1,8 +1,15 @@
 ---
 title: BLU-17 · Toreando pass to lapel choke
 description: Toreando guard pass to side control and Knee-on-belly, finishing with a lapel choke.
-tags: [exam/blue-belt, family/guard-passing, position/knee-on-belly, finish/lapel-choke]
-cssclasses: [technique-card, belt-blue, family-guard-passing]
+tags:
+  - exam/blue-belt
+  - family/guard-passing
+  - position/knee-on-belly
+  - finish/lapel-choke
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-passing
 exam_id: 17
 family: guard-passing
 start: open-guard
@@ -10,6 +17,8 @@ landing: knee-on-belly
 finish: lapel-choke
 instructor_verified: false
 video_match: parts
+source_exam_id: 17
+belt: blue
 ---
 
 ## Sequence
@@ -33,8 +42,8 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 
-![Toreando pass to Knee-on-belly](https://www.youtube.com/watch?v=T1uovoaMPto) · **Match:** entry and control; verify the lapel finish with your instructor
+![Toreando pass to Knee-on-belly](https://www.youtube.com/watch?v=T1uovoaMPto) · **Match:** entry and control; verify the lapel finish with your professor

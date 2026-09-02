@@ -1,8 +1,15 @@
 ---
 title: BLU-15 · Hook sweep to Ezekiel choke
 description: Hook sweep from open guard to mount, finishing with an Ezekiel choke.
-tags: [exam/blue-belt, family/sweep, position/open-guard, finish/ezekiel]
-cssclasses: [technique-card, belt-blue, family-sweep]
+tags:
+  - exam/blue-belt
+  - family/sweep
+  - position/open-guard
+  - finish/ezekiel
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-sweep
 exam_id: 15
 family: sweep
 start: open-guard
@@ -10,6 +17,8 @@ landing: mount
 finish: ezekiel-choke
 instructor_verified: false
 video_match: parts
+source_exam_id: 15
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Hook sweep into mount](https://www.youtube.com/watch?v=ztGmEnlX05A)
 - ![Ezekiel choke from mount](https://www.youtube.com/watch?v=KVnengZD1XA)

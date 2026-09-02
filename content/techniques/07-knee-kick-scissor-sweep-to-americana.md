@@ -17,6 +17,8 @@ landing: mount
 finish: americana
 instructor_verified: false
 video_match: parts
+source_exam_id: 7
+belt: blue
 ---
 
 ## Sequence
@@ -31,18 +33,18 @@ video_match: parts
 
 ### Key cues
 
-- [ ] Add first instructor cue
-- [ ] Add second instructor cue
-- [ ] Add third instructor cue
+- [ ] Add first professor cue
+- [ ] Add second professor cue
+- [ ] Add third professor cue
 
 ### Practice
 
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Knee-push scissor sweep](https://www.youtube.com/watch?v=y1UlgNFS4Ss)
 - ![Scissor sweep to Americana](https://www.youtube.com/watch?v=WTHGaAuim60)

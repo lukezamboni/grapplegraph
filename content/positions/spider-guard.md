@@ -1,10 +1,12 @@
 ---
 title: Spider guard
-tags: [concept/position]
+tags:
+  - concept/position
+description: Spider guard reference for the academy exam sequences.
 ---
 
 The shared starting guard for [[techniques/04-spider-guard-push-sweep-to-cross-choke|BLU-04 · Spider-guard push sweep to cross choke]] and [[techniques/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]].
 
 ## Video study
 
-[Search YouTube: Spider guard](https://www.youtube.com/results?search_query=BJJ%20Spider%20guard%20technique)
+![Spider-guard sweep reference](https://www.youtube.com/watch?v=W2h2SC7d-Ks) · **Reference:** compare details and sequence order with your professor.

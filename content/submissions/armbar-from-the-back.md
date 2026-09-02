@@ -1,10 +1,13 @@
 ---
 title: Armbar from the back
-tags: [concept/submission, joint-lock]
+tags:
+  - concept/submission
+  - joint-lock
+description: Armbar from the back reference for the academy exam sequences.
 ---
 
 The finishing transition in [[techniques/14-de-la-riva-sweep-to-back-armbar|BLU-14 · De La Riva sweep to back armbar]].
 
 ## Video study
 
-[Search YouTube: Armbar from the back](https://www.youtube.com/results?search_query=BJJ%20Armbar%20from%20the%20back%20technique)
+![Armbar from the back](https://www.youtube.com/watch?v=g6HTeyhCmm8) · **Reference:** compare details and sequence order with your professor.

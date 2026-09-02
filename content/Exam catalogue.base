@@ -17,7 +17,7 @@ formulas:
     if(file.hasTag("family/sweep"), "Sweeps",
     if(file.hasTag("family/takedown"), "Takedowns",
     if(file.hasTag("family/guard-transition"), "Guard attacks and transitions", note.family))))))
-  verification: if(note.instructor_verified, "Verified", "Needs instructor review")
+  verification: if(note.instructor_verified, "Verified", "Needs professor review")
   video_reference: if(file.hasProperty("video_match"), note.video_match, "representative")
 properties:
   formula.technique:

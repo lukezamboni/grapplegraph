@@ -1,8 +1,13 @@
 ---
 title: De La Riva forward sweep
-tags: [movement/sweep, position/de-la-riva]
+tags:
+  - movement/sweep
+  - position/de-la-riva
+description: De La Riva forward sweep reference for the academy exam sequences.
 ---
 
 A sleeve-and-collar De La Riva sweep that advances forward.
 
-[Video study search](https://www.youtube.com/results?search_query=De+La+Riva+sleeve+collar+forward+sweep)
+## Video study
+
+![Collar-sleeve De La Riva push sweep](https://www.youtube.com/watch?v=Od5N4kDMUUs) · **Reference:** compare details and sequence order with your professor.

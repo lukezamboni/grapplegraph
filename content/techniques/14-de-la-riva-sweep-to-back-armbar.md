@@ -1,15 +1,24 @@
 ---
 title: BLU-14 · De La Riva sweep to back armbar
 description: De La Riva sweep transitioning to the back, finishing with an armbar.
-tags: [exam/blue-belt, family/sweep, position/de-la-riva, finish/armbar]
-cssclasses: [technique-card, belt-blue, family-sweep]
+tags:
+  - exam/blue-belt
+  - family/sweep
+  - position/de-la-riva
+  - finish/armbar
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-sweep
 exam_id: 14
 family: sweep
-start: de-la-riva
+start: de-la-riva-guard
 landing: back-control
 finish: armbar
 instructor_verified: false
 video_match: parts
+source_exam_id: 14
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![De La Riva back take](https://www.youtube.com/watch?v=9P-HrHcpT7Q)
 - ![Armbar from the back](https://www.youtube.com/watch?v=g6HTeyhCmm8)

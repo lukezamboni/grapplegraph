@@ -1,10 +1,12 @@
 ---
 title: Standing against a wall
-tags: [concept/position]
+tags:
+  - concept/position
+description: Standing against a wall reference for the academy exam sequences.
 ---
 
 The constrained starting position for [[techniques/23-wall-throat-choke-escape|BLU-23 · Wall throat-choke escape]].
 
 ## Video study
 
-[Search YouTube: Standing against a wall](https://www.youtube.com/results?search_query=BJJ%20Standing%20against%20a%20wall%20technique)
+![Standing wall self-defence reference](https://www.youtube.com/watch?v=nP6tsU3T_No) · **Reference:** compare details and sequence order with your professor.

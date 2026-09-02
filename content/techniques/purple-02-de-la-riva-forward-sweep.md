@@ -1,19 +1,48 @@
 ---
 title: PUR-02 · De La Riva forward sweep
 description: De La Riva sweep controlling sleeve and collar while moving forward.
-tags: [exam/purple-belt, family/sweep, position/de-la-riva]
-cssclasses: [technique-card, belt-purple, family-sweep]
+tags:
+  - exam/purple-belt
+  - family/sweep
+  - position/de-la-riva
+cssclasses:
+  - technique-card
+  - belt-purple
+  - family-sweep
 exam_id: 2
 source_exam_id: 2
 belt: purple
 family: sweep
 instructor_verified: false
+start: de-la-riva-guard
+landing: top-position
+finish: positional-control
+video_match: very-close
 ---
 
 ## Sequence
 
-[[positions/de-la-riva-guard|De La Riva guard]] → [[movements/de-la-riva-forward-sweep|Sleeve-and-collar forward sweep]] → top position
+[[positions/de-la-riva-guard|De La Riva guard]] → [[movements/de-la-riva-forward-sweep|Sleeve-and-collar forward sweep]] → [[positions/top-position|Top position]]
+
+## Study card
+
+- **Primary movement:** Sleeve-and-collar De La Riva push sweep
+- **Landing:** Top position
+- **Finish:** Positional control
+
+## Key cues
+
+- [ ] Keep the sleeve-and-collar controls named on the exam sheet
+- [ ] Coordinate the hook and forward drive
+- [ ] Stabilize top position before resetting
+
+## Practice
+
+- [ ] Left side
+- [ ] Right side
+- [ ] Performed without coaching
+- [ ] Professor verified
 
 ## Video study
 
-![De La Riva guard concepts and forward sweep mechanics](https://www.youtube.com/watch?v=L3gkpR4w8cM) · **Match:** representative reference; verify the academy sequence with your instructor.
+![Collar-sleeve De La Riva push sweep](https://www.youtube.com/watch?v=Od5N4kDMUUs) · **Match:** very close reference

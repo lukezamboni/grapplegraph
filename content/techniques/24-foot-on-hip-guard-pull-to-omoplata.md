@@ -1,15 +1,24 @@
 ---
 title: BLU-24 · Foot-on-hip guard pull to omoplata
 description: Pull guard with a foot on the hip, transition, and finish with an omoplata.
-tags: [exam/blue-belt, family/guard-transition, position/standing, finish/omoplata]
-cssclasses: [technique-card, belt-blue, family-guard-transition]
+tags:
+  - exam/blue-belt
+  - family/guard-transition
+  - position/standing
+  - finish/omoplata
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-transition
 exam_id: 24
-family: guard-attacks-and-transitions
+family: guard-transition
 start: standing
-landing: guard
+landing: omoplata
 finish: omoplata
 instructor_verified: false
 video_match: full
+source_exam_id: 24
+belt: blue
 ---
 
 ## Sequence
@@ -33,7 +42,7 @@ video_match: full
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

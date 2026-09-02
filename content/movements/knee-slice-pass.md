@@ -1,10 +1,13 @@
 ---
 title: Knee-slice pass
-tags: [concept/movement, guard-passing]
+tags:
+  - concept/movement
+  - guard-passing
+description: Knee-slice pass reference for the academy exam sequences.
 ---
 
 The passing action used to reach side control in [[techniques/06-standing-guard-pass-to-ezekiel-choke|BLU-06 · Standing guard pass to Ezekiel choke]].
 
 ## Video study
 
-[Search YouTube: Knee-slice pass](https://www.youtube.com/results?search_query=BJJ%20Knee-slice%20pass%20technique)
+![Standing break to knee-slice pass](https://www.youtube.com/watch?v=0YZMbPUOLDc) · **Reference:** compare details and sequence order with your professor.

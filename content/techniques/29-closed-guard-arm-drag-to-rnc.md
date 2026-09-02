@@ -1,15 +1,24 @@
 ---
 title: BLU-29 · Closed-guard arm drag to Rear naked choke
 description: Arm drag from closed guard to the back, finishing with a Rear naked choke.
-tags: [exam/blue-belt, family/guard-transition, position/closed-guard, finish/rear-naked-choke]
-cssclasses: [technique-card, belt-blue, family-guard-transition]
+tags:
+  - exam/blue-belt
+  - family/guard-transition
+  - position/closed-guard
+  - finish/rear-naked-choke
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-transition
 exam_id: 29
-family: guard-attacks-and-transitions
+family: guard-transition
 start: closed-guard
 landing: back-control
 finish: rear-naked-choke
 instructor_verified: false
 video_match: parts
+source_exam_id: 29
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Closed-guard arm drag to back take](https://www.youtube.com/watch?v=nnzXF5xntE0)
 - ![Rear naked choke mechanics](https://www.youtube.com/watch?v=KW2RvtWgBxU)

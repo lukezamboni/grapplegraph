@@ -1,8 +1,15 @@
 ---
 title: BLU-09 · Deep-half flower sweep to Kimura
 description: Flower sweep from deep half guard to side control, finishing with a Kimura.
-tags: [exam/blue-belt, family/half-guard, position/deep-half, finish/kimura]
-cssclasses: [technique-card, belt-blue, family-half-guard]
+tags:
+  - exam/blue-belt
+  - family/half-guard
+  - position/deep-half
+  - finish/kimura
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-half-guard
 exam_id: 9
 family: half-guard
 start: deep-half-guard
@@ -10,6 +17,8 @@ landing: side-control
 finish: kimura
 instructor_verified: false
 video_match: parts
+source_exam_id: 9
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Deep-half sweep to side control](https://www.youtube.com/watch?v=FsJ6JbGk-oU)
 - ![Kimura from side control](https://www.youtube.com/watch?v=p-6lmaseoGI)

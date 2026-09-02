@@ -2,10 +2,11 @@
 title: Knee-kick scissor sweep
 tags:
   - concept/movement
+description: Knee-kick scissor sweep reference for the academy exam sequences.
 ---
 
 A scissor-sweep variation used in [[techniques/07-knee-kick-scissor-sweep-to-americana|BLU-07 · Knee-kick scissor sweep to Americana]]. See also [[movements/scissor-sweep|Scissor sweep]].
 
 ## Video study
 
-[Search YouTube: Knee-kick scissor sweep](https://www.youtube.com/results?search_query=BJJ%20Knee-kick%20scissor%20sweep%20technique)
+![Knee-push scissor sweep](https://www.youtube.com/watch?v=y1UlgNFS4Ss) · **Reference:** compare details and sequence order with your professor.

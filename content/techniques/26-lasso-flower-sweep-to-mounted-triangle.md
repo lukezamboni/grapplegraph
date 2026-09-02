@@ -1,8 +1,15 @@
 ---
 title: BLU-26 · Lasso flower sweep to mounted triangle
 description: Flower sweep from lasso guard to mount, finishing with a mounted triangle.
-tags: [exam/blue-belt, family/sweep, position/lasso-guard, finish/triangle]
-cssclasses: [technique-card, belt-blue, family-sweep]
+tags:
+  - exam/blue-belt
+  - family/sweep
+  - position/lasso-guard
+  - finish/triangle
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-sweep
 exam_id: 26
 family: sweep
 start: lasso-guard
@@ -10,6 +17,8 @@ landing: mount
 finish: mounted-triangle
 instructor_verified: false
 video_match: closest
+source_exam_id: 26
+belt: blue
 ---
 
 ## Sequence
@@ -33,7 +42,7 @@ video_match: closest
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

@@ -1,10 +1,13 @@
 ---
 title: Violin armbar
-tags: [concept/submission, joint-lock]
+tags:
+  - concept/submission
+  - joint-lock
+description: Violin armbar reference for the academy exam sequences.
 ---
 
 The armbar variation that finishes [[techniques/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]].
 
 ## Video study
 
-[Search YouTube: Violin armbar](https://www.youtube.com/results?search_query=BJJ%20Violin%20armbar%20technique)
+![Violin armbar](https://www.youtube.com/watch?v=vYiR0ls3td8) · **Reference:** compare details and sequence order with your professor.

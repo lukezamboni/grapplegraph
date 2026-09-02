@@ -1,10 +1,13 @@
 ---
 title: Punch defence
-tags: [concept/movement, self-defence]
+tags:
+  - concept/movement
+  - self-defence
+description: Punch defence reference for the academy exam sequences.
 ---
 
 The lateral-punch response that begins [[techniques/01-punch-defence-to-osoto-gari|BLU-01 · Punch defence to Osoto gari]].
 
 ## Video study
 
-[Search YouTube: Punch defence](https://www.youtube.com/results?search_query=BJJ%20Punch%20defence%20technique)
+![Lateral-punch defence](https://www.youtube.com/watch?v=S_CGrkyPmgc) · **Reference:** compare details and sequence order with your professor.

@@ -1,14 +1,23 @@
 ---
 title: BLU-28 · De La Riva lapel knee-kick sweep
 description: De La Riva sweep using a lapel grip and knee kick to sweep forward.
-tags: [exam/blue-belt, family/sweep, position/de-la-riva]
-cssclasses: [technique-card, belt-blue, family-sweep]
+tags:
+  - exam/blue-belt
+  - family/sweep
+  - position/de-la-riva
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-sweep
 exam_id: 28
 family: sweep
-start: de-la-riva
+start: de-la-riva-guard
 finish: top-position
 instructor_verified: false
 video_match: very-close
+source_exam_id: 28
+belt: blue
+landing: top-position
 ---
 
 ## Sequence
@@ -32,7 +41,7 @@ video_match: very-close
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

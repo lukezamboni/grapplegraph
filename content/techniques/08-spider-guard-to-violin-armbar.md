@@ -1,15 +1,24 @@
 ---
 title: BLU-08 · Spider guard to violin armbar
 description: Spider guard to omoplata sweep and Knee-on-belly, finishing with a violin armbar.
-tags: [exam/blue-belt, family/guard-transition, position/spider-guard, finish/armbar]
-cssclasses: [technique-card, belt-blue, family-guard-transition]
+tags:
+  - exam/blue-belt
+  - family/guard-transition
+  - position/spider-guard
+  - finish/armbar
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-transition
 exam_id: 8
-family: guard-attacks-and-transitions
+family: guard-transition
 start: spider-guard
 landing: knee-on-belly
 finish: violin-armbar
 instructor_verified: false
 video_match: parts
+source_exam_id: 8
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Spider guard to omoplata](https://www.youtube.com/watch?v=p3RN_8y_l_Y)
 - ![Omoplata sweep details](https://www.youtube.com/watch?v=6mYhvTAnrIQ)

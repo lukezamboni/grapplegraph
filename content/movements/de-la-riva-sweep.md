@@ -2,10 +2,11 @@
 title: De La Riva sweep
 tags:
   - concept/movement
+description: De La Riva sweep reference for the academy exam sequences.
 ---
 
 The primary sweep in [[techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke|BLU-03 · De La Riva sweep to bow-and-arrow choke]].
 
 ## Video study
 
-[Search YouTube: De La Riva sweep](https://www.youtube.com/results?search_query=BJJ%20De%20La%20Riva%20sweep%20technique)
+![De La Riva sweep](https://www.youtube.com/watch?v=75G5oYkq9CA) · **Reference:** compare details and sequence order with your professor.

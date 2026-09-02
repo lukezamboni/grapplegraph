@@ -1,14 +1,23 @@
 ---
 title: BLU-23 · Wall throat-choke escape
 description: Self-defence escape from a two-hand throat choke against a wall.
-tags: [exam/blue-belt, family/self-defence, position/standing]
-cssclasses: [technique-card, belt-blue, family-self-defence]
+tags:
+  - exam/blue-belt
+  - family/self-defence
+  - position/standing
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-self-defence
 exam_id: 23
 family: self-defence
-start: standing-against-wall
+start: standing-against-a-wall
 finish: escape
 instructor_verified: false
 video_match: full
+source_exam_id: 23
+belt: blue
+landing: standing
 ---
 
 ## Sequence
@@ -32,7 +41,7 @@ video_match: full
 - [ ] Escape to the left
 - [ ] Escape to the right
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

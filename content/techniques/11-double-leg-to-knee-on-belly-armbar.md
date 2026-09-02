@@ -1,8 +1,15 @@
 ---
 title: BLU-11 · Double-leg to Knee-on-belly armbar
 description: Double-leg takedown to side control and Knee-on-belly, finishing with an armbar.
-tags: [exam/blue-belt, family/takedown, position/standing, finish/armbar]
-cssclasses: [technique-card, belt-blue, family-takedown]
+tags:
+  - exam/blue-belt
+  - family/takedown
+  - position/standing
+  - finish/armbar
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-takedown
 exam_id: 11
 family: takedown
 start: standing
@@ -10,6 +17,8 @@ landing: knee-on-belly
 finish: armbar
 instructor_verified: false
 video_match: parts
+source_exam_id: 11
+belt: blue
 ---
 
 ## Sequence
@@ -33,9 +42,9 @@ video_match: parts
 - [ ] Left-side shot
 - [ ] Right-side shot
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
-## Video studys
+## Video study
 
 - ![Double-leg to side-control armbar sequence](https://www.youtube.com/watch?v=q7PTsjd6aSo)
 - ![Armbar from Knee-on-belly](https://www.youtube.com/watch?v=XFzcD5dMFLE)

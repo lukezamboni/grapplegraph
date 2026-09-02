@@ -1,8 +1,12 @@
 ---
 title: Seoi nage
-tags: [movement/takedown]
+tags:
+  - movement/takedown
+description: Seoi nage reference for the academy exam sequences.
 ---
 
 A shoulder throw used here to enter an arm lock.
 
-[Video study search](https://www.youtube.com/results?search_query=BJJ+seoi+nage+to+armbar)
+## Video study
+
+![Seoi nage to armbar](https://www.youtube.com/watch?v=Ex0Cki-WyAI) · **Reference:** compare details and sequence order with your professor.

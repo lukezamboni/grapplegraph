@@ -1,15 +1,24 @@
 ---
 title: BLU-19 · Foot-on-hip guard pull to armbar
 description: Pull guard with a foot on the hip, finishing with an armbar.
-tags: [exam/blue-belt, family/guard-transition, position/standing, finish/armbar]
-cssclasses: [technique-card, belt-blue, family-guard-transition]
+tags:
+  - exam/blue-belt
+  - family/guard-transition
+  - position/standing
+  - finish/armbar
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-guard-transition
 exam_id: 19
-family: guard-attacks-and-transitions
+family: guard-transition
 start: standing
 landing: guard
 finish: armbar
 instructor_verified: false
 video_match: full
+source_exam_id: 19
+belt: blue
 ---
 
 ## Sequence
@@ -33,7 +42,7 @@ video_match: full
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 

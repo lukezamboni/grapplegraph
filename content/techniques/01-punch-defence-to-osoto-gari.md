@@ -1,8 +1,14 @@
 ---
 title: BLU-01 · Punch defence to Osoto gari
 description: Defence against a lateral punch, followed by Osoto gari and Knee-on-belly control.
-tags: [exam/blue-belt, family/self-defence, position/standing]
-cssclasses: [technique-card, belt-blue, family-self-defence]
+tags:
+  - exam/blue-belt
+  - family/self-defence
+  - position/standing
+cssclasses:
+  - technique-card
+  - belt-blue
+  - family-self-defence
 exam_id: 1
 family: self-defence
 start: standing
@@ -10,6 +16,8 @@ landing: knee-on-belly
 finish: positional-control
 instructor_verified: false
 video_match: full
+source_exam_id: 1
+belt: blue
 ---
 
 ## Sequence
@@ -33,7 +41,7 @@ video_match: full
 - [ ] Left side
 - [ ] Right side
 - [ ] Performed without coaching
-- [ ] Instructor verified
+- [ ] Professor verified
 
 ## Video study
 
