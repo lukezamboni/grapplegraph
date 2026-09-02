@@ -35,10 +35,10 @@ cssclasses:
 
 Click through a sequence normally. Quartz keeps a visible binder trail of the pages you opened, so one click returns to the source technique without using the browser's Back button. Hover a link for a quick preview.
 
-## Try the visualization demos
+## Explore the syllabus
 
-- [[demos/exam-catalogue.base|Exam catalogue · Bases demo]] — compare sortable belt views and a compact list generated from technique metadata.
-- [[demos/closed-guard-attack-tree.canvas|Closed-guard attack tree · Canvas demo]] — pan and zoom through a curated reaction map linked to exam techniques.
+- [[exams/Exam catalogue.base|Exam catalogue]] — browse sortable belt, family, and video-reference views generated from technique metadata.
+- [[maps/index|System maps]] — pan and zoom through curated positional and curriculum maps linked to exam techniques.
 
 ## Try the visualization demos
 

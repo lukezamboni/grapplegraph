@@ -1,0 +1,354 @@
+{
+  "nodes": [
+    {
+      "id": "group-start",
+      "type": "group",
+      "x": 590,
+      "y": 40,
+      "width": 540,
+      "height": 420,
+      "color": "#0d5da8",
+      "label": "START · IDENTIFY THE CONTEXT"
+    },
+    {
+      "id": "group-defence",
+      "type": "group",
+      "x": -40,
+      "y": 530,
+      "width": 820,
+      "height": 670,
+      "color": "#e47525",
+      "label": "SELF-DEFENCE RESPONSES"
+    },
+    {
+      "id": "group-grappling",
+      "type": "group",
+      "x": 840,
+      "y": 530,
+      "width": 920,
+      "height": 670,
+      "color": "#0d5da8",
+      "label": "GRAPPLING ENTRIES"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "text": "# Standing pathways\n\nSeparate immediate self-defence responses from deliberate grappling entries, then open the linked exam sequence.\n\n*Confirm every academy-specific entry and finish.*",
+      "x": 650,
+      "y": 80,
+      "width": 420,
+      "height": 175,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "standing",
+      "type": "file",
+      "file": "positions/standing.md",
+      "x": 725,
+      "y": 290,
+      "width": 270,
+      "height": 80,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "context",
+      "type": "text",
+      "text": "## Threat response or grappling entry?",
+      "x": 665,
+      "y": 395,
+      "width": 390,
+      "height": 70,
+      "color": "#e47525"
+    },
+    {
+      "id": "defence-prompt",
+      "type": "text",
+      "text": "## Immediate threat\n\nProtect posture, clear the danger, control position, then follow the academy sequence.",
+      "x": 200,
+      "y": 575,
+      "width": 340,
+      "height": 130,
+      "color": "#e47525"
+    },
+    {
+      "id": "grappling-prompt",
+      "type": "text",
+      "text": "## Deliberate entry\n\nChoose the takedown family, establish top control, and connect the required finish.",
+      "x": 1130,
+      "y": 575,
+      "width": 340,
+      "height": 130,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "blu-01",
+      "type": "file",
+      "file": "techniques/01-punch-defence-to-osoto-gari.md",
+      "x": 0,
+      "y": 760,
+      "width": 240,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-12",
+      "type": "file",
+      "file": "techniques/12-rear-bear-hug-escape.md",
+      "x": 270,
+      "y": 760,
+      "width": 240,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-21",
+      "type": "file",
+      "file": "techniques/21-front-bear-hug-escape.md",
+      "x": 540,
+      "y": 760,
+      "width": 220,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-22",
+      "type": "file",
+      "file": "techniques/22-standing-headlock-escape.md",
+      "x": 0,
+      "y": 910,
+      "width": 240,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-23",
+      "type": "file",
+      "file": "techniques/23-wall-throat-choke-escape.md",
+      "x": 270,
+      "y": 910,
+      "width": 240,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "pur-01",
+      "type": "file",
+      "file": "techniques/purple-01-rear-hair-grab-defence.md",
+      "x": 540,
+      "y": 910,
+      "width": 220,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-10",
+      "type": "file",
+      "file": "techniques/10-single-leg-to-lapel-choke.md",
+      "x": 880,
+      "y": 760,
+      "width": 260,
+      "height": 90,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "blu-11",
+      "type": "file",
+      "file": "techniques/11-double-leg-to-knee-on-belly-armbar.md",
+      "x": 1170,
+      "y": 760,
+      "width": 260,
+      "height": 90,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "pur-12",
+      "type": "file",
+      "file": "techniques/purple-14-seoi-nage-to-armbar.md",
+      "x": 1460,
+      "y": 760,
+      "width": 260,
+      "height": 90,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "pur-16",
+      "type": "file",
+      "file": "techniques/purple-19-kata-guruma-to-own-lapel-choke.md",
+      "x": 1010,
+      "y": 930,
+      "width": 280,
+      "height": 90,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "pur-23",
+      "type": "file",
+      "file": "techniques/purple-26-jab-cross-front-kick-to-double-leg.md",
+      "x": 1340,
+      "y": 930,
+      "width": 280,
+      "height": 90,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "legend",
+      "type": "text",
+      "text": "**Study prompt**\n\nFor every card, say the entry, landing position, and finish aloud before opening the full sequence.",
+      "x": 590,
+      "y": 1270,
+      "width": 540,
+      "height": 130,
+      "color": "#0d5da8"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-title-standing",
+      "fromNode": "title",
+      "fromSide": "bottom",
+      "toNode": "standing",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-standing-context",
+      "fromNode": "standing",
+      "fromSide": "bottom",
+      "toNode": "context",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-context-defence",
+      "fromNode": "context",
+      "fromSide": "bottom",
+      "toNode": "defence-prompt",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "respond",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-context-grappling",
+      "fromNode": "context",
+      "fromSide": "bottom",
+      "toNode": "grappling-prompt",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "enter",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-defence-punch",
+      "fromNode": "defence-prompt",
+      "fromSide": "bottom",
+      "toNode": "blu-01",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "strike",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-defence-rear-bear",
+      "fromNode": "defence-prompt",
+      "fromSide": "bottom",
+      "toNode": "blu-12",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "rear bear hug",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-defence-front-bear",
+      "fromNode": "defence-prompt",
+      "fromSide": "bottom",
+      "toNode": "blu-21",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "front bear hug",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-defence-headlock",
+      "fromNode": "defence-prompt",
+      "fromSide": "bottom",
+      "toNode": "blu-22",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "headlock",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-defence-wall",
+      "fromNode": "defence-prompt",
+      "fromSide": "bottom",
+      "toNode": "blu-23",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "wall choke",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-defence-hair",
+      "fromNode": "defence-prompt",
+      "fromSide": "bottom",
+      "toNode": "pur-01",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "hair grab",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-grappling-single",
+      "fromNode": "grappling-prompt",
+      "fromSide": "bottom",
+      "toNode": "blu-10",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "single leg",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-grappling-double",
+      "fromNode": "grappling-prompt",
+      "fromSide": "bottom",
+      "toNode": "blu-11",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "double leg",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-grappling-seoi",
+      "fromNode": "grappling-prompt",
+      "fromSide": "bottom",
+      "toNode": "pur-12",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "seoi nage",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-grappling-kata",
+      "fromNode": "grappling-prompt",
+      "fromSide": "bottom",
+      "toNode": "pur-16",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "kata guruma",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-grappling-combination",
+      "fromNode": "grappling-prompt",
+      "fromSide": "bottom",
+      "toNode": "pur-23",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "strike combination",
+      "color": "#0d5da8"
+    }
+  ]
+}

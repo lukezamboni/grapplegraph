@@ -23,7 +23,7 @@
     {
       "id": "title",
       "type": "text",
-      "text": "# Closed-guard attack tree\n\nA small **Canvas demo**: start from closed guard, identify the reaction, then open the linked exam sequence.\n\n*This is a study map—not an academy-approved decision system.*",
+      "text": "# Closed-guard system\n\nStart from closed guard, identify the reaction, then open the linked exam sequence.\n\n*This is a curated study map—not an academy-approved decision system.*",
       "x": 440,
       "y": 80,
       "width": 420,
@@ -143,7 +143,7 @@
     {
       "id": "legend",
       "type": "text",
-      "text": "**How to use this demo**\n\n- Drag the background to pan\n- Scroll or use controls to zoom\n- Click a file card to open the technique\n- Hover linked cards for a preview",
+      "text": "**How to use this map**\n\n- Drag the background to pan\n- Scroll or use controls to zoom\n- Click a file card to open the technique\n- Hover linked cards for a preview",
       "x": 395,
       "y": 1015,
       "width": 510,

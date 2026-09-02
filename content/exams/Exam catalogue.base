@@ -11,6 +11,7 @@ formulas:
     if(file.hasTag("exam/blue-belt"), "Blue",
     if(file.hasTag("exam/purple-belt"), "Purple", "Brown-only"))
   verification: if(note.instructor_verified, "Verified", "Needs instructor review")
+  video_reference: if(file.hasProperty("video_match"), note.video_match, "representative")
 properties:
   formula.technique:
     displayName: Technique
@@ -30,6 +31,8 @@ properties:
     displayName: Video match
   formula.verification:
     displayName: Academy check
+  formula.video_reference:
+    displayName: Video reference
 views:
   - type: table
     name: All belts
@@ -99,6 +102,43 @@ views:
       - finish
       - formula.verification
     sort:
+      - property: exam_id
+        direction: ASC
+  - type: table
+    name: By family
+    groupBy:
+      property: family
+      direction: ASC
+    order:
+      - formula.technique
+      - formula.belt_label
+      - exam_id
+      - family
+      - start
+      - finish
+    sort:
+      - property: family
+        direction: ASC
+      - property: formula.belt_label
+        direction: ASC
+      - property: exam_id
+        direction: ASC
+  - type: table
+    name: Video references
+    groupBy:
+      property: formula.video_reference
+      direction: ASC
+    order:
+      - formula.technique
+      - formula.belt_label
+      - formula.video_reference
+      - family
+      - formula.verification
+    sort:
+      - property: formula.video_reference
+        direction: ASC
+      - property: formula.belt_label
+        direction: ASC
       - property: exam_id
         direction: ASC
   - type: list

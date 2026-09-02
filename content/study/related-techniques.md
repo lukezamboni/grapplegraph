@@ -3,6 +3,8 @@ title: Related techniques
 description: Technique clusters that share a guard, entry, sweep, or transition.
 ---
 
+For curated visual pathways, open the [[maps/index|system maps library]].
+
 ## Entry and movement clusters
 
 - **Scissor sweeps:** [[techniques/02-scissor-sweep-to-mounted-armbar|BLU-02 · Scissor sweep to mounted armbar]] and [[techniques/07-knee-kick-scissor-sweep-to-americana|BLU-07 · Knee-kick scissor sweep to Americana]]
