@@ -37,7 +37,7 @@ Click through a sequence normally. Quartz keeps a visible binder trail of the pa
 
 ## Explore the syllabus
 
-- [[exams/Exam catalogue.base|Exam catalogue]] — browse sortable belt, family, and video-reference views generated from technique metadata.
+- [[Exam catalogue.base|Exam catalogue]] — browse sortable belt, family, and video-reference views generated from technique metadata.
 - [[maps/index|System maps]] — pan and zoom through curated positional and curriculum maps linked to exam techniques.
 
 ## Try the visualization demos

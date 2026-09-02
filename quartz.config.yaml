@@ -125,7 +125,7 @@ plugins:
     enabled: true
     options:
       localGraph: { depth: 1, showTags: false }
-      globalGraph: { depth: -1, showTags: false, focusOnHover: true, enableRadial: true }
+      globalGraph: { depth: 1, showTags: false, focusOnHover: true, enableRadial: true }
     layout: { position: right, priority: 10 }
   - source: "@quartz-community/search"
     enabled: true

@@ -27,4 +27,4 @@ Separate self-defence reactions from grappling entries, then connect the standin
 
 - Use a **system map** when you want a curated pathway with meaningful branch labels.
 - Use the **interactive graph** when you want to discover every connection created by shared positions, movements, and submissions.
-- Use the [[exams/Exam catalogue.base|exam catalogue]] when you want a structured list or comparison.
+- Use the [[Exam catalogue.base|exam catalogue]] when you want a structured list or comparison.

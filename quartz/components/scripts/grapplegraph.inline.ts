@@ -168,10 +168,182 @@ async function buildExamTracker() {
   render()
 }
 
+function buildRequirementProgress() {
+  const slug = document.body.dataset.slug?.replace(/^\/+|\/+$/g, "") ?? ""
+  const article = document.querySelector<HTMLElement>("article.technique-card")
+  if (!slug.startsWith("techniques/") || !article) return
+
+  let control = article.querySelector<HTMLElement>(".technique-progress-control")
+  if (!control) {
+    control = document.createElement("section")
+    control.className = "technique-progress-control"
+    control.setAttribute("aria-label", "Requirement progress")
+    control.innerHTML = `
+      <div class="technique-progress-copy">
+        <p class="eyebrow">MY PROGRESS</p>
+        <strong>Practice status</strong>
+        <small>Saved only in this browser</small>
+      </div>
+      <button class="technique-progress-toggle" type="button"></button>`
+    article.prepend(control)
+
+    control
+      .querySelector<HTMLButtonElement>(".technique-progress-toggle")!
+      .addEventListener("click", () => {
+        const progress = readProgress()
+        const next = cycleState(progress[slug])
+        if (next) progress[slug] = next
+        else delete progress[slug]
+        saveProgress(progress)
+        buildRequirementProgress()
+      })
+  }
+
+  const state = readProgress()[slug]
+  control.dataset.state = state ?? "not-started"
+  const button = control.querySelector<HTMLButtonElement>(".technique-progress-toggle")!
+  const label = stateLabel(state)
+  button.dataset.state = state ?? "not-started"
+  button.title = `${label}. Click to change status.`
+  button.setAttribute("aria-label", `${label}. Click to change status.`)
+  button.innerHTML = `<span aria-hidden="true">${statusIcon(state)}</span><strong>${label}</strong>`
+}
+
+function configureExpandedGraph() {
+  document.querySelectorAll<HTMLElement>(".graph").forEach((graphRoot) => {
+    const localGraph = graphRoot.querySelector<HTMLElement>(".graph-container")
+    const globalGraph = graphRoot.querySelector<HTMLElement>(".global-graph-container")
+    const overlay = graphRoot.querySelector<HTMLElement>(".global-graph-outer")
+    const sourceFilters = graphRoot.querySelector<HTMLElement>(":scope > .graph-filters")
+    if (!localGraph || !globalGraph || !overlay || !sourceFilters) return
+
+    try {
+      const localConfig = JSON.parse(localGraph.dataset.cfg ?? "{}") as { depth?: number }
+      const globalConfig = JSON.parse(globalGraph.dataset.cfg ?? "{}") as Record<string, unknown>
+      const slug = document.body.dataset.slug?.replace(/^\/+|\/+$/g, "") ?? "index"
+      globalGraph.dataset.cfg = JSON.stringify({
+        ...globalConfig,
+        depth: slug === "index" ? -1 : (localConfig.depth ?? 1),
+      })
+    } catch {
+      // Leave the plugin configuration intact if a third-party option is malformed.
+    }
+
+    if (overlay.querySelector(".global-graph-toolbar")) return
+
+    const toolbar = document.createElement("div")
+    toolbar.className = "global-graph-toolbar"
+    toolbar.addEventListener("click", (event) => event.stopPropagation())
+
+    const heading = document.createElement("div")
+    heading.className = "global-graph-heading"
+    const pageTitle = document.querySelector<HTMLElement>(".article-title")?.textContent?.trim()
+    heading.innerHTML = `<p class="eyebrow">EXPANDED TECHNIQUE MAP</p><strong></strong><small></small>`
+    heading.querySelector("strong")!.textContent = pageTitle || "Complete atlas"
+
+    const modalCount = heading.querySelector("small")!
+    const localCount = graphRoot.querySelector<HTMLElement>(".graph-filter-count")
+    const updateCount = () => {
+      modalCount.textContent = localCount?.textContent || "Current filters"
+    }
+    updateCount()
+    if (localCount) {
+      new MutationObserver(updateCount).observe(localCount, {
+        childList: true,
+        characterData: true,
+        subtree: true,
+      })
+    }
+
+    const filters = sourceFilters.cloneNode(true) as HTMLElement
+    filters.classList.add("global-graph-filters")
+    filters.querySelectorAll<HTMLSelectElement>("[data-graph-filter]").forEach((clone) => {
+      const name = clone.dataset.graphFilter
+      const original = sourceFilters.querySelector<HTMLSelectElement>(
+        `[data-graph-filter="${name}"]`,
+      )
+      if (!original) return
+      clone.value = original.value
+      original.addEventListener("change", () => {
+        clone.value = original.value
+      })
+      clone.addEventListener("change", () => {
+        original.value = clone.value
+        original.dispatchEvent(new Event("change", { bubbles: true }))
+        window.setTimeout(() => {
+          const theme: "light" | "dark" =
+            document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
+          document.dispatchEvent(
+            new CustomEvent<{ theme: "light" | "dark" }>("themechange", { detail: { theme } }),
+          )
+        }, 0)
+      })
+    })
+
+    const close = document.createElement("button")
+    close.className = "global-graph-close"
+    close.type = "button"
+    close.setAttribute("aria-label", "Close expanded technique map")
+    close.textContent = "×"
+    close.addEventListener("click", () => {
+      graphRoot.querySelector<HTMLButtonElement>(".global-graph-icon")?.click()
+    })
+
+    toolbar.append(heading, filters, close)
+    overlay.prepend(toolbar)
+  })
+}
+
+let canvasObservers: ResizeObserver[] = []
+
+function disconnectCanvasObservers() {
+  canvasObservers.forEach((observer) => observer.disconnect())
+  canvasObservers = []
+}
+
+function configureResponsiveCanvases() {
+  if (typeof ResizeObserver === "undefined") return
+
+  document.querySelectorAll<HTMLElement>(".canvas-container").forEach((container) => {
+    if (container.dataset.responsiveFit === "true") return
+    container.dataset.responsiveFit = "true"
+
+    let previousWidth = container.clientWidth
+    let previousHeight = container.clientHeight
+    const observer = new ResizeObserver(() => {
+      const width = container.clientWidth
+      const height = container.clientHeight
+      if (Math.abs(width - previousWidth) < 2 && Math.abs(height - previousHeight) < 2) return
+      previousWidth = width
+      previousHeight = height
+      window.requestAnimationFrame(() => {
+        container.querySelector<HTMLButtonElement>(".canvas-reset-view")?.click()
+      })
+    })
+    observer.observe(container)
+    canvasObservers.push(observer)
+  })
+}
+
+function schedulePageEnhancements() {
+  window.setTimeout(() => {
+    buildRequirementProgress()
+    configureExpandedGraph()
+    configureResponsiveCanvases()
+  }, 0)
+}
+
 document.addEventListener("nav", () => {
   buildExamTracker()
   normalizeStackedPagesAfterNavigation()
+  schedulePageEnhancements()
 })
-document.addEventListener("render", normalizeStackedPagesAfterNavigation)
+document.addEventListener("render", () => {
+  normalizeStackedPagesAfterNavigation()
+  schedulePageEnhancements()
+})
+document.addEventListener("prenav", disconnectCanvasObservers)
+window.addEventListener("grapplegraph-progress", buildRequirementProgress)
 buildExamTracker()
 normalizeStackedPagesAfterNavigation()
+schedulePageEnhancements()
