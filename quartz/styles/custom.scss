@@ -1,3 +1,410 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+:root {
+  --renzo-blue: #0d5da8;
+  --renzo-navy: #082f57;
+  --working: #e47525;
+  --done: #2f9e68;
+  --belt-blue: #176ec0;
+  --belt-purple: #7343a4;
+  --belt-brown: #76503a;
+  --node-position: #20a4c5;
+  --node-movement: #535ad7;
+  --node-submission: #d96d34;
+  --family-self-defence: #8854a7;
+  --family-half-guard: #d9a51b;
+  --family-passing: #2378c4;
+  --family-sweep: #20a4c5;
+  --family-takedown: #535ad7;
+  --family-transition: #d96d34;
+}
+
+body {
+  background-image:
+    radial-gradient(
+      circle at 10% 0%,
+      color-mix(in srgb, var(--secondary) 9%, transparent),
+      transparent 34rem
+    ),
+    linear-gradient(color-mix(in srgb, var(--secondary) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--secondary) 4%, transparent) 1px,
+      transparent 1px
+    );
+  background-size:
+    auto,
+    36px 36px,
+    36px 36px;
+}
+
+.page {
+  max-width: 1680px;
+}
+
+.page > #quartz-body {
+  background: color-mix(in srgb, var(--light) 95%, transparent);
+  box-shadow: 0 0 70px color-mix(in srgb, var(--dark) 8%, transparent);
+}
+
+.page-title a {
+  color: var(--secondary);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.page-title a::before {
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.5rem;
+  vertical-align: -0.42rem;
+  border-radius: 50%;
+  background: url("assets/renzo-gracie-niagara.png") center / cover no-repeat;
+}
+
+.graph,
+.explorer,
+.backlinks,
+.toc {
+  border-radius: 16px;
+}
+
+.graph {
+  border: 1px solid var(--lightgray);
+  background: color-mix(in srgb, var(--light) 92%, var(--secondary) 8%);
+  padding: 0.8rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--secondary);
+  font-family: var(--codeFont);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.academy-hero {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--light) 84%, white),
+    color-mix(in srgb, var(--secondary) 12%, var(--light))
+  );
+  box-shadow: 0 20px 55px color-mix(in srgb, var(--renzo-navy) 13%, transparent);
+
+  img {
+    width: 112px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 4.5vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+  }
+
+  p:last-child {
+    max-width: 60ch;
+    margin: 0.75rem 0 0;
+    line-height: 1.65;
+  }
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  > a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem;
+    border: 1px solid var(--lightgray);
+    border-left: 4px solid var(--secondary);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--light) 94%, var(--secondary) 6%);
+    transition:
+      transform 160ms ease,
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  > a:hover {
+    transform: translateY(-2px);
+    border-color: var(--secondary);
+    box-shadow: 0 9px 24px color-mix(in srgb, var(--secondary) 12%, transparent);
+  }
+
+  span {
+    color: var(--darkgray);
+    font-size: 0.82rem;
+    font-weight: 450;
+  }
+}
+
+#exam-tracker {
+  margin: 1rem 0 1.5rem;
+}
+
+.exam-tracker-shell {
+  overflow: hidden;
+  border: 1px solid var(--lightgray);
+  border-radius: 18px;
+  background: var(--light);
+  box-shadow: 0 18px 45px color-mix(in srgb, var(--renzo-navy) 10%, transparent);
+}
+
+.tracker-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-end;
+  padding: 1rem 1.1rem 0.8rem;
+  background: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--secondary) 13%, var(--light)),
+    var(--light)
+  );
+
+  h2 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+}
+
+.tracker-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  button {
+    padding: 0.42rem 0.65rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    background: var(--light);
+    color: var(--darkgray);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.77rem;
+    font-weight: 700;
+  }
+
+  button[aria-selected="true"] {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: white;
+  }
+
+  span {
+    opacity: 0.72;
+  }
+}
+
+.tracker-summary {
+  padding: 0.65rem 1.1rem;
+  border-top: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--lightgray);
+
+  p {
+    margin: 0.35rem 0 0;
+    font-size: 0.78rem;
+  }
+}
+
+.progress-rail {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--lightgray);
+
+  span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--done);
+    transition: width 180ms ease;
+  }
+}
+
+.exam-requirements {
+  max-height: min(50vh, 520px);
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    align-items: stretch;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  li[data-state="working"] {
+    background: color-mix(in srgb, var(--working) 8%, var(--light));
+  }
+
+  li[data-state="done"] {
+    background: color-mix(in srgb, var(--done) 8%, var(--light));
+  }
+
+  a.internal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.65rem 0.7rem;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  small {
+    color: var(--darkgray);
+    font-size: 0.72rem;
+    font-weight: 450;
+    opacity: 0.82;
+  }
+}
+
+.status-toggle {
+  border: 0;
+  border-right: 1px solid var(--lightgray);
+  background: transparent;
+  color: var(--gray);
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+li[data-state="working"] .status-toggle {
+  color: var(--working);
+}
+li[data-state="done"] .status-toggle {
+  color: var(--done);
+}
+
+.tracker-note {
+  margin: 0;
+  padding: 0.65rem 1rem;
+  color: var(--gray);
+  font-size: 0.7rem;
+}
+
+.technique-card > h2:first-of-type + p {
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--lightgray);
+  border-left: 5px solid var(--secondary);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--light) 90%, var(--secondary) 10%);
+  font-family: var(--headerFont);
+  font-weight: 700;
+  line-height: 2;
+}
+
+.belt-blue::before,
+.belt-purple::before,
+.belt-brown-only::before {
+  display: inline-flex;
+  margin: 0 0.35rem 0.6rem 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  color: white;
+  font-family: var(--codeFont);
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+}
+
+.belt-blue::before {
+  content: "BLUE BELT EXAM";
+  background: #176ec0;
+}
+.belt-purple::before {
+  content: "PURPLE BELT EXAM";
+  background: #7343a4;
+}
+.belt-brown-only::before {
+  content: "BROWN BELT ONLY";
+  background: #76503a;
+}
+
+.video-reference img,
+.youtube-embed {
+  width: 100%;
+  border-radius: 14px;
+}
+
+@media all and (min-width: 1200px) {
+  body:has(article.grapple-home) .page > #quartz-body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "grid-center grid-sidebar-right"
+      "grid-footer grid-footer";
+    column-gap: 1.25rem;
+    padding: 0 1.25rem;
+  }
+
+  body:has(article.grapple-home) .sidebar.left {
+    display: none;
+  }
+
+  body:has(article.grapple-home) .center {
+    grid-area: grid-center;
+    min-width: 0;
+  }
+
+  body:has(article.grapple-home) .sidebar.right {
+    grid-area: grid-sidebar-right;
+    min-width: 0;
+    height: 100vh;
+    padding: 2rem 0 1.5rem;
+  }
+
+  body:has(article.grapple-home) .sidebar.right .graph {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: calc(100vh - 3.5rem);
+  }
+
+  body:has(article.grapple-home) .sidebar.right .graph-outer {
+    flex: 1;
+    height: auto;
+  }
+
+  body:has(article.grapple-home) .sidebar.right .graph-container {
+    height: 100%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .academy-hero {
+    grid-template-columns: 72px minmax(0, 1fr);
+    padding: 0.9rem;
+
+    img {
+      width: 72px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+  .tracker-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

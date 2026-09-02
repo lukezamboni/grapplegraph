@@ -1,0 +1,164 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: GrappleGraph
+  pageTitleSuffix: " · Renzo Gracie Niagara study atlas"
+  enableSPA: true
+  enablePopovers: true
+  analytics: null
+  locale: en-US
+  baseUrl: lukezamboni.github.io/grapplegraph
+  ignorePatterns: [private, templates, .obsidian]
+  theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    typography:
+      header: Manrope
+      body: Inter
+      code: IBM Plex Mono
+    colors:
+      lightMode:
+        light: "#f7fbff"
+        lightgray: "#dbe8f3"
+        gray: "#8aa4bb"
+        darkgray: "#294a67"
+        dark: "#082f57"
+        secondary: "#0d5da8"
+        tertiary: "#e47525"
+        highlight: rgba(13, 93, 168, 0.12)
+        textHighlight: "#f5b94266"
+      darkMode:
+        light: "#071522"
+        lightgray: "#18334a"
+        gray: "#6687a3"
+        darkgray: "#c9dceb"
+        dark: "#f4f9fd"
+        secondary: "#62b0ef"
+        tertiary: "#ff9b52"
+        highlight: rgba(98, 176, 239, 0.14)
+        textHighlight: "#a8731e88"
+plugins:
+  - source: "@quartz-community/note-properties"
+    enabled: true
+    options: { hidePropertiesView: true, language: yaml }
+    order: 5
+  - source: "@quartz-community/created-modified-date"
+    enabled: true
+    options:
+      defaultDateType: modified
+      priority: [frontmatter, filesystem]
+    order: 10
+  - source: "@quartz-community/syntax-highlighting"
+    enabled: true
+    options:
+      theme: { light: github-light, dark: github-dark }
+      keepBackground: false
+    order: 20
+  - source: "@quartz-community/obsidian-flavored-markdown"
+    enabled: true
+    options:
+      enableInHtmlEmbed: true
+      enableYouTubeEmbed: true
+      enableCheckbox: true
+    order: 30
+  - source: "@quartz-community/github-flavored-markdown"
+    enabled: true
+    order: 40
+  - source: "@quartz-community/table-of-contents"
+    enabled: true
+    order: 50
+    layout: { position: right, priority: 30, condition: not-index }
+  - source: "@quartz-community/crawl-links"
+    enabled: true
+    options: { markdownLinkResolution: shortest }
+    order: 60
+  - source: "@quartz-community/description"
+    enabled: true
+    order: 70
+  - source: "@quartz-community/quartz-fonts"
+    enabled: true
+  - source: "@quartz-community/remove-draft"
+    enabled: true
+  - source: "@quartz-community/alias-redirects"
+    enabled: true
+  - source: "@quartz-community/content-index"
+    enabled: true
+    options: { enableSiteMap: true, enableRSS: true }
+  - source: "@quartz-community/favicon"
+    enabled: true
+  - source: "@quartz-community/og-image"
+    enabled: true
+  - source: "@quartz-community/content-page"
+    enabled: true
+  - source: "@quartz-community/folder-page"
+    enabled: true
+  - source: "@quartz-community/tag-page"
+    enabled: true
+  - source: "@quartz-community/bases-page"
+    enabled: true
+    order: 50
+  - source: "@quartz-community/explorer"
+    enabled: true
+    options:
+      title: Study library
+      folderDefaultState: collapsed
+      useSavedState: true
+    layout: { position: left, priority: 50 }
+  - source: "@quartz-community/graph"
+    enabled: true
+    options:
+      localGraph: { depth: 1, showTags: false }
+      globalGraph: { depth: -1, showTags: false, focusOnHover: true, enableRadial: true }
+    layout: { position: right, priority: 10 }
+  - source: "@quartz-community/search"
+    enabled: true
+    layout:
+      position: left
+      priority: 20
+      group: toolbar
+      groupOptions: { grow: true }
+  - source: "@quartz-community/backlinks"
+    enabled: true
+    layout: { position: right, priority: 50, condition: not-index }
+  - source: "@quartz-community/article-title"
+    enabled: true
+    layout: { position: beforeBody, priority: 10, condition: not-index }
+  - source: "@quartz-community/page-title"
+    enabled: true
+    layout: { position: left, priority: 10 }
+  - source: "@quartz-community/darkmode"
+    enabled: true
+    layout: { position: left, priority: 30, group: toolbar }
+  - source: "@quartz-community/breadcrumbs"
+    enabled: true
+    layout: { position: beforeBody, priority: 5, condition: not-index }
+  - source: "@quartz-community/spacer"
+    enabled: true
+    order: 25
+    layout: { position: left, priority: 25, display: mobile-only }
+  - source: "@quartz-community/stacked-pages"
+    enabled: true
+    options:
+      maxTabs: 5
+      mobileBreakpoint: 800
+      showSpines: true
+      animateTransitions: true
+    layout: { position: afterBody, priority: 50, display: all }
+  - source: "@quartz-community/footer"
+    enabled: true
+    options:
+      links:
+        GitHub: https://github.com/lukezamboni/grapplegraph
+        Technique index: /grapplegraph/techniques/
+    layout: { position: footer, priority: 50 }
+layout:
+  groups:
+    toolbar: { priority: 35, direction: row, gap: 0.5rem }
+  byPageType:
+    "404":
+      positions: { beforeBody: [], left: [], right: [] }
+    content: {}
+    folder:
+      positions: { right: [] }
+    tag:
+      positions: { right: [] }
+    bases: {}

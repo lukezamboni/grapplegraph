@@ -1,0 +1,128 @@
+.graph {
+  & > .graph-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-end;
+
+    h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .graph-eyebrow {
+      margin: 0 0 0.15rem;
+      color: var(--secondary);
+      font-size: 0.62rem;
+      font-weight: 750;
+      letter-spacing: 0.11em;
+    }
+
+    .graph-filter-count {
+      color: var(--gray);
+      font-size: 0.7rem;
+    }
+  }
+
+  & > .graph-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+    margin: 0.65rem 0 0.45rem;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      color: var(--gray);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    select {
+      width: 100%;
+      padding: 0.38rem 1.6rem 0.38rem 0.45rem;
+      border: 1px solid var(--lightgray);
+      border-radius: 7px;
+      background: var(--light);
+      color: var(--darkgray);
+      font: inherit;
+      font-size: 0.72rem;
+      font-weight: 650;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+  }
+
+  & > .graph-outer {
+    border-radius: 5px;
+    border: 1px solid var(--lightgray);
+    box-sizing: border-box;
+    height: 250px;
+    margin: 0.3em 0 0;
+    position: relative;
+    overflow: hidden;
+
+    & > .global-graph-icon {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--dark);
+      opacity: 0.5;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      padding: 0.2rem;
+      margin: 0.3rem;
+      top: 0;
+      right: 0;
+      border-radius: 4px;
+      background-color: transparent;
+      transition: background-color 0.5s ease;
+
+      &:hover {
+        background-color: var(--lightgray);
+      }
+    }
+  }
+
+  & > .global-graph-outer {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    display: none;
+    overflow: hidden;
+
+    &.active {
+      display: inline-block;
+    }
+
+    & > .global-graph-container {
+      border: 1px solid var(--lightgray);
+      background-color: var(--light);
+      border-radius: 5px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 80vh;
+      width: 80vw;
+
+      @media all and (max-width: 800px) {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.graph-container {
+  width: 100%;
+  height: 100%;
+}
