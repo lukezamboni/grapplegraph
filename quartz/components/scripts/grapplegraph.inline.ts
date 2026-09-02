@@ -41,48 +41,163 @@ function numericTitle(title: string) {
 
 const stackedPagesKey = "stacked-pages-state"
 
+type StackedPageTab = { slug: string; title: string }
+type StackedPageState = { tabs: StackedPageTab[]; activeIndex: number }
+
 /**
  * Quartz's stacked-pages plugin stores the full pathname as its slug. On a
  * project Pages site that pathname already includes the base path, so adding
  * the base path again on tab navigation produces /grapplegraph/grapplegraph/.
- * Keep the stored binder slugs relative to the configured site base instead.
+ * Keep stored binder slugs relative to the configured site base and collapse
+ * any full-path/relative-path duplicates into one tab.
  */
-function normalizeStackedPageState() {
-  const basePath = document.body?.dataset.basepath?.replace(/^\/+|\/+$/g, "")
-  if (!basePath) return
-
+function readNormalizedStackedPageState(): StackedPageState | undefined {
   try {
     const raw = sessionStorage.getItem(stackedPagesKey)
-    if (!raw) return
-    const state = JSON.parse(raw) as {
-      tabs?: Array<{ slug?: string; title?: string }>
-      activeIndex?: number
-    }
-    if (!Array.isArray(state.tabs)) return
+    if (!raw) return undefined
+    const stored = JSON.parse(raw) as Partial<StackedPageState>
+    if (!Array.isArray(stored.tabs)) return undefined
 
-    let changed = false
-    const prefix = `${basePath}/`
-    state.tabs = state.tabs.map((tab) => {
-      let slug = tab.slug?.replace(/^\/+|\/+$/g, "") ?? "index"
-      while (slug.startsWith(prefix)) {
-        slug = slug.slice(prefix.length) || "index"
-        changed = true
+    const basePath = document.body?.dataset.basepath?.replace(/^\/+|\/+$/g, "") ?? ""
+    const prefix = basePath ? `${basePath}/` : ""
+    const tabs: StackedPageTab[] = []
+    let activeIndex = -1
+
+    stored.tabs.forEach((tab, index) => {
+      let slug = tab.slug?.replace(/^\/+|\/+$/g, "") || "index"
+      while (prefix && slug.startsWith(prefix)) slug = slug.slice(prefix.length) || "index"
+      if (basePath && slug === basePath) slug = "index"
+
+      let canonicalIndex = tabs.findIndex((candidate) => candidate.slug === slug)
+      if (canonicalIndex === -1) {
+        tabs.push({ slug, title: tab.title || slug })
+        canonicalIndex = tabs.length - 1
+      } else if (index === stored.activeIndex && tab.title) {
+        tabs[canonicalIndex].title = tab.title
       }
-      if (slug === basePath) {
-        slug = "index"
-        changed = true
-      }
-      return { ...tab, slug }
+
+      if (index === stored.activeIndex) activeIndex = canonicalIndex
     })
 
-    if (changed) sessionStorage.setItem(stackedPagesKey, JSON.stringify(state))
+    if (tabs.length === 0) activeIndex = -1
+    else if (activeIndex < 0) activeIndex = Math.min(stored.activeIndex ?? 0, tabs.length - 1)
+
+    const state = { tabs, activeIndex }
+    if (JSON.stringify(stored) !== JSON.stringify(state)) {
+      sessionStorage.setItem(stackedPagesKey, JSON.stringify(state))
+    }
+    return state
   } catch {
     // Ignore malformed or unavailable session storage and leave navigation usable.
+    return undefined
   }
 }
 
+function saveStackedPageState(state: StackedPageState) {
+  sessionStorage.setItem(stackedPagesKey, JSON.stringify(state))
+}
+
+function navigateToStackedPage(tab: StackedPageTab) {
+  const basePath = document.body?.dataset.basepath?.replace(/\/+$/g, "") ?? ""
+  const path = tab.slug === "index" ? `${basePath}/` : `${basePath}/${tab.slug}`
+  const url = new URL(path || "/", window.location.origin)
+  if (window.spaNavigate) window.spaNavigate(url, false)
+  else window.location.href = url.toString()
+}
+
+/**
+ * The upstream binder splits history around the active page: earlier tabs on
+ * the left, later tabs on the right. GrappleGraph uses a conventional, stable
+ * left-side strip instead so a tab never appears to jump across the screen.
+ */
+function renderStackedPages() {
+  const container = document.getElementById("stacked-pages-container")
+  const state = readNormalizedStackedPageState()
+  if (!container || !state) return
+
+  const mobileBreakpoint = Number(container.dataset.mobileBreakpoint || 800)
+  if (window.innerWidth < mobileBreakpoint) {
+    container.style.display = "none"
+    document.body.classList.remove("has-binder-left", "has-binder-right")
+    return
+  }
+
+  container.style.display = ""
+  container.replaceChildren()
+  document.body.classList.remove("has-binder-right")
+  if (state.tabs.length <= 1) {
+    container.classList.remove("binder-active")
+    document.body.classList.remove("has-binder-left")
+    return
+  }
+
+  container.classList.add("binder-active")
+  document.body.classList.add("has-binder-left")
+  const strip = document.createElement("div")
+  strip.className = "binder-strip binder-strip-left"
+
+  state.tabs.forEach((tab, index) => {
+    const item = document.createElement("div")
+    item.className = "binder-tab binder-tab-left"
+    item.dataset.index = String(index)
+    item.setAttribute("role", "tab")
+    item.setAttribute("aria-selected", String(index === state.activeIndex))
+    item.tabIndex = 0
+    if (index === state.activeIndex) item.classList.add("binder-tab-active")
+
+    if (container.dataset.showSpines !== "false") {
+      const spine = document.createElement("div")
+      spine.className = "binder-spine"
+      item.appendChild(spine)
+    }
+
+    const label = document.createElement("span")
+    label.className = "binder-label"
+    label.textContent = tab.title
+    item.appendChild(label)
+
+    const activate = () => {
+      if (index === state.activeIndex) return
+      const nextState = readNormalizedStackedPageState()
+      if (!nextState?.tabs[index]) return
+      nextState.activeIndex = index
+      saveStackedPageState(nextState)
+      navigateToStackedPage(nextState.tabs[index])
+    }
+    item.addEventListener("click", activate)
+    item.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return
+      event.preventDefault()
+      activate()
+    })
+
+    const close = document.createElement("button")
+    close.className = "binder-close"
+    close.textContent = "×"
+    close.setAttribute("aria-label", `Close ${tab.title}`)
+    close.addEventListener("click", (event) => {
+      event.stopPropagation()
+      const nextState = readNormalizedStackedPageState()
+      if (!nextState || nextState.tabs.length < 2) return
+      const wasActive = index === nextState.activeIndex
+      nextState.tabs.splice(index, 1)
+      if (wasActive) nextState.activeIndex = Math.min(index, nextState.tabs.length - 1)
+      else if (index < nextState.activeIndex) nextState.activeIndex -= 1
+      saveStackedPageState(nextState)
+      if (wasActive) navigateToStackedPage(nextState.tabs[nextState.activeIndex])
+      else renderStackedPages()
+    })
+    item.appendChild(close)
+    strip.appendChild(item)
+  })
+
+  container.appendChild(strip)
+}
+
+let stackedPagesTimer: number | undefined
 function normalizeStackedPagesAfterNavigation() {
-  window.setTimeout(normalizeStackedPageState, 0)
+  window.clearTimeout(stackedPagesTimer)
+  stackedPagesTimer = window.setTimeout(renderStackedPages, 0)
 }
 
 async function buildExamTracker() {
@@ -387,6 +502,7 @@ document.addEventListener("render", () => {
 })
 document.addEventListener("prenav", disconnectPageObservers)
 window.addEventListener("grapplegraph-progress", buildRequirementProgress)
+window.addEventListener("resize", normalizeStackedPagesAfterNavigation)
 buildExamTracker()
 normalizeStackedPagesAfterNavigation()
 schedulePageEnhancements()
