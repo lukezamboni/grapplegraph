@@ -21,7 +21,7 @@ Compare forward, backward, back-take, and lapel-assisted sweep directions across
 Separate self-defence reactions from grappling entries, then connect the standing curriculum to takedowns, control positions, and finishes.
 
 > [!note] Academy version comes first
-> These maps explain relationships between requirements. They do not replace the exact grips, timing, or decision rules taught by your Renzo Gracie Niagara instructor.
+> These maps explain relationships between requirements. They do not replace the exact grips, timing, or decision rules taught by your professor.
 
 ## Map or graph?
 

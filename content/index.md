@@ -25,7 +25,7 @@ cssclasses:
 <div id="exam-tracker" aria-live="polite"><p>Loading exam requirements…</p></div>
 
 > [!note] Academy version comes first
-> These notes are study aids. Grips, details, and sequence order should be verified with your Renzo Gracie Niagara instructor.
+> These notes are study aids. Grips, details, and sequence order should be verified with your professor.
 
 ## Explore by family
 
