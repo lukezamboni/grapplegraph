@@ -10,6 +10,13 @@ formulas:
   belt_label: |
     if(file.hasTag("exam/blue-belt"), "Blue",
     if(file.hasTag("exam/purple-belt"), "Purple", "Brown-only"))
+  family_label: |
+    if(file.hasTag("family/self-defence"), "Self-defence",
+    if(file.hasTag("family/half-guard"), "Half guard",
+    if(file.hasTag("family/guard-passing"), "Guard passing",
+    if(file.hasTag("family/sweep"), "Sweeps",
+    if(file.hasTag("family/takedown"), "Takedowns",
+    if(file.hasTag("family/guard-transition"), "Guard attacks and transitions", note.family))))))
   verification: if(note.instructor_verified, "Verified", "Needs instructor review")
   video_reference: if(file.hasProperty("video_match"), note.video_match, "representative")
 properties:
@@ -21,7 +28,7 @@ properties:
     displayName: Exam order
   source_exam_id:
     displayName: Source number
-  family:
+  formula.family_label:
     displayName: Family
   start:
     displayName: Starts from
@@ -43,7 +50,7 @@ views:
       - formula.technique
       - formula.belt_label
       - exam_id
-      - family
+      - formula.family_label
       - finish
     sort:
       - property: formula.belt_label
@@ -54,7 +61,7 @@ views:
       formula.technique: 340
       formula.belt_label: 110
       exam_id: 90
-      family: 150
+      formula.family_label: 210
       finish: 170
   - type: table
     name: Blue belt
@@ -64,7 +71,7 @@ views:
     order:
       - formula.technique
       - exam_id
-      - family
+      - formula.family_label
       - start
       - finish
       - video_match
@@ -81,7 +88,7 @@ views:
       - formula.technique
       - exam_id
       - source_exam_id
-      - family
+      - formula.family_label
       - start
       - finish
       - formula.verification
@@ -97,7 +104,7 @@ views:
       - formula.technique
       - exam_id
       - source_exam_id
-      - family
+      - formula.family_label
       - start
       - finish
       - formula.verification
@@ -107,17 +114,17 @@ views:
   - type: table
     name: By family
     groupBy:
-      property: family
+      property: formula.family_label
       direction: ASC
     order:
       - formula.technique
       - formula.belt_label
       - exam_id
-      - family
+      - formula.family_label
       - start
       - finish
     sort:
-      - property: family
+      - property: formula.family_label
         direction: ASC
       - property: formula.belt_label
         direction: ASC
@@ -132,7 +139,7 @@ views:
       - formula.technique
       - formula.belt_label
       - formula.video_reference
-      - family
+      - formula.family_label
       - formula.verification
     sort:
       - property: formula.video_reference
@@ -147,7 +154,7 @@ views:
       - formula.technique
       - formula.belt_label
       - exam_id
-      - family
+      - formula.family_label
       - start
       - finish
     sort:

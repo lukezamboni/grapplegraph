@@ -318,6 +318,12 @@ async function normalizeCanvasLabels() {
 function prioritizeExamCatalogue() {
   document.querySelectorAll<HTMLUListElement>(".explorer-ul").forEach((list) => {
     const moveCatalogueFirst = () => {
+      list
+        .querySelector<HTMLElement>(
+          '.folder-container[data-folderpath="families/index"] .folder-title',
+        )
+        ?.replaceChildren("Families")
+
       const catalogue = Array.from(list.children).find((item) =>
         item.querySelector<HTMLAnchorElement>(":scope > a")?.href.includes("exam-catalogue.base"),
       )
