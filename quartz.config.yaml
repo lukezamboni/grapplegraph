@@ -100,17 +100,8 @@ plugins:
     enabled: true
     options:
       enableInteraction: true
-      initialZoom: 0.82
-      minZoom: 0.25
-      maxZoom: 3
-      defaultFullscreen: false
-    order: 55
-  - source: "@quartz-community/canvas-page"
-    enabled: true
-    options:
-      enableInteraction: true
-      initialZoom: 0.82
-      minZoom: 0.25
+      initialZoom: 0.65
+      minZoom: 0.55
       maxZoom: 3
       defaultFullscreen: false
     order: 55

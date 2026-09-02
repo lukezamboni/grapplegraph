@@ -1,6 +1,6 @@
 ---
-title: BLU-01 · Punch defence to Osoto Gari
-description: Defence against a lateral punch, followed by Osoto Gari and Knee-on-Belly control.
+title: BLU-01 · Punch defence to Osoto gari
+description: Defence against a lateral punch, followed by Osoto gari and Knee-on-belly control.
 tags: [exam/blue-belt, family/self-defence, position/standing]
 cssclasses: [technique-card, belt-blue, family-self-defence]
 exam_id: 1
@@ -14,19 +14,19 @@ video_match: full
 
 ## Sequence
 
-[[positions/standing|Standing]] → lateral [[movements/punch-defence|Punch defence]] → [[movements/osoto-gari|Osoto Gari]] → [[positions/knee-on-belly|Knee-on-Belly]]
+[[positions/standing|Standing]] → lateral [[movements/punch-defence|Punch defence]] → [[movements/osoto-gari|Osoto gari]] → [[positions/knee-on-belly|Knee-on-belly]]
 
 ## Study card
 
-**Primary movement:** Punch defence and Osoto Gari  
-**Landing position:** Knee-on-Belly  
+**Primary movement:** Punch defence and Osoto gari\
+**Landing position:** Knee-on-belly\
 **Finish:** Positional control
 
 ### Key cues
 
 - [ ] Add academy grip and entry details
 - [ ] Confirm safe fall and landing angle
-- [ ] Establish stable Knee-on-Belly control
+- [ ] Establish stable Knee-on-belly control
 
 ### Practice
 
@@ -37,4 +37,4 @@ video_match: full
 
 ## Video study
 
-![Punch defence to Osoto Gari and Knee-on-Belly](https://www.youtube.com/watch?v=S_CGrkyPmgc) · **Match:** full sequence, pending academy verification
+![Punch defence to Osoto gari and Knee-on-belly](https://www.youtube.com/watch?v=S_CGrkyPmgc) · **Match:** full sequence, pending academy verification

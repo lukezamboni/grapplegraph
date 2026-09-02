@@ -1,5 +1,5 @@
 ---
-title: PUR-24 · Omoplata to lapel-or-collar choke
+title: PUR-24 · Omoplata to lapel or collar choke
 description: Maintain the omoplata arm while finishing with a lapel or collar choke.
 tags: [exam/purple-belt, family/guard-transition, finish/omoplata, finish/lapel-choke]
 cssclasses: [technique-card, belt-purple, family-guard-transition]

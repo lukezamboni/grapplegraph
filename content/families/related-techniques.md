@@ -12,9 +12,9 @@ For curated visual pathways, open the [[maps/index|system maps library]].
 - **Spider guard:** [[techniques/04-spider-guard-push-sweep-to-cross-choke|BLU-04 · Spider-guard push sweep to cross choke]] and [[techniques/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]]
 - **Standing passes:** [[techniques/05-standing-guard-pass-to-straight-ankle-lock|BLU-05 · Standing guard pass to straight ankle lock]] and [[techniques/06-standing-guard-pass-to-ezekiel-choke|BLU-06 · Standing guard pass to Ezekiel choke]]
 - **Half guard:** [[techniques/09-deep-half-flower-sweep-to-kimura|BLU-09 · Deep-half flower sweep to Kimura]] and [[techniques/18-half-guard-sweep-to-knee-cut-pass|BLU-18 · Half-guard sweep to knee-cut pass]]
-- **Takedowns:** [[techniques/10-single-leg-to-lapel-choke|BLU-10 · Single-leg takedown to lapel choke]] and [[techniques/11-double-leg-to-knee-on-belly-armbar|BLU-11 · Double-leg to Knee-on-Belly armbar]]
+- **Takedowns:** [[techniques/10-single-leg-to-lapel-choke|BLU-10 · Single-leg takedown to lapel choke]] and [[techniques/11-double-leg-to-knee-on-belly-armbar|BLU-11 · Double-leg to Knee-on-belly armbar]]
 - **Foot-on-hip guard pulls:** [[techniques/19-foot-on-hip-guard-pull-to-armbar|BLU-19 · Foot-on-hip guard pull to armbar]] and [[techniques/24-foot-on-hip-guard-pull-to-omoplata|BLU-24 · Foot-on-hip guard pull to omoplata]]
-- **Closed-guard arm drags:** [[techniques/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear Naked Choke]] and [[techniques/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]]
+- **Closed-guard arm drags:** [[techniques/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear naked choke]] and [[techniques/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]]
 
 ## Shared finishes
 
@@ -22,5 +22,5 @@ For curated visual pathways, open the [[maps/index|system maps library]].
 - **Ezekiel chokes:** exams 6 and 15
 - **Lapel chokes:** exams 10 and 17
 - **Clock chokes:** exams 13 and 30
-- **Rear Naked Chokes:** exams 16 and 29
+- **Rear naked chokes:** exams 16 and 29
 - **Triangles:** exams 20 and 26

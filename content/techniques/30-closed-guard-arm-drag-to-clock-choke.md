@@ -41,4 +41,4 @@ video_match: parts
 - ![Clock choke from turtle](https://www.youtube.com/watch?v=Hmz6VXltm9E)
 
 **Match:** taught in parts; compare carefully with the academy version  
-**Related:** [[techniques/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear Naked Choke]]
+**Related:** [[techniques/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear naked choke]]

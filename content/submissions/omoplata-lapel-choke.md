@@ -1,5 +1,5 @@
 ---
-title: Omoplata lapel-or-collar choke
+title: Omoplata lapel or collar choke
 tags: [submission/lapel-choke, submission/omoplata]
 ---
 

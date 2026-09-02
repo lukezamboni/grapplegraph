@@ -1,5 +1,5 @@
 ---
-title: PUR-10 · Standing arm drag to opponent's-lapel choke
+title: PUR-10 · Standing arm drag to opponent's lapel choke
 description: Standing arm drag takedown to knee on belly, finishing with the opponent's lapel.
 tags: [exam/purple-belt, family/takedown, position/knee-on-belly, finish/lapel-choke]
 cssclasses: [technique-card, belt-purple, family-takedown]

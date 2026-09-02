@@ -129,7 +129,7 @@ async function buildExamTracker() {
 
     shell.innerHTML = `
       <div class="tracker-head">
-        <div><p class="eyebrow">EXAM REQUIREMENTS</p><h2>${beltLabel}</h2></div>
+        <div><p class="eyebrow">Exam requirements</p><h2>${beltLabel}</h2></div>
         <div class="tracker-tabs" role="tablist" aria-label="Belt exam">
           <button data-belt="blue" aria-selected="${activeBelt === "blue"}">Blue <span>${groups.blue.length}</span></button>
           <button data-belt="purple" aria-selected="${activeBelt === "purple"}">Purple <span>${groups.purple.length}</span></button>
@@ -180,7 +180,7 @@ function buildRequirementProgress() {
     control.setAttribute("aria-label", "Requirement progress")
     control.innerHTML = `
       <div class="technique-progress-copy">
-        <p class="eyebrow">MY PROGRESS</p>
+        <p class="eyebrow">My progress</p>
         <strong>Practice status</strong>
         <small>Saved only in this browser</small>
       </div>
@@ -238,7 +238,7 @@ function configureExpandedGraph() {
     const heading = document.createElement("div")
     heading.className = "global-graph-heading"
     const pageTitle = document.querySelector<HTMLElement>(".article-title")?.textContent?.trim()
-    heading.innerHTML = `<p class="eyebrow">EXPANDED TECHNIQUE MAP</p><strong></strong><small></small>`
+    heading.innerHTML = `<p class="eyebrow">Expanded technique map</p><strong></strong><small></small>`
     heading.querySelector("strong")!.textContent = pageTitle || "Complete atlas"
 
     const modalCount = heading.querySelector("small")!
@@ -295,10 +295,45 @@ function configureExpandedGraph() {
 }
 
 let canvasObservers: ResizeObserver[] = []
+let explorerObservers: MutationObserver[] = []
 
-function disconnectCanvasObservers() {
+function disconnectPageObservers() {
   canvasObservers.forEach((observer) => observer.disconnect())
   canvasObservers = []
+  explorerObservers.forEach((observer) => observer.disconnect())
+  explorerObservers = []
+}
+
+async function normalizeCanvasLabels() {
+  const links = document.querySelectorAll<HTMLAnchorElement>(".canvas-file-label a[data-slug]")
+  if (links.length === 0) return
+
+  const data = (await fetchData) as Record<string, { title?: string }>
+  links.forEach((link) => {
+    const title = data[link.dataset.slug ?? ""]?.title
+    if (title) link.textContent = title
+  })
+}
+
+function prioritizeExamCatalogue() {
+  document.querySelectorAll<HTMLUListElement>(".explorer-ul").forEach((list) => {
+    const moveCatalogueFirst = () => {
+      const catalogue = Array.from(list.children).find((item) =>
+        item.querySelector<HTMLAnchorElement>(":scope > a")?.href.includes("exam-catalogue.base"),
+      )
+      if (!catalogue) return false
+      catalogue.classList.add("exam-catalogue-nav")
+      if (list.firstElementChild !== catalogue) list.prepend(catalogue)
+      return true
+    }
+
+    if (moveCatalogueFirst()) return
+    const observer = new MutationObserver(() => {
+      if (moveCatalogueFirst()) observer.disconnect()
+    })
+    observer.observe(list, { childList: true })
+    explorerObservers.push(observer)
+  })
 }
 
 function configureResponsiveCanvases() {
@@ -330,6 +365,8 @@ function schedulePageEnhancements() {
     buildRequirementProgress()
     configureExpandedGraph()
     configureResponsiveCanvases()
+    normalizeCanvasLabels()
+    prioritizeExamCatalogue()
   }, 0)
 }
 
@@ -342,7 +379,7 @@ document.addEventListener("render", () => {
   normalizeStackedPagesAfterNavigation()
   schedulePageEnhancements()
 })
-document.addEventListener("prenav", disconnectCanvasObservers)
+document.addEventListener("prenav", disconnectPageObservers)
 window.addEventListener("grapplegraph-progress", buildRequirementProgress)
 buildExamTracker()
 normalizeStackedPagesAfterNavigation()

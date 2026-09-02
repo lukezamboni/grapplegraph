@@ -1,5 +1,5 @@
 ---
-title: Knee-on-Belly
+title: Knee-on-belly
 tags: [concept/position]
 ---
 
@@ -7,4 +7,4 @@ A control position reached in exam techniques 1, 8, 11, and 17 before control or
 
 ## Video study
 
-[Search YouTube: Knee-on-Belly](https://www.youtube.com/results?search_query=BJJ%20Knee-on-Belly%20technique)
+[Search YouTube: Knee-on-belly](https://www.youtube.com/results?search_query=BJJ%20Knee-on-belly%20technique)

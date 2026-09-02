@@ -9,11 +9,18 @@ cssclasses:
 <section class="academy-hero">
   <img src="assets/renzo-gracie-niagara.png" alt="Renzo Gracie Team Niagara Jiu-Jitsu" />
   <div>
-    <p class="eyebrow">RENZO GRACIE NIAGARA · EXAM STUDY ATLAS</p>
+    <p class="eyebrow">Renzo Gracie Niagara · Exam study atlas</p>
     <h1>See the whole sequence.</h1>
     <p>Explore how positions, movements, submissions, and exam requirements connect. Use the graph to discover shared mechanics, then track what you are drilling.</p>
   </div>
 </section>
+
+<nav class="home-jump-nav" aria-label="GrappleGraph sections">
+  <a href="#exam-tracker"><span>01</span><strong>Exam progress</strong><small>Track every requirement</small></a>
+  <a href="#explore-by-family"><span>02</span><strong>Technique families</strong><small>Study related sequences</small></a>
+  <a href="#study-library"><span>03</span><strong>Study library</strong><small>Browse the complete atlas</small></a>
+  <a href="#how-to-use-the-atlas"><span>04</span><strong>How to use it</strong><small>Learn the navigation</small></a>
+</nav>
 
 <div id="exam-tracker" aria-live="polite"><p>Loading exam requirements…</p></div>
 
@@ -35,12 +42,13 @@ cssclasses:
 
 Click through a sequence normally. Quartz keeps a visible binder trail of the pages you opened, so one click returns to the source technique without using the browser's Back button. Hover a link for a quick preview.
 
-## Explore the syllabus
+## Study library
 
-- [[Exam catalogue.base|Exam catalogue]] — browse sortable belt, family, and video-reference views generated from technique metadata.
-- [[maps/index|System maps]] — pan and zoom through curated positional and curriculum maps linked to exam techniques.
-
-## Try the visualization demos
-
-- [[demos/exam-catalogue.base|Exam catalogue · Bases demo]] — compare sortable belt views and a card view generated from technique metadata.
-- [[demos/closed-guard-attack-tree.canvas|Closed-guard attack tree · Canvas demo]] — pan and zoom through a curated reaction map linked to exam techniques.
+<nav class="library-grid" aria-label="Study library">
+  <a class="library-featured" href="exam-catalogue.base"><span>Start here</span><strong>Exam catalogue</strong><small>Filter and compare every belt requirement</small></a>
+  <a href="maps"><span>Visual paths</span><strong>System maps</strong><small>Follow curated reactions and transitions</small></a>
+  <a href="techniques"><span>Requirements</span><strong>Exam techniques</strong><small>Open complete sequences and videos</small></a>
+  <a href="positions"><span>Checkpoints</span><strong>Positions</strong><small>Browse starting and landing positions</small></a>
+  <a href="movements"><span>Actions</span><strong>Movements and transitions</strong><small>Connect sweeps, passes, escapes, and entries</small></a>
+  <a href="submissions"><span>Finishes</span><strong>Submissions</strong><small>Compare techniques with shared finishes</small></a>
+</nav>
