@@ -1,5 +1,5 @@
 ---
-title: 16 · Mount to back and Rear Naked Choke
+title: BLU-16 · Mount to back and Rear Naked Choke
 description: Transition from mount to back control, finishing with a Rear Naked Choke.
 tags: [exam/blue-belt, family/guard-transition, position/mount, finish/rear-naked-choke]
 cssclasses: [technique-card, belt-blue, family-guard-transition]

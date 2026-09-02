@@ -1,5 +1,5 @@
 ---
-title: 02 · Scissor sweep to mounted armbar
+title: BLU-02 · Scissor sweep to mounted armbar
 description: Closed guard to mount with a scissor sweep, finishing with a mounted armbar.
 tags:
   - exam/blue-belt
@@ -46,4 +46,4 @@ video_match: full
 
 ![Scissor sweep to mounted armbar](https://www.youtube.com/watch?v=8Jeqo0f3hZo) · **Match:** full sequence, pending academy verification
 
-**Related:** [[techniques/07-knee-kick-scissor-sweep-to-americana|07 - Knee-kick scissor sweep to Americana]]
+**Related:** [[techniques/07-knee-kick-scissor-sweep-to-americana|BLU-07 · Knee-kick scissor sweep to Americana]]

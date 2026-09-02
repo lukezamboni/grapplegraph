@@ -1,5 +1,5 @@
 ---
-title: 05 · Standing guard pass to straight ankle lock
+title: BLU-05 · Standing guard pass to straight ankle lock
 description: Standing guard pass transitioning directly into a straight ankle lock.
 tags: [exam/blue-belt, family/guard-passing, position/closed-guard, finish/ankle-lock]
 cssclasses: [technique-card, belt-blue, family-guard-passing]

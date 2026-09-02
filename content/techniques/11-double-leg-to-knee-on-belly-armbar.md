@@ -1,5 +1,5 @@
 ---
-title: 11 · Double-leg to Knee-on-Belly armbar
+title: BLU-11 · Double-leg to Knee-on-Belly armbar
 description: Double-leg takedown to side control and Knee-on-Belly, finishing with an armbar.
 tags: [exam/blue-belt, family/takedown, position/standing, finish/armbar]
 cssclasses: [technique-card, belt-blue, family-takedown]

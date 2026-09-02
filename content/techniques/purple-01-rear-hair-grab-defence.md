@@ -1,9 +1,10 @@
 ---
-title: P01 · Rear hair-grab defence
+title: PUR-01 · Rear hair-grab defence
 description: Self-defence against a rear hair grab.
 tags: [exam/purple-belt, family/self-defence, position/standing]
 cssclasses: [technique-card, belt-purple, family-self-defence]
 exam_id: 1
+source_exam_id: 1
 belt: purple
 family: self-defence
 instructor_verified: false
@@ -19,4 +20,4 @@ Confirm posture, grip release, turn direction, control, and finishing position w
 
 ## Video study
 
-[Search YouTube: BJJ rear hair-grab self-defence](https://www.youtube.com/results?search_query=BJJ+rear+hair+grab+self+defence) · **Match:** search starting point
+![Rear hair-grab defence options](https://www.youtube.com/watch?v=PWaxVn-LT90) · **Match:** representative reference; verify the academy sequence with your instructor.

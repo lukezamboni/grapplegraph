@@ -1,5 +1,5 @@
 ---
-title: 03 · De La Riva sweep to bow-and-arrow choke
+title: BLU-03 · De La Riva sweep to bow-and-arrow choke
 description: De La Riva sweep to the back, finishing with a bow-and-arrow choke.
 tags:
   - exam/blue-belt

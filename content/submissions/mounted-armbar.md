@@ -4,7 +4,7 @@ tags:
   - concept/submission
 ---
 
-The finishing submission in [[techniques/02-scissor-sweep-to-mounted-armbar|02 - Scissor sweep to mounted armbar]].
+The finishing submission in [[techniques/02-scissor-sweep-to-mounted-armbar|BLU-02 · Scissor sweep to mounted armbar]].
 
 ## Video study
 

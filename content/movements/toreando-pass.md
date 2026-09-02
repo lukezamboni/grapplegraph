@@ -3,7 +3,7 @@ title: Toreando pass
 tags: [concept/movement, guard-passing]
 ---
 
-The open-guard pass in [[techniques/17-toreando-pass-to-lapel-choke|17 - Toreando pass to lapel choke]].
+The open-guard pass in [[techniques/17-toreando-pass-to-lapel-choke|BLU-17 · Toreando pass to lapel choke]].
 
 ## Video study
 

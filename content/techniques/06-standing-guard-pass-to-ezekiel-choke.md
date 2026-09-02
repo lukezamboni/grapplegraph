@@ -1,5 +1,5 @@
 ---
-title: 06 · Standing guard pass to Ezekiel choke
+title: BLU-06 · Standing guard pass to Ezekiel choke
 description: Standing guard pass to side control, finishing with an Ezekiel choke.
 tags: [exam/blue-belt, family/guard-passing, position/side-control, finish/ezekiel]
 cssclasses: [technique-card, belt-blue, family-guard-passing]

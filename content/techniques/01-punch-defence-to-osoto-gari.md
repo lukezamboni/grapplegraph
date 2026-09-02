@@ -1,5 +1,5 @@
 ---
-title: 01 · Punch defence to Osoto Gari
+title: BLU-01 · Punch defence to Osoto Gari
 description: Defence against a lateral punch, followed by Osoto Gari and Knee-on-Belly control.
 tags: [exam/blue-belt, family/self-defence, position/standing]
 cssclasses: [technique-card, belt-blue, family-self-defence]

@@ -1,5 +1,5 @@
 ---
-title: 25 · Kimura from closed guard
+title: BLU-25 · Kimura from closed guard
 description: Apply and finish the Kimura lock from closed guard.
 tags: [exam/blue-belt, family/guard-transition, position/closed-guard, finish/kimura]
 cssclasses: [technique-card, belt-blue, family-guard-transition]

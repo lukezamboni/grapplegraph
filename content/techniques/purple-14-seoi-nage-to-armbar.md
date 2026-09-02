@@ -1,9 +1,10 @@
 ---
-title: P14 · Seoi nage to armbar
+title: PUR-12 · Seoi nage to armbar
 description: Seoi nage takedown finishing with an arm lock.
 tags: [exam/purple-belt, family/takedown, finish/armbar]
 cssclasses: [technique-card, belt-purple, family-takedown]
-exam_id: 14
+exam_id: 12
+source_exam_id: 14
 belt: purple
 family: takedown
 instructor_verified: false
@@ -15,4 +16,4 @@ instructor_verified: false
 
 ## Video study
 
-[Search YouTube: BJJ seoi nage to armbar](https://www.youtube.com/results?search_query=BJJ+seoi+nage+to+armbar) · **Match:** search starting point
+![Drop Seoi Nage to armbar](https://www.youtube.com/watch?v=Ex0Cki-WyAI) · **Match:** representative reference; verify the academy sequence with your instructor.

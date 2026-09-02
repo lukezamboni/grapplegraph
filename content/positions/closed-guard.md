@@ -4,7 +4,7 @@ tags:
   - concept/position
 ---
 
-A starting position used by several exam sequences, including [[techniques/02-scissor-sweep-to-mounted-armbar|02 - Scissor sweep to mounted armbar]] and [[techniques/07-knee-kick-scissor-sweep-to-americana|07 - Knee-kick scissor sweep to Americana]].
+A starting position used by several exam sequences, including [[techniques/02-scissor-sweep-to-mounted-armbar|BLU-02 · Scissor sweep to mounted armbar]] and [[techniques/07-knee-kick-scissor-sweep-to-americana|BLU-07 · Knee-kick scissor sweep to Americana]].
 
 ## Video study
 

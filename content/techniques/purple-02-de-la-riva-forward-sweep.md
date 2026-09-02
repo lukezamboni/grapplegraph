@@ -1,9 +1,10 @@
 ---
-title: P02 · De La Riva forward sweep
+title: PUR-02 · De La Riva forward sweep
 description: De La Riva sweep controlling sleeve and collar while moving forward.
 tags: [exam/purple-belt, family/sweep, position/de-la-riva]
 cssclasses: [technique-card, belt-purple, family-sweep]
 exam_id: 2
+source_exam_id: 2
 belt: purple
 family: sweep
 instructor_verified: false
@@ -15,4 +16,4 @@ instructor_verified: false
 
 ## Video study
 
-[Search YouTube: De La Riva sleeve collar forward sweep](https://www.youtube.com/results?search_query=De+La+Riva+sleeve+collar+forward+sweep) · **Match:** search starting point
+![De La Riva guard concepts and forward sweep mechanics](https://www.youtube.com/watch?v=L3gkpR4w8cM) · **Match:** representative reference; verify the academy sequence with your instructor.

@@ -1,9 +1,10 @@
 ---
-title: P04 · Open-guard leg lock to foot Americana
+title: PUR-04 · Open-guard leg lock to foot Americana
 description: Transition from open guard to a leg lock combined with a foot Americana.
 tags: [exam/purple-belt, family/guard-transition, position/open-guard, finish/leg-lock]
 cssclasses: [technique-card, belt-purple, family-guard-transition]
 exam_id: 4
+source_exam_id: 4
 belt: purple
 family: guard-transition
 instructor_verified: false
@@ -15,4 +16,4 @@ instructor_verified: false
 
 ## Video study
 
-[Search YouTube: BJJ foot Americana leg lock](https://www.youtube.com/results?search_query=BJJ+foot+Americana+leg+lock) · **Match:** verify academy terminology
+![Foot Americana using the legs](https://www.youtube.com/watch?v=Ax8EmZ4MGFA) · **Match:** representative reference; verify the academy sequence with your instructor.

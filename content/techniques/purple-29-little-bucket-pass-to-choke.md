@@ -1,9 +1,10 @@
 ---
-title: P29 · Little Bucket pass to choke
+title: PUR-26 · Little Bucket pass to choke
 description: Pass the guard using the Little Bucket and finish with a choke.
 tags: [exam/purple-belt, family/guard-passing, finish/choke]
 cssclasses: [technique-card, belt-purple, family-guard-passing]
-exam_id: 29
+exam_id: 26
+source_exam_id: 29
 belt: purple
 family: guard-passing
 instructor_verified: false
@@ -18,4 +19,4 @@ Guard pass → [[movements/little-bucket-pass|Little Bucket]] → choke finish
 
 ## Video study
 
-[Search YouTube: BJJ little bucket guard pass choke](https://www.youtube.com/results?search_query=BJJ+little+bucket+guard+pass+choke) · **Match:** terminology needs instructor verification
+![Full-guard pass to Bucket choke](https://www.youtube.com/watch?v=Om6Elm0PrFY) · **Match:** representative reference; verify the academy sequence with your instructor.

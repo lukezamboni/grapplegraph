@@ -1,9 +1,10 @@
 ---
-title: P26 · Jab-cross-front-kick to double leg
+title: PUR-23 · Jab-cross-front-kick to double leg
 description: Jab and cross, front kick to create distance, then double-leg takedown.
 tags: [exam/purple-belt, family/self-defence, family/takedown, position/standing]
 cssclasses: [technique-card, belt-purple, family-self-defence]
-exam_id: 26
+exam_id: 23
+source_exam_id: 26
 belt: purple
 family: self-defence
 instructor_verified: false
@@ -15,4 +16,4 @@ instructor_verified: false
 
 ## Video study
 
-[Search YouTube: Gracie self defence jab cross front kick double leg](https://www.youtube.com/results?search_query=Gracie+self+defence+jab+cross+front+kick+double+leg) · **Match:** verify striking distance and academy version
+![Gracie front-kick self-defence mechanics](https://www.youtube.com/watch?v=AD7nJr685ZA) · **Match:** representative reference; verify the academy sequence with your instructor.

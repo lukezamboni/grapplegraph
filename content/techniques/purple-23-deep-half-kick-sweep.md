@@ -1,9 +1,10 @@
 ---
-title: P23 · Deep-half kick sweep
+title: PUR-20 · Deep-half kick sweep
 description: Deep-half-guard sweep by kicking the opponent's leg.
 tags: [exam/purple-belt, family/half-guard, position/deep-half-guard]
 cssclasses: [technique-card, belt-purple, family-half-guard]
-exam_id: 23
+exam_id: 20
+source_exam_id: 23
 belt: purple
 family: half-guard
 instructor_verified: false
@@ -15,4 +16,4 @@ instructor_verified: false
 
 ## Video study
 
-[Search YouTube: BJJ deep half guard kick leg sweep](https://www.youtube.com/results?search_query=BJJ+deep+half+guard+kick+leg+sweep) · **Match:** search starting point
+![Deep-half transition to the Faria sweep](https://www.youtube.com/watch?v=zDD2ORNn_yw) · **Match:** representative reference; verify the academy sequence with your instructor.

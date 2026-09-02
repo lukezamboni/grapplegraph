@@ -1,5 +1,5 @@
 ---
-title: 12 · Rear bear-hug escape
+title: BLU-12 · Rear bear-hug escape
 description: Self-defence escape from a rear bear hug under the arms.
 tags: [exam/blue-belt, family/self-defence, position/standing]
 cssclasses: [technique-card, belt-blue, family-self-defence]

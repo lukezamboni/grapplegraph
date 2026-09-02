@@ -1,5 +1,5 @@
 ---
-title: 07 · Knee-kick scissor sweep to Americana
+title: BLU-07 · Knee-kick scissor sweep to Americana
 description: A knee-kick scissor sweep from closed guard, landing in mount and finishing with an Americana.
 tags:
   - exam/blue-belt
@@ -48,4 +48,4 @@ video_match: parts
 - ![Scissor sweep to Americana](https://www.youtube.com/watch?v=WTHGaAuim60)
 
 **Match:** taught in parts; pending academy verification  
-**Related:** [[techniques/02-scissor-sweep-to-mounted-armbar|02 - Scissor sweep to mounted armbar]]
+**Related:** [[techniques/02-scissor-sweep-to-mounted-armbar|BLU-02 · Scissor sweep to mounted armbar]]

@@ -1,5 +1,5 @@
 ---
-title: 18 · Half-guard sweep to knee-cut pass
+title: BLU-18 · Half-guard sweep to knee-cut pass
 description: Sweep from half guard, follow with a knee-cut pass, and finish in side control.
 tags: [exam/blue-belt, family/half-guard, position/half-guard, finish/side-control]
 cssclasses: [technique-card, belt-blue, family-half-guard]

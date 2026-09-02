@@ -1,5 +1,5 @@
 ---
-title: 10 · Single-leg takedown to lapel choke
+title: BLU-10 · Single-leg takedown to lapel choke
 description: Single-leg takedown to side control, finishing with a lapel choke.
 tags: [exam/blue-belt, family/takedown, position/standing, finish/lapel-choke]
 cssclasses: [technique-card, belt-blue, family-takedown]

@@ -1,5 +1,5 @@
 ---
-title: 04 · Spider-guard push sweep to cross choke
+title: BLU-04 · Spider-guard push sweep to cross choke
 description: Spider-guard push sweep to mount, finishing with a cross choke.
 tags: [exam/blue-belt, family/sweep, position/spider-guard, finish/cross-choke]
 cssclasses: [technique-card, belt-blue, family-sweep]
@@ -41,4 +41,4 @@ video_match: parts
 - ![Cross choke from mount](https://www.youtube.com/watch?v=8wLWTw8G0c0)
 
 **Match:** taught in parts; pending academy verification  
-**Related:** [[techniques/08-spider-guard-to-violin-armbar|08 - Spider guard to violin armbar]]
+**Related:** [[techniques/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]]

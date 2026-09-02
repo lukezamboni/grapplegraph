@@ -1,5 +1,5 @@
 ---
-title: 14 · De La Riva sweep to back armbar
+title: BLU-14 · De La Riva sweep to back armbar
 description: De La Riva sweep transitioning to the back, finishing with an armbar.
 tags: [exam/blue-belt, family/sweep, position/de-la-riva, finish/armbar]
 cssclasses: [technique-card, belt-blue, family-sweep]
@@ -41,4 +41,4 @@ video_match: parts
 - ![Armbar from the back](https://www.youtube.com/watch?v=g6HTeyhCmm8)
 
 **Match:** taught in parts; pending academy verification  
-**Related:** [[techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke|03 - De La Riva sweep to bow-and-arrow choke]] and [[techniques/28-de-la-riva-lapel-knee-kick-sweep|28 - De La Riva lapel knee-kick sweep]]
+**Related:** [[techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke|BLU-03 · De La Riva sweep to bow-and-arrow choke]] and [[techniques/28-de-la-riva-lapel-knee-kick-sweep|BLU-28 · De La Riva lapel knee-kick sweep]]

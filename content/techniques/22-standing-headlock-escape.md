@@ -1,5 +1,5 @@
 ---
-title: 22 · Standing headlock escape
+title: BLU-22 · Standing headlock escape
 description: Self-defence escape from a standing “bouncer's headlock.”
 tags: [exam/blue-belt, family/self-defence, position/standing]
 cssclasses: [technique-card, belt-blue, family-self-defence]

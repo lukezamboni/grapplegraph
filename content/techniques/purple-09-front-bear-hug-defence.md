@@ -1,9 +1,10 @@
 ---
-title: P09 · Front bear-hug defence
+title: PUR-09 · Front bear-hug defence
 description: Self-defence against a front bear hug under the arms.
 tags: [exam/purple-belt, family/self-defence, position/standing]
 cssclasses: [technique-card, belt-purple, family-self-defence]
 exam_id: 9
+source_exam_id: 9
 belt: purple
 family: self-defence
 instructor_verified: false
@@ -15,4 +16,4 @@ instructor_verified: false
 
 ## Video study
 
-[Front bear hug under the arms](https://www.youtube.com/watch?v=wMa1YbtyX0I) · **Match:** compare with academy version
+![Front bear-hug defence under the arms](https://www.youtube.com/watch?v=wMa1YbtyX0I) · **Match:** representative reference; verify the academy sequence with your instructor.

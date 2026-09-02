@@ -35,8 +35,54 @@ function statusIcon(state?: ProgressState) {
 }
 
 function numericTitle(title: string) {
-  const match = title.match(/^[A-Z]?(\d+)/)
+  const match = title.match(/^(?:[A-Z]{3}-)?(\d+)/)
   return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER
+}
+
+const stackedPagesKey = "stacked-pages-state"
+
+/**
+ * Quartz's stacked-pages plugin stores the full pathname as its slug. On a
+ * project Pages site that pathname already includes the base path, so adding
+ * the base path again on tab navigation produces /grapplegraph/grapplegraph/.
+ * Keep the stored binder slugs relative to the configured site base instead.
+ */
+function normalizeStackedPageState() {
+  const basePath = document.body?.dataset.basepath?.replace(/^\/+|\/+$/g, "")
+  if (!basePath) return
+
+  try {
+    const raw = sessionStorage.getItem(stackedPagesKey)
+    if (!raw) return
+    const state = JSON.parse(raw) as {
+      tabs?: Array<{ slug?: string; title?: string }>
+      activeIndex?: number
+    }
+    if (!Array.isArray(state.tabs)) return
+
+    let changed = false
+    const prefix = `${basePath}/`
+    state.tabs = state.tabs.map((tab) => {
+      let slug = tab.slug?.replace(/^\/+|\/+$/g, "") ?? "index"
+      while (slug.startsWith(prefix)) {
+        slug = slug.slice(prefix.length) || "index"
+        changed = true
+      }
+      if (slug === basePath) {
+        slug = "index"
+        changed = true
+      }
+      return { ...tab, slug }
+    })
+
+    if (changed) sessionStorage.setItem(stackedPagesKey, JSON.stringify(state))
+  } catch {
+    // Ignore malformed or unavailable session storage and leave navigation usable.
+  }
+}
+
+function normalizeStackedPagesAfterNavigation() {
+  window.setTimeout(normalizeStackedPageState, 0)
 }
 
 async function buildExamTracker() {
@@ -122,5 +168,10 @@ async function buildExamTracker() {
   render()
 }
 
-document.addEventListener("nav", buildExamTracker)
+document.addEventListener("nav", () => {
+  buildExamTracker()
+  normalizeStackedPagesAfterNavigation()
+})
+document.addEventListener("render", normalizeStackedPagesAfterNavigation)
 buildExamTracker()
+normalizeStackedPagesAfterNavigation()

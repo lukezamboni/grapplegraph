@@ -3,7 +3,7 @@ title: Mounted triangle
 tags: [concept/submission, choke]
 ---
 
-The finishing submission in [[techniques/26-lasso-flower-sweep-to-mounted-triangle|26 - Lasso flower sweep to mounted triangle]].
+The finishing submission in [[techniques/26-lasso-flower-sweep-to-mounted-triangle|BLU-26 · Lasso flower sweep to mounted triangle]].
 
 ## Video study
 

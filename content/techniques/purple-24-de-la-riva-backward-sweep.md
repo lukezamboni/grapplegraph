@@ -1,9 +1,10 @@
 ---
-title: P24 · De La Riva backward sweep
+title: PUR-21 · De La Riva backward sweep
 description: De La Riva sweep controlling arm and leg while moving backward.
 tags: [exam/purple-belt, family/sweep, position/de-la-riva]
 cssclasses: [technique-card, belt-purple, family-sweep]
-exam_id: 24
+exam_id: 21
+source_exam_id: 24
 belt: purple
 family: sweep
 instructor_verified: false
@@ -15,4 +16,4 @@ instructor_verified: false
 
 ## Video study
 
-[Search YouTube: De La Riva arm leg backward sweep](https://www.youtube.com/results?search_query=De+La+Riva+arm+leg+backward+sweep) · **Match:** search starting point
+![Reverse De La Riva sweep](https://www.youtube.com/watch?v=TIwd1Z-b6fA) · **Match:** representative reference; verify the academy sequence with your instructor.

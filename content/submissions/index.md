@@ -7,9 +7,9 @@ Submission notes connect sequences that begin differently but share finishing me
 
 ## Cross-reference
 
-- **Armbars:** [[techniques/02-scissor-sweep-to-mounted-armbar|02 - Scissor sweep to mounted armbar]], [[techniques/08-spider-guard-to-violin-armbar|08 - Spider guard to violin armbar]], [[techniques/11-double-leg-to-knee-on-belly-armbar|11 - Double-leg to Knee-on-Belly armbar]], [[techniques/14-de-la-riva-sweep-to-back-armbar|14 - De La Riva sweep to back armbar]], and [[techniques/19-foot-on-hip-guard-pull-to-armbar|19 - Foot-on-hip guard pull to armbar]]
-- **Ezekiel chokes:** [[techniques/06-standing-guard-pass-to-ezekiel-choke|06 - Standing guard pass to Ezekiel choke]] and [[techniques/15-hook-sweep-to-ezekiel-choke|15 - Hook sweep to Ezekiel choke]]
-- **Lapel chokes:** [[techniques/10-single-leg-to-lapel-choke|10 - Single-leg takedown to lapel choke]] and [[techniques/17-toreando-pass-to-lapel-choke|17 - Toreando pass to lapel choke]]
-- **Clock chokes:** [[techniques/13-guard-pass-reaction-to-clock-choke|13 - Guard-pass reaction to clock choke]] and [[techniques/30-closed-guard-arm-drag-to-clock-choke|30 - Closed-guard arm drag to clock choke]]
-- **Rear Naked Chokes:** [[techniques/16-mount-to-back-rear-naked-choke|16 - Mount to back and Rear Naked Choke]] and [[techniques/29-closed-guard-arm-drag-to-rnc|29 - Closed-guard arm drag to Rear Naked Choke]]
-- **Triangles:** [[techniques/20-closed-guard-armbar-to-triangle|20 - Closed-guard armbar to triangle]] and [[techniques/26-lasso-flower-sweep-to-mounted-triangle|26 - Lasso flower sweep to mounted triangle]]
+- **Armbars:** [[techniques/02-scissor-sweep-to-mounted-armbar|BLU-02 · Scissor sweep to mounted armbar]], [[techniques/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]], [[techniques/11-double-leg-to-knee-on-belly-armbar|BLU-11 · Double-leg to Knee-on-Belly armbar]], [[techniques/14-de-la-riva-sweep-to-back-armbar|BLU-14 · De La Riva sweep to back armbar]], and [[techniques/19-foot-on-hip-guard-pull-to-armbar|BLU-19 · Foot-on-hip guard pull to armbar]]
+- **Ezekiel chokes:** [[techniques/06-standing-guard-pass-to-ezekiel-choke|BLU-06 · Standing guard pass to Ezekiel choke]] and [[techniques/15-hook-sweep-to-ezekiel-choke|BLU-15 · Hook sweep to Ezekiel choke]]
+- **Lapel chokes:** [[techniques/10-single-leg-to-lapel-choke|BLU-10 · Single-leg takedown to lapel choke]] and [[techniques/17-toreando-pass-to-lapel-choke|BLU-17 · Toreando pass to lapel choke]]
+- **Clock chokes:** [[techniques/13-guard-pass-reaction-to-clock-choke|BLU-13 · Guard-pass reaction to clock choke]] and [[techniques/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]]
+- **Rear Naked Chokes:** [[techniques/16-mount-to-back-rear-naked-choke|BLU-16 · Mount to back and Rear Naked Choke]] and [[techniques/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear Naked Choke]]
+- **Triangles:** [[techniques/20-closed-guard-armbar-to-triangle|BLU-20 · Closed-guard armbar to triangle]] and [[techniques/26-lasso-flower-sweep-to-mounted-triangle|BLU-26 · Lasso flower sweep to mounted triangle]]

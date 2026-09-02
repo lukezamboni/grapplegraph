@@ -1,5 +1,5 @@
 ---
-title: 23 · Wall throat-choke escape
+title: BLU-23 · Wall throat-choke escape
 description: Self-defence escape from a two-hand throat choke against a wall.
 tags: [exam/blue-belt, family/self-defence, position/standing]
 cssclasses: [technique-card, belt-blue, family-self-defence]

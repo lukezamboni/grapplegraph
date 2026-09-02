@@ -1,5 +1,5 @@
 ---
-title: 29 · Closed-guard arm drag to Rear Naked Choke
+title: BLU-29 · Closed-guard arm drag to Rear Naked Choke
 description: Arm drag from closed guard to the back, finishing with a Rear Naked Choke.
 tags: [exam/blue-belt, family/guard-transition, position/closed-guard, finish/rear-naked-choke]
 cssclasses: [technique-card, belt-blue, family-guard-transition]
@@ -41,4 +41,4 @@ video_match: parts
 - ![Rear Naked Choke mechanics](https://www.youtube.com/watch?v=KW2RvtWgBxU)
 
 **Match:** taught in parts; pending academy verification  
-**Related:** [[techniques/30-closed-guard-arm-drag-to-clock-choke|30 - Closed-guard arm drag to clock choke]]
+**Related:** [[techniques/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]]

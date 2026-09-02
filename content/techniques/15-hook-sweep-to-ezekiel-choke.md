@@ -1,5 +1,5 @@
 ---
-title: 15 · Hook sweep to Ezekiel choke
+title: BLU-15 · Hook sweep to Ezekiel choke
 description: Hook sweep from open guard to mount, finishing with an Ezekiel choke.
 tags: [exam/blue-belt, family/sweep, position/open-guard, finish/ezekiel]
 cssclasses: [technique-card, belt-blue, family-sweep]

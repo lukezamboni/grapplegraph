@@ -1,5 +1,5 @@
 ---
-title: 08 · Spider guard to violin armbar
+title: BLU-08 · Spider guard to violin armbar
 description: Spider guard to omoplata sweep and Knee-on-Belly, finishing with a violin armbar.
 tags: [exam/blue-belt, family/guard-transition, position/spider-guard, finish/armbar]
 cssclasses: [technique-card, belt-blue, family-guard-transition]
@@ -42,4 +42,4 @@ video_match: parts
 - ![Violin-armbar mechanics](https://www.youtube.com/watch?v=vYiR0ls3td8)
 
 **Match:** taught in parts; compare carefully with the academy version  
-**Related:** [[techniques/04-spider-guard-push-sweep-to-cross-choke|04 - Spider-guard push sweep to cross choke]]
+**Related:** [[techniques/04-spider-guard-push-sweep-to-cross-choke|BLU-04 · Spider-guard push sweep to cross choke]]

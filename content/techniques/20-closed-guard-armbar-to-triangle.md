@@ -1,5 +1,5 @@
 ---
-title: 20 · Closed-guard armbar to triangle
+title: BLU-20 · Closed-guard armbar to triangle
 description: Attack an armbar from closed guard and transition to a triangle.
 tags: [exam/blue-belt, family/guard-transition, position/closed-guard, finish/triangle]
 cssclasses: [technique-card, belt-blue, family-guard-transition]

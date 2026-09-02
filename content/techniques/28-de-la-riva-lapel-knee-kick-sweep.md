@@ -1,5 +1,5 @@
 ---
-title: 28 · De La Riva lapel knee-kick sweep
+title: BLU-28 · De La Riva lapel knee-kick sweep
 description: De La Riva sweep using a lapel grip and knee kick to sweep forward.
 tags: [exam/blue-belt, family/sweep, position/de-la-riva]
 cssclasses: [technique-card, belt-blue, family-sweep]
@@ -38,4 +38,4 @@ video_match: very-close
 
 ![Ricardo De La Riva's knee-lapel sweep](https://www.youtube.com/watch?v=75G5oYkq9CA) · **Match:** very close; pending academy verification
 
-**Related:** [[techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke|03 - De La Riva sweep to bow-and-arrow choke]] and [[techniques/14-de-la-riva-sweep-to-back-armbar|14 - De La Riva sweep to back armbar]]
+**Related:** [[techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke|BLU-03 · De La Riva sweep to bow-and-arrow choke]] and [[techniques/14-de-la-riva-sweep-to-back-armbar|BLU-14 · De La Riva sweep to back armbar]]

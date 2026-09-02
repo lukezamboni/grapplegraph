@@ -1,5 +1,5 @@
 ---
-title: 27 · Loop choke from butterfly guard
+title: BLU-27 · Loop choke from butterfly guard
 description: Apply and finish a loop choke from butterfly guard.
 tags: [exam/blue-belt, family/guard-transition, position/butterfly-guard, finish/loop-choke]
 cssclasses: [technique-card, belt-blue, family-guard-transition]

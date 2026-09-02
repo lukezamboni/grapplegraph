@@ -1,5 +1,5 @@
 ---
-title: P30 · Knee-on-belly opposite-arm violin lock
+title: PUR-27 · Knee-on-belly opposite-arm violin lock
 description: Side control to knee on belly, finishing with a reverse violin arm lock on the opposite arm.
 tags:
   [
@@ -10,7 +10,8 @@ tags:
     finish/armbar,
   ]
 cssclasses: [technique-card, belt-purple, family-guard-transition]
-exam_id: 30
+exam_id: 27
+source_exam_id: 30
 belt: purple
 family: guard-transition
 instructor_verified: false
@@ -22,4 +23,4 @@ instructor_verified: false
 
 ## Video study
 
-[Search YouTube: BJJ knee on belly reverse violin arm lock opposite arm](https://www.youtube.com/results?search_query=BJJ+knee+on+belly+reverse+violin+arm+lock+opposite+arm) · **Match:** verify academy version
+![Knee-on-belly arm-lock attacks](https://www.youtube.com/watch?v=Y0udZKm1KRM) · **Match:** representative reference; verify the academy sequence with your instructor.

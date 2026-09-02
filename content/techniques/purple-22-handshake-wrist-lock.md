@@ -1,9 +1,10 @@
 ---
-title: P22 · Handshake self-defence to wrist lock
+title: PUR-19 · Handshake self-defence to wrist lock
 description: Self-defence against a handshake, finishing with a wrist lock.
 tags: [exam/purple-belt, family/self-defence, position/standing, finish/wrist-lock]
 cssclasses: [technique-card, belt-purple, family-self-defence]
-exam_id: 22
+exam_id: 19
+source_exam_id: 22
 belt: purple
 family: self-defence
 instructor_verified: false
@@ -15,4 +16,4 @@ Handshake grip → [[movements/handshake-defence|Handshake defence]] → [[submi
 
 ## Video study
 
-[Search YouTube: Gracie Jiu-Jitsu handshake wrist lock self defence](https://www.youtube.com/results?search_query=Gracie+Jiu-Jitsu+handshake+wrist+lock+self+defence) · **Match:** verify academy version
+![Gracie self-defence wrist lock](https://www.youtube.com/watch?v=I-y_IXSj_Ng) · **Match:** representative reference; verify the academy sequence with your instructor.
