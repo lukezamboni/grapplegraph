@@ -1,0 +1,261 @@
+{
+  "nodes": [
+    {
+      "id": "group-structure",
+      "type": "group",
+      "x": 390,
+      "y": 40,
+      "width": 520,
+      "height": 430,
+      "color": "#0d5da8",
+      "label": "START · READ THE REACTION"
+    },
+    {
+      "id": "group-attacks",
+      "type": "group",
+      "x": -40,
+      "y": 520,
+      "width": 1380,
+      "height": 440,
+      "color": "#e47525",
+      "label": "BLUE-BELT EXAM CONNECTIONS"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "text": "# Closed-guard attack tree\n\nA small **Canvas demo**: start from closed guard, identify the reaction, then open the linked exam sequence.\n\n*This is a study map—not an academy-approved decision system.*",
+      "x": 440,
+      "y": 80,
+      "width": 420,
+      "height": 170,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "closed-guard",
+      "type": "file",
+      "file": "positions/closed-guard.md",
+      "x": 515,
+      "y": 290,
+      "width": 270,
+      "height": 80,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "read-reaction",
+      "type": "text",
+      "text": "## What reaction do you get?",
+      "x": 490,
+      "y": 395,
+      "width": 320,
+      "height": 70,
+      "color": "#e47525"
+    },
+    {
+      "id": "reaction-balance",
+      "type": "text",
+      "text": "### Weight comes forward\n\nCreate an angle and reverse the position.",
+      "x": 0,
+      "y": 575,
+      "width": 270,
+      "height": 120,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "reaction-arm",
+      "type": "text",
+      "text": "### Arm is isolated\n\nAttack the elbow line or connect attacks.",
+      "x": 340,
+      "y": 575,
+      "width": 270,
+      "height": 120,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "reaction-posture",
+      "type": "text",
+      "text": "### Hand posts in range\n\nControl the wrist and lock the shoulder.",
+      "x": 680,
+      "y": 575,
+      "width": 270,
+      "height": 120,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "reaction-crosses",
+      "type": "text",
+      "text": "### Elbow crosses centre\n\nArm drag toward the back or turtle-side control.",
+      "x": 1020,
+      "y": 575,
+      "width": 270,
+      "height": 120,
+      "color": "#0d5da8"
+    },
+    {
+      "id": "blu-02",
+      "type": "file",
+      "file": "techniques/02-scissor-sweep-to-mounted-armbar.md",
+      "x": 0,
+      "y": 745,
+      "width": 270,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-20",
+      "type": "file",
+      "file": "techniques/20-closed-guard-armbar-to-triangle.md",
+      "x": 340,
+      "y": 745,
+      "width": 270,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-25",
+      "type": "file",
+      "file": "techniques/25-closed-guard-kimura.md",
+      "x": 680,
+      "y": 745,
+      "width": 270,
+      "height": 90,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-29",
+      "type": "file",
+      "file": "techniques/29-closed-guard-arm-drag-to-rnc.md",
+      "x": 990,
+      "y": 735,
+      "width": 300,
+      "height": 80,
+      "color": "#e47525"
+    },
+    {
+      "id": "blu-30",
+      "type": "file",
+      "file": "techniques/30-closed-guard-arm-drag-to-clock-choke.md",
+      "x": 990,
+      "y": 845,
+      "width": 300,
+      "height": 80,
+      "color": "#e47525"
+    },
+    {
+      "id": "legend",
+      "type": "text",
+      "text": "**How to use this demo**\n\n- Drag the background to pan\n- Scroll or use controls to zoom\n- Click a file card to open the technique\n- Hover linked cards for a preview",
+      "x": 395,
+      "y": 1015,
+      "width": 510,
+      "height": 160,
+      "color": "#0d5da8"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-title-start",
+      "fromNode": "title",
+      "fromSide": "bottom",
+      "toNode": "closed-guard",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-start-read",
+      "fromNode": "closed-guard",
+      "fromSide": "bottom",
+      "toNode": "read-reaction",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "begin",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-read-balance",
+      "fromNode": "read-reaction",
+      "fromSide": "bottom",
+      "toNode": "reaction-balance",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-read-arm",
+      "fromNode": "read-reaction",
+      "fromSide": "bottom",
+      "toNode": "reaction-arm",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-read-posture",
+      "fromNode": "read-reaction",
+      "fromSide": "bottom",
+      "toNode": "reaction-posture",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-read-crosses",
+      "fromNode": "read-reaction",
+      "fromSide": "bottom",
+      "toNode": "reaction-crosses",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "color": "#0d5da8"
+    },
+    {
+      "id": "edge-balance-technique",
+      "fromNode": "reaction-balance",
+      "fromSide": "bottom",
+      "toNode": "blu-02",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "sweep → armbar",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-arm-technique",
+      "fromNode": "reaction-arm",
+      "fromSide": "bottom",
+      "toNode": "blu-20",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "armbar → triangle",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-posture-technique",
+      "fromNode": "reaction-posture",
+      "fromSide": "bottom",
+      "toNode": "blu-25",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Kimura",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-crosses-rnc",
+      "fromNode": "reaction-crosses",
+      "fromSide": "bottom",
+      "toNode": "blu-29",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "back take",
+      "color": "#e47525"
+    },
+    {
+      "id": "edge-crosses-clock",
+      "fromNode": "reaction-crosses",
+      "fromSide": "bottom",
+      "toNode": "blu-30",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "turtle-side control",
+      "color": "#e47525"
+    }
+  ]
+}

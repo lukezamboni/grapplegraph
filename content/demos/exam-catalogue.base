@@ -1,0 +1,118 @@
+filters:
+  and:
+    - file.inFolder("techniques")
+    - or:
+        - file.hasTag("exam/blue-belt")
+        - file.hasTag("exam/purple-belt")
+        - file.hasTag("exam/brown-belt-only")
+formulas:
+  technique: link(file.path, note.title)
+  belt_label: |
+    if(file.hasTag("exam/blue-belt"), "Blue",
+    if(file.hasTag("exam/purple-belt"), "Purple", "Brown-only"))
+  verification: if(note.instructor_verified, "Verified", "Needs instructor review")
+properties:
+  formula.technique:
+    displayName: Technique
+  formula.belt_label:
+    displayName: Belt
+  exam_id:
+    displayName: Exam order
+  source_exam_id:
+    displayName: Source number
+  family:
+    displayName: Family
+  start:
+    displayName: Starts from
+  finish:
+    displayName: Finish
+  video_match:
+    displayName: Video match
+  formula.verification:
+    displayName: Academy check
+views:
+  - type: table
+    name: All belts
+    groupBy:
+      property: formula.belt_label
+      direction: ASC
+    order:
+      - formula.technique
+      - formula.belt_label
+      - exam_id
+      - family
+      - finish
+    sort:
+      - property: formula.belt_label
+        direction: ASC
+      - property: exam_id
+        direction: ASC
+    columnSize:
+      formula.technique: 340
+      formula.belt_label: 110
+      exam_id: 90
+      family: 150
+      finish: 170
+  - type: table
+    name: Blue belt
+    filters:
+      and:
+        - file.hasTag("exam/blue-belt")
+    order:
+      - formula.technique
+      - exam_id
+      - family
+      - start
+      - finish
+      - video_match
+      - formula.verification
+    sort:
+      - property: exam_id
+        direction: ASC
+  - type: table
+    name: Purple belt
+    filters:
+      and:
+        - file.hasTag("exam/purple-belt")
+    order:
+      - formula.technique
+      - exam_id
+      - source_exam_id
+      - family
+      - start
+      - finish
+      - formula.verification
+    sort:
+      - property: exam_id
+        direction: ASC
+  - type: table
+    name: Brown-only
+    filters:
+      and:
+        - file.hasTag("exam/brown-belt-only")
+    order:
+      - formula.technique
+      - exam_id
+      - source_exam_id
+      - family
+      - start
+      - finish
+      - formula.verification
+    sort:
+      - property: exam_id
+        direction: ASC
+  - type: list
+    name: Quick scan
+    order:
+      - formula.technique
+      - formula.belt_label
+      - exam_id
+      - family
+      - start
+      - finish
+    sort:
+      - property: formula.belt_label
+        direction: ASC
+      - property: exam_id
+        direction: ASC
+    limit: 60

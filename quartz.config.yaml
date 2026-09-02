@@ -96,6 +96,24 @@ plugins:
   - source: "@quartz-community/bases-page"
     enabled: true
     order: 50
+  - source: "@quartz-community/canvas-page"
+    enabled: true
+    options:
+      enableInteraction: true
+      initialZoom: 0.82
+      minZoom: 0.25
+      maxZoom: 3
+      defaultFullscreen: false
+    order: 55
+  - source: "@quartz-community/canvas-page"
+    enabled: true
+    options:
+      enableInteraction: true
+      initialZoom: 0.82
+      minZoom: 0.25
+      maxZoom: 3
+      defaultFullscreen: false
+    order: 55
   - source: "@quartz-community/explorer"
     enabled: true
     options:
@@ -161,4 +179,5 @@ layout:
       positions: { right: [] }
     tag:
       positions: { right: [] }
-    bases: {}
+    bases:
+      positions: { right: [] }
