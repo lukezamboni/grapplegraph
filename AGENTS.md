@@ -25,7 +25,7 @@ npm run validate
 
 Also run `npm run build && npm run audit:site` when content, components, styles, plugins, or assets change. Run `npm audit --omit=dev` when dependencies or the lockfile change.
 
-`npm test` intentionally runs Quartz tests and the vendored graph tests separately. Do not replace it with an unrestricted `tsx --test`, which incorrectly collects the vendored Vitest suite.
+`npm test` intentionally runs Quartz tests and the vendored component tests separately. Do not replace it with an unrestricted `tsx --test`, which incorrectly collects the vendored Vitest suites.
 
 ## Curriculum invariants
 
@@ -65,6 +65,10 @@ When changing the graph:
 4. Run the root validation and production build.
 
 Keep graph filters synchronized between local and expanded views. Any asynchronous render must be cancellable or stale-safe, and every registered listener or observer must have a cleanup path across Quartz SPA navigation.
+
+## Page-title plugin
+
+`vendor/grapplegraph-page-title/` replaces Quartz's relative site-title link with an explicit production base path. Keep the production link at `/grapplegraph/` and the local-development link at `/`. Build and commit its `dist/` output after source changes, and preserve the generated-site audit that checks every rendered title link.
 
 ## Styling and accessibility
 

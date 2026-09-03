@@ -21,7 +21,7 @@ Progress is intentionally stored in the current browser with `localStorage`; it 
 
 ## Technology
 
-The site is built with [Quartz 5](https://quartz.jzhao.xyz/) and published as a static site on GitHub Pages. The graph is a repository-local fork of the Quartz Community graph plugin, with GrappleGraph filters and navigation behavior added in `vendor/grapplegraph-graph`.
+The site is built with [Quartz 5](https://quartz.jzhao.xyz/) and published as a static site on GitHub Pages. Repository-local Quartz components provide GrappleGraph's filtered graph and base-path-safe navigation.
 
 Requirements:
 
@@ -43,17 +43,18 @@ npm run build
 
 Useful commands:
 
-| Command                 | Purpose                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| `npm run validate`      | Type-check, format-check, run core and graph tests, and audit curriculum content |
-| `npm run audit:content` | Validate counts, numbering, metadata, videos, concept links, and Wikilinks       |
-| `npm run audit:site`    | Check generated descriptions, links, assets, and graph runtime dependencies      |
-| `npm run test:core`     | Run Quartz core tests without accidentally collecting vendored Vitest tests      |
-| `npm run test:graph`    | Run the local graph-plugin test suite                                            |
-| `npm audit --omit=dev`  | Check production dependencies against npm advisories                             |
-| `npm run format`        | Apply Prettier formatting                                                        |
+| Command                   | Purpose                                                                          |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| `npm run validate`        | Type-check, format-check, run core and graph tests, and audit curriculum content |
+| `npm run audit:content`   | Validate counts, numbering, metadata, videos, concept links, and Wikilinks       |
+| `npm run audit:site`      | Check generated descriptions, links, assets, and graph runtime dependencies      |
+| `npm run test:core`       | Run Quartz core tests without accidentally collecting vendored Vitest tests      |
+| `npm run test:graph`      | Run the local graph-plugin test suite                                            |
+| `npm run test:page-title` | Verify project-root navigation locally and on GitHub Pages                       |
+| `npm audit --omit=dev`    | Check production dependencies against npm advisories                             |
+| `npm run format`          | Apply Prettier formatting                                                        |
 
-`npm run build` installs configured Quartz plugins and rebuilds the local graph package before generating the site.
+`npm run build` installs configured Quartz plugins and rebuilds the local component packages before generating the site.
 
 ## Content model
 
@@ -88,6 +89,7 @@ See [DATA_REVIEW.md](./DATA_REVIEW.md) for source-of-truth decisions and details
 | `quartz/components/scripts/grapplegraph.inline.ts` | Progress tracker, stacked navigation, catalogue ordering, and page enhancements |
 | `quartz/styles/custom.scss`                        | Motion Atlas visual identity and responsive behavior                            |
 | `vendor/grapplegraph-graph/`                       | Local graph component, filters, and full-screen rendering                       |
+| `vendor/grapplegraph-page-title/`                  | Site-title component with GitHub Pages base-path handling                       |
 | `scripts/content-audit.mjs`                        | Curriculum integrity checks                                                     |
 | `.github/workflows/`                               | Pull-request validation and GitHub Pages deployment                             |
 

@@ -20,13 +20,14 @@
     "docs": "node ./quartz/bootstrap-cli.mjs build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
-    "test": "node ./scripts/run-tests.mjs && npm test --prefix vendor/grapplegraph-graph",
+    "test": "node ./scripts/run-tests.mjs && npm test --prefix vendor/grapplegraph-graph && npm test --prefix vendor/grapplegraph-page-title",
     "test:core": "node ./scripts/run-tests.mjs",
     "test:graph": "npm test --prefix vendor/grapplegraph-graph",
+    "test:page-title": "npm test --prefix vendor/grapplegraph-page-title",
     "validate": "npm run check && npm test && npm run audit:content",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "prebuild": "npm run build --prefix vendor/grapplegraph-graph && npm run install-plugins"
+    "prebuild": "npm run build --prefix vendor/grapplegraph-page-title && npm run build --prefix vendor/grapplegraph-graph && npm run install-plugins"
   },
   "engines": {
     "npm": ">=10.9.2",
@@ -78,7 +79,7 @@
     "@quartz-community/obsidian-flavored-markdown": "^0.1.1",
     "@quartz-community/og-image": "^0.1.1",
     "@quartz-community/ox-hugo": "^0.1.0",
-    "@quartz-community/page-title": "^0.1.0",
+    "@quartz-community/page-title": "file:vendor/grapplegraph-page-title",
     "@quartz-community/quartz-fonts": "^0.1.1",
     "@quartz-community/reader-mode": "^0.1.0",
     "@quartz-community/recent-notes": "^0.1.0",

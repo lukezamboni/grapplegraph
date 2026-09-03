@@ -52,6 +52,19 @@ for (const file of htmlFiles) {
     failures.add(`${path.relative(root, file)}: generated page is missing a useful description`)
   }
 
+  const pageTitleHref = html.match(/<h2 class="[^"]*page-title[^"]*"><a href="([^"]+)"/)?.[1]
+  if (pageTitleHref) {
+    const pageTitleUrl = new URL(pageTitleHref, pageUrl)
+    if (
+      pageTitleUrl.origin !== productionOrigin ||
+      pageTitleUrl.pathname !== `${productionBase}/`
+    ) {
+      failures.add(
+        `${path.relative(root, file)}: GrappleGraph title resolves to "${pageTitleUrl.pathname}" instead of "${productionBase}/"`,
+      )
+    }
+  }
+
   for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
     const reference = match[1].replaceAll("&amp;", "&")
     if (/^(?:#|data:|mailto:|tel:|javascript:)/i.test(reference)) continue
