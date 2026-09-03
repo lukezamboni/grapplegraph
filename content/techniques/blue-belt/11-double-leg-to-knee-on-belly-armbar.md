@@ -1,8 +1,8 @@
 ---
 aliases:
   - techniques/11-double-leg-to-knee-on-belly-armbar
-title: BLU-11 · Double-leg to Knee-on-belly armbar
-description: Double-leg takedown to side control and Knee-on-belly, finishing with an armbar.
+title: BLU-11 · Double-leg to knee-on-belly armbar
+description: Double-leg takedown to side control and knee-on-belly, finishing with an armbar.
 tags:
   - exam/blue-belt
   - family/takedown

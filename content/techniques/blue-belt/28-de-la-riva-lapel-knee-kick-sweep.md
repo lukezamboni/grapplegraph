@@ -24,7 +24,7 @@ landing: top-position
 
 ## Sequence
 
-[[positions/de-la-riva-guard|De La Riva guard]] → lapel grip → knee kick → [[movements/forward-sweep|Forward sweep]] → top position
+[[positions/de-la-riva-guard|De La Riva guard]] → lapel grip → knee kick → [[movements/forward-sweep|Forward sweep]] → [[positions/top-position|Top position]]
 
 ## Study card
 

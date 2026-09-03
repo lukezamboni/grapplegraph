@@ -1,7 +1,7 @@
 ---
 aliases:
   - techniques/16-mount-to-back-rear-naked-choke
-title: BLU-16 · Mount to back and Rear naked choke
+title: BLU-16 · Mount to back and rear naked choke
 description: Transition from mount to back control, finishing with a Rear naked choke.
 tags:
   - exam/blue-belt

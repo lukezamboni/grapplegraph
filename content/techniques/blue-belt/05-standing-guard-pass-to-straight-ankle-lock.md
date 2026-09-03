@@ -25,7 +25,7 @@ landing: leg-entanglement
 
 ## Sequence
 
-[[positions/closed-guard|Closed guard]] → [[movements/standing-guard-break|Standing guard break]] → [[movements/standing-guard-pass|Standing guard pass]] → [[submissions/straight-ankle-lock|Straight ankle lock]]
+[[positions/closed-guard|Closed guard]] → [[movements/standing-guard-break|Standing guard break]] → [[movements/standing-guard-pass|Standing guard pass]] → [[positions/leg-entanglement|Leg entanglement]] → [[submissions/straight-ankle-lock|Straight ankle lock]]
 
 ## Study card
 

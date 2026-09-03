@@ -25,7 +25,7 @@ belt: blue
 
 ## Sequence
 
-[[families/half-guard|Half guard]] → [[movements/half-guard-sweep|Half-guard sweep]] → top half guard → [[movements/knee-cut-pass|Knee-cut pass]] → [[positions/side-control|Side control]]
+[[positions/half-guard|Half guard]] → [[movements/half-guard-sweep|Half-guard sweep]] → [[positions/top-half-guard|Top half guard]] → [[movements/knee-cut-pass|Knee-cut pass]] → [[positions/side-control|Side control]]
 
 ## Study card
 

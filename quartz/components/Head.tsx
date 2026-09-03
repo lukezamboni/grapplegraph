@@ -15,9 +15,15 @@ export default (() => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
     const title =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+    const generatedPageDescription = fileData.slug?.endsWith(".base")
+      ? "Filter and compare GrappleGraph exam requirements by belt, family, position, finish, and study status."
+      : fileData.slug?.endsWith(".canvas")
+        ? "Explore a curated GrappleGraph system map connecting positions, movements, exam sequences, and finishes."
+        : undefined
     const description =
       fileData.frontmatter?.socialDescription ??
       fileData.frontmatter?.description ??
+      generatedPageDescription ??
       unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
 
     const { css, js, additionalHead } = externalResources
@@ -29,7 +35,9 @@ export default (() => {
 
     // Url of current page
     const socialUrl =
-      fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+      fileData.slug === "404" || fileData.slug === "index"
+        ? url.toString()
+        : joinSegments(url.toString(), fileData.slug!)
 
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some((e) => e.name === "CustomOgImages")
     const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`

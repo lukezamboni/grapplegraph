@@ -3,7 +3,7 @@
 :root {
   --renzo-blue: #0867b7;
   --renzo-navy: #0c3155;
-  --working: #e77824;
+  --working: #a84b12;
   --done: #329761;
   --belt-blue: #176ec0;
   --belt-purple: #7343a4;
@@ -333,7 +333,7 @@ body {
     font-weight: 700;
   }
 
-  button[aria-selected="true"] {
+  button[aria-pressed="true"] {
     border-color: var(--secondary);
     background: var(--secondary);
     color: white;
@@ -833,6 +833,7 @@ li[data-state="done"] .status-toggle {
 
 /* Motion Atlas visual system */
 :root[saved-theme="dark"] {
+  --working: #ff9850;
   --atlas-surface: color-mix(in srgb, var(--light) 94%, white 6%);
   --atlas-surface-soft: color-mix(in srgb, var(--light) 86%, var(--secondary) 14%);
   --atlas-shadow-sm: 0 10px 28px rgba(0, 5, 12, 0.24);

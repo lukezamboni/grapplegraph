@@ -10,7 +10,7 @@ Standing entries that establish top control or connect to a finish.
 ## Blue belt
 
 - [[techniques/blue-belt/10-single-leg-to-lapel-choke|BLU-10 · Single-leg takedown to lapel choke]]
-- [[techniques/blue-belt/11-double-leg-to-knee-on-belly-armbar|BLU-11 · Double-leg to Knee-on-belly armbar]]
+- [[techniques/blue-belt/11-double-leg-to-knee-on-belly-armbar|BLU-11 · Double-leg to knee-on-belly armbar]]
 
 ## Purple belt
 

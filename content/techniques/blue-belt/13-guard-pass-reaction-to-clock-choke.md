@@ -25,7 +25,7 @@ belt: blue
 
 ## Sequence
 
-[[families/guard-passing|Guard passing]] → opponent turns to [[positions/turtle|Turtle]] → [[submissions/clock-choke|Clock choke]]
+[[positions/guard|Guard]] → [[families/guard-passing|Guard-passing sequence]] → opponent turns to [[positions/turtle|Turtle]] → [[submissions/clock-choke|Clock choke]]
 
 ## Study card
 

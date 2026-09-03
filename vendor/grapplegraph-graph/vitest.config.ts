@@ -7,12 +7,11 @@ export default defineConfig({
     include: ["test/**/*.test.ts"],
     reporters: ["default"],
     alias: {
-      "./styles/graph.scss": path.resolve(__dirname, "test/__mocks__/styleMock.ts"),
-      "./scripts/graph.inline.ts": path.resolve(__dirname, "test/__mocks__/scriptMock.ts"),
+      "./styles/graph.scss": path.resolve(import.meta.dirname, "test/__mocks__/styleMock.ts"),
+      "./scripts/graph.inline.ts": path.resolve(
+        import.meta.dirname,
+        "test/__mocks__/scriptMock.ts",
+      ),
     },
-  },
-  esbuild: {
-    jsx: "automatic",
-    jsxImportSource: "preact",
   },
 });

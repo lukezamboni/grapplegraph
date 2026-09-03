@@ -160,9 +160,20 @@ const submissionSlugs = new Set(
     .map((file) => path.basename(file, ".md")),
 )
 
+function linkedConcepts(body) {
+  return new Set(
+    Array.from(body.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]/g), (match) =>
+      match[1].replace(/^\//, ""),
+    ),
+  )
+}
+
 for (const note of techniques) {
+  const links = linkedConcepts(note.body)
   if (!positionSlugs.has(String(note.data.start))) {
     report(note.file, `start "${note.data.start}" does not identify a position note`)
+  } else if (!links.has(`positions/${note.data.start}`)) {
+    report(note.file, `Sequence must link its start position "positions/${note.data.start}"`)
   }
   if (
     !positionSlugs.has(String(note.data.landing)) &&
@@ -172,6 +183,14 @@ for (const note of techniques) {
       note.file,
       `landing "${note.data.landing}" does not identify a position or submission-control note`,
     )
+  } else {
+    const landingFolder = positionSlugs.has(String(note.data.landing)) ? "positions" : "submissions"
+    if (!links.has(`${landingFolder}/${note.data.landing}`)) {
+      report(
+        note.file,
+        `Sequence must link its landing concept "${landingFolder}/${note.data.landing}"`,
+      )
+    }
   }
   const finish = String(note.data.finish)
   if (
@@ -183,6 +202,15 @@ for (const note of techniques) {
       note.file,
       `finish "${finish}" does not identify a submission, position, or approved outcome`,
     )
+  } else if (submissionSlugs.has(finish) || positionSlugs.has(finish)) {
+    const finishFolder = submissionSlugs.has(finish) ? "submissions" : "positions"
+    if (!links.has(`${finishFolder}/${finish}`)) {
+      report(note.file, `Sequence must link its finish concept "${finishFolder}/${finish}"`)
+    }
+  }
+
+  if (/Add (?:first|second|third) professor cue/i.test(note.body)) {
+    report(note.file, "contains placeholder professor cues")
   }
 }
 

@@ -25,7 +25,7 @@ belt: blue
 
 ## Sequence
 
-[[positions/standing|Standing]] → [[movements/foot-on-hip-guard-pull|Foot-on-hip guard pull]] → guard → [[submissions/armbar|Armbar]]
+[[positions/standing|Standing]] → [[movements/foot-on-hip-guard-pull|Foot-on-hip guard pull]] → [[positions/guard|Guard attack position]] → [[submissions/armbar|Armbar]]
 
 ## Study card
 

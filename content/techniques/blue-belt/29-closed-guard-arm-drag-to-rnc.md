@@ -1,7 +1,7 @@
 ---
 aliases:
   - techniques/29-closed-guard-arm-drag-to-rnc
-title: BLU-29 · Closed-guard arm drag to Rear naked choke
+title: BLU-29 · Closed-guard arm drag to rear naked choke
 description: Arm drag from closed guard to the back, finishing with a Rear naked choke.
 tags:
   - exam/blue-belt

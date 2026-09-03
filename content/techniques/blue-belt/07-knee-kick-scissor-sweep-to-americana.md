@@ -35,9 +35,9 @@ belt: blue
 
 ### Key cues
 
-- [ ] Add first professor cue
-- [ ] Add second professor cue
-- [ ] Add third professor cue
+- [ ] Control posture and establish the academy's scissor-sweep grips
+- [ ] Kick through the knee line while rotating the opponent over the base
+- [ ] Stabilize mount and isolate the arm before applying the Americana
 
 ### Practice
 

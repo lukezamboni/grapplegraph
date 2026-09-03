@@ -25,7 +25,7 @@ video_match: full
 
 ## Sequence
 
-[[positions/guard|Guard]] → opponent passes → [[movements/guard-pass-reaction|Front-headlock reaction]] → [[submissions/anaconda-choke|Anaconda choke]]
+[[positions/guard|Guard]] → opponent passes → [[movements/guard-pass-reaction|Front-headlock reaction]] → [[positions/front-headlock|Front headlock]] → [[submissions/anaconda-choke|Anaconda choke]]
 
 ## Study card
 

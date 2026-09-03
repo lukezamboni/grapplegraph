@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import Graph from "../src/components/Graph";
+import render from "preact-render-to-string";
+import fs from "node:fs";
 
 describe("Graph Component", () => {
   it("should create a Graph component with default options", () => {
@@ -38,5 +40,21 @@ describe("Graph Component", () => {
 
     expect(component.afterDOMLoaded).toBeDefined();
     expect(typeof component.afterDOMLoaded).toBe("string");
+
+    const source = fs.readFileSync(
+      new URL("../src/components/scripts/graph.inline.ts", import.meta.url),
+      "utf8",
+    );
+    expect(source).not.toContain("cdn.jsdelivr.net");
+    expect(source).toContain("spaNavigate");
+  });
+
+  it("renders accessible filters in belt-progression order", () => {
+    const component = Graph({});
+    const markup = render(component({ displayClass: "desktop-only" } as never) as never);
+
+    expect(markup).toContain('aria-label="Expand technique map"');
+    expect(markup.indexOf(">Blue<")).toBeLessThan(markup.indexOf(">Purple<"));
+    expect(markup.indexOf(">Purple<")).toBeLessThan(markup.indexOf(">Brown-only<"));
   });
 });

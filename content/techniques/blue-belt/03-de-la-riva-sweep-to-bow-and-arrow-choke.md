@@ -35,9 +35,9 @@ belt: blue
 
 ### Key cues
 
-- [ ] Add first professor cue
-- [ ] Add second professor cue
-- [ ] Add third professor cue
+- [ ] Keep the sleeve or collar connection and active De La Riva hook
+- [ ] Off-balance the opponent before exposing the route to the back
+- [ ] Secure hip control and the back position before setting the choke
 
 ### Practice
 

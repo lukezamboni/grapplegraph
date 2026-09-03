@@ -6,6 +6,8 @@ import {
   simplifySlug,
   resolveBasePath,
 } from "@quartz-community/utils";
+import * as d3 from "d3";
+import * as PIXI from "pixi.js";
 
 (function () {
   function getSlugFromUrl() {
@@ -18,58 +20,28 @@ import {
     return slug;
   }
 
-  function loadScript(src) {
-    var existing = document.querySelector('script[src="' + src + '"]');
-    if (existing) return Promise.resolve();
-    return new Promise(function (resolve, reject) {
-      var script = document.createElement("script");
-      script.src = src;
-      script.crossOrigin = "anonymous";
-      script.onload = resolve;
-      script.onerror = reject;
-      document.head.appendChild(script);
-    });
-  }
-
-  Promise.all([
-    loadScript("https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"),
-    loadScript("https://cdn.jsdelivr.net/npm/pixi.js@8/dist/pixi.js"),
-  ])
-    .then(function () {
-      initGraph();
-    })
-    .catch(function (err) {
-      console.error("[Graph] Failed to load libraries:", err);
-      var containers = document.querySelectorAll(".graph-container");
-      for (var i = 0; i < containers.length; i++) {
-        containers[i].textContent = "Graph could not load. Check your network connection.";
-        containers[i].style.display = "flex";
-        containers[i].style.alignItems = "center";
-        containers[i].style.justifyContent = "center";
-        containers[i].style.color = "var(--gray)";
-        containers[i].style.fontSize = "0.9rem";
-      }
-    });
+  initGraph();
 
   function initGraph() {
-    var d3 = window.d3;
-    var PIXI = window.PIXI;
-
-    if (!d3 || !PIXI) {
-      console.error("[Graph] Libraries not loaded");
-      return;
-    }
-
     var localStorageKey = "graph-visited";
 
     function getVisited() {
-      return new Set(JSON.parse(localStorage.getItem(localStorageKey) || "[]"));
+      try {
+        var stored = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+        return new Set(Array.isArray(stored) ? stored : []);
+      } catch (_) {
+        return new Set();
+      }
     }
 
     function addToVisited(slug) {
       var visited = getVisited();
       visited.add(slug);
-      localStorage.setItem(localStorageKey, JSON.stringify(Array.from(visited)));
+      try {
+        localStorage.setItem(localStorageKey, JSON.stringify(Array.from(visited)));
+      } catch (_) {
+        // Browsing modes that disable storage should not disable the graph.
+      }
     }
 
     // Resolves CSS color values containing calc()/var() that PixiJS cannot parse.
@@ -86,16 +58,17 @@ import {
       return resolved || fallback;
     }
 
-    async function renderGraph(graph, fullSlug, renderGeneration) {
+    async function renderGraph(graph, fullSlug, isCurrent) {
+      function stale() {
+        return typeof isCurrent === "function" && !isCurrent();
+      }
+
       var slug = simplifySlug(fullSlug);
       if (slug === "") slug = "index";
       var visited = getVisited();
       removeAllChildren(graph);
 
-      if (renderGeneration !== undefined && renderGeneration !== currentRenderGeneration) {
-        console.log("[Graph] Stale render, skipping");
-        return function () {};
-      }
+      if (stale()) return function () {};
 
       var config = JSON.parse(graph.dataset["cfg"] || "{}");
       var enableDrag = config.drag;
@@ -127,6 +100,7 @@ import {
         console.error("[Graph] Error loading data:", err);
         return function () {};
       }
+      if (stale()) return function () {};
 
       var graphRoot = graph.closest(".graph");
       function filterValue(name) {
@@ -149,7 +123,8 @@ import {
         return state === progressFilter;
       }
 
-      var hasContextFilter = beltFilter !== "all" || familyFilter !== "all" || progressFilter !== "all";
+      var hasContextFilter =
+        beltFilter !== "all" || familyFilter !== "all" || progressFilter !== "all";
       var matchingTechniques = new Set();
       var contextualNodes = new Set();
       data.forEach(function (details, id) {
@@ -283,9 +258,18 @@ import {
       var blueBelt = resolveColor(styles.getPropertyValue("--belt-blue").trim(), "#176ec0");
       var purpleBelt = resolveColor(styles.getPropertyValue("--belt-purple").trim(), "#7343a4");
       var brownBelt = resolveColor(styles.getPropertyValue("--belt-brown").trim(), "#76503a");
-      var positionColor = resolveColor(styles.getPropertyValue("--node-position").trim(), "#20a4c5");
-      var movementColor = resolveColor(styles.getPropertyValue("--node-movement").trim(), "#535ad7");
-      var submissionColor = resolveColor(styles.getPropertyValue("--node-submission").trim(), "#d96d34");
+      var positionColor = resolveColor(
+        styles.getPropertyValue("--node-position").trim(),
+        "#20a4c5",
+      );
+      var movementColor = resolveColor(
+        styles.getPropertyValue("--node-movement").trim(),
+        "#535ad7",
+      );
+      var submissionColor = resolveColor(
+        styles.getPropertyValue("--node-submission").trim(),
+        "#d96d34",
+      );
 
       var app = new PIXI.Application();
       await app.init({
@@ -297,6 +281,12 @@ import {
         autoDensity: true,
         eventMode: "static",
       });
+      if (stale()) {
+        try {
+          app.destroy(true);
+        } catch (_) {}
+        return function () {};
+      }
 
       graph.appendChild(app.canvas);
 
@@ -585,8 +575,7 @@ import {
           renderPixiFromD3();
 
           if (Date.now() - dragStartTime < 500) {
-            var target = resolveBasePath(event.subject.id);
-            window.location.href = target;
+            navigateToNode(event.subject.id);
           }
         };
 
@@ -603,8 +592,7 @@ import {
         for (var i = 0; i < nodeRenderData.length; i++) {
           (function (nodeData) {
             nodeData.gfx.on("click", function () {
-              var target = resolveBasePath(nodeData.simulationData.id);
-              window.location.href = target;
+              navigateToNode(nodeData.simulationData.id);
             });
           })(nodeRenderData[i]);
         }
@@ -699,8 +687,19 @@ import {
     var localCleanups = [];
     var globalCleanups = [];
     var currentRenderGeneration = 0;
+    var currentGlobalGeneration = 0;
+    var filterControls = [];
+    var scheduledNavFrame = 0;
+    var globalTrigger = null;
+
+    function navigateToNode(slug) {
+      var target = new URL(resolveBasePath(slug), window.location.origin);
+      if (window.spaNavigate) window.spaNavigate(target, false);
+      else window.location.assign(target.toString());
+    }
 
     function cleanupLocal() {
+      currentRenderGeneration++;
       for (var i = 0; i < localCleanups.length; i++) {
         localCleanups[i]();
       }
@@ -708,10 +707,18 @@ import {
     }
 
     function cleanupGlobal() {
+      currentGlobalGeneration++;
       for (var i = 0; i < globalCleanups.length; i++) {
         globalCleanups[i]();
       }
       globalCleanups = [];
+    }
+
+    function detachFilterControls() {
+      for (var i = 0; i < filterControls.length; i++) {
+        filterControls[i].removeEventListener("change", handleFilterChange);
+      }
+      filterControls = [];
     }
 
     var globalContainers = [];
@@ -729,6 +736,8 @@ import {
           sidebar.style.zIndex = "";
         }
       }
+      if (globalTrigger && globalTrigger.isConnected) globalTrigger.focus();
+      globalTrigger = null;
     }
 
     function anyGlobalGraphActive() {
@@ -740,8 +749,9 @@ import {
       return false;
     }
 
-    function showGlobalGraph() {
+    function showGlobalGraph(focusDialog) {
       cleanupGlobal();
+      var thisGeneration = ++currentGlobalGeneration;
       var currentSlug = getSlugFromUrl();
       for (var i = 0; i < globalContainers.length; i++) {
         var container = globalContainers[i];
@@ -754,9 +764,12 @@ import {
         var graphContainer = container.querySelector(".global-graph-container");
         if (graphContainer) {
           (function (gc) {
-            renderGraph(gc, currentSlug, undefined)
+            renderGraph(gc, currentSlug, function () {
+              return thisGeneration === currentGlobalGeneration;
+            })
               .then(function (cleanup) {
-                globalCleanups.push(cleanup);
+                if (thisGeneration === currentGlobalGeneration) globalCleanups.push(cleanup);
+                else cleanup();
               })
               .catch(function (err) {
                 console.error("[Graph] Global render error:", err);
@@ -764,13 +777,18 @@ import {
           })(graphContainer);
         }
       }
+      if (focusDialog) {
+        window.requestAnimationFrame(function () {
+          document.querySelector(".global-graph-outer.active .global-graph-close")?.focus();
+        });
+      }
     }
 
     function toggleGlobalGraph() {
       if (anyGlobalGraphActive()) {
         hideGlobalGraph();
       } else {
-        showGlobalGraph();
+        showGlobalGraph(true);
       }
     }
 
@@ -783,11 +801,13 @@ import {
       var localContainers = document.querySelectorAll(".graph-container");
       for (var i = 0; i < localContainers.length; i++) {
         (function (container) {
-          renderGraph(container, slug, thisGeneration)
+          renderGraph(container, slug, function () {
+            return thisGeneration === currentRenderGeneration;
+          })
             .then(function (cleanup) {
               if (thisGeneration === currentRenderGeneration) {
                 localCleanups.push(cleanup);
-              }
+              } else cleanup();
             })
             .catch(function (err) {
               console.error("[Graph] Local render error:", err);
@@ -796,8 +816,13 @@ import {
       }
     }
 
-    function handleNav(e) {
-      var slug = e.detail ? e.detail.url : getSlugFromUrl();
+    function handleFilterChange() {
+      renderLocal();
+      if (anyGlobalGraphActive()) showGlobalGraph(false);
+    }
+
+    function handleNav() {
+      var slug = getSlugFromUrl();
       addToVisited(simplifySlug(slug));
 
       renderLocal();
@@ -811,7 +836,8 @@ import {
       }
 
       globalIcons = Array.from(document.querySelectorAll(".global-graph-icon"));
-      iconClickHandler = function () {
+      iconClickHandler = function (event) {
+        globalTrigger = event.currentTarget;
         toggleGlobalGraph();
       };
       for (var i = 0; i < globalIcons.length; i++) {
@@ -823,8 +849,9 @@ import {
       }
       documentClickHandler = function (e) {
         if (anyGlobalGraphActive()) {
-          var inContainer = e.target.closest(".global-graph-container");
-          var inIcon = e.target.closest(".global-graph-icon");
+          var target = e.target instanceof Element ? e.target : null;
+          var inContainer = target?.closest(".global-graph-container");
+          var inIcon = target?.closest(".global-graph-icon");
           if (!inContainer && !inIcon) {
             hideGlobalGraph();
           }
@@ -851,34 +878,44 @@ import {
       document.addEventListener("keydown", documentKeydownHandler);
 
       if (anyGlobalGraphActive()) {
-        showGlobalGraph();
+        showGlobalGraph(false);
       }
 
-      var filterControls = document.querySelectorAll("[data-graph-filter]");
+      detachFilterControls();
+      filterControls = Array.from(
+        document.querySelectorAll(".graph > .graph-filters [data-graph-filter]"),
+      );
       for (var fi = 0; fi < filterControls.length; fi++) {
-        filterControls[fi].addEventListener("change", renderLocal);
+        filterControls[fi].addEventListener("change", handleFilterChange);
       }
+    }
+
+    function scheduleHandleNav() {
+      window.cancelAnimationFrame(scheduledNavFrame);
+      scheduledNavFrame = window.requestAnimationFrame(handleNav);
     }
 
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", function () {
-        handleNav({ detail: { url: getSlugFromUrl() } });
+        scheduleHandleNav();
       });
     } else {
-      handleNav({ detail: { url: getSlugFromUrl() } });
+      scheduleHandleNav();
     }
     document.addEventListener("prenav", function () {
+      window.cancelAnimationFrame(scheduledNavFrame);
+      detachFilterControls();
       cleanupLocal();
       cleanupGlobal();
     });
-    document.addEventListener("nav", handleNav);
-    document.addEventListener("render", handleNav);
-    window.addEventListener("grapplegraph-progress", renderLocal);
+    document.addEventListener("nav", scheduleHandleNav);
+    document.addEventListener("render", scheduleHandleNav);
+    window.addEventListener("grapplegraph-progress", handleFilterChange);
 
     function handleThemeChange() {
       renderLocal();
       if (anyGlobalGraphActive()) {
-        showGlobalGraph();
+        showGlobalGraph(false);
       }
     }
     document.addEventListener("themechange", handleThemeChange);

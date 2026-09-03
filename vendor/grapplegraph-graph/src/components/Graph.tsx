@@ -63,7 +63,7 @@ const defaultOptions: GraphOptions = {
 };
 
 export default ((userOpts?: Partial<GraphOptions>) => {
-  const Graph: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
+  const Graph: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     const localGraph = { ...defaultOptions.localGraph, ...userOpts?.localGraph };
     const globalGraph = { ...defaultOptions.globalGraph, ...userOpts?.globalGraph };
 
@@ -120,7 +120,7 @@ export default ((userOpts?: Partial<GraphOptions>) => {
         </div>
         <div class="graph-outer">
           <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
-          <button class="global-graph-icon" aria-label="Global Graph">
+          <button class="global-graph-icon" aria-label="Expand technique map">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

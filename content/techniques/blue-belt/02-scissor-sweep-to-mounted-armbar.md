@@ -35,9 +35,9 @@ belt: blue
 
 ### Key cues
 
-- [ ] Add first professor cue
-- [ ] Add second professor cue
-- [ ] Add third professor cue
+- [ ] Break posture and establish collar-and-sleeve control
+- [ ] Turn to an angle and load the opponent before extending the sweep
+- [ ] Stabilize mount before isolating the arm for the finish
 
 ### Practice
 

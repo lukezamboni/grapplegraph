@@ -25,7 +25,7 @@ video_match: full
 
 ## Sequence
 
-[[positions/spider-guard|Spider guard]] → [[movements/spider-guard-push-sweep|Spider-guard sweep]] → [[submissions/triangle|Triangle choke]]
+[[positions/spider-guard|Spider guard]] → [[movements/spider-guard-push-sweep|Spider-guard sweep]] → [[positions/triangle-control|Triangle control]] → [[submissions/triangle|Triangle choke]]
 
 ## Study card
 

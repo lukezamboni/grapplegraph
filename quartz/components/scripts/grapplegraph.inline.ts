@@ -5,14 +5,21 @@ const progressKey = "grapplegraph-progress-v1"
 
 function readProgress(): ProgressMap {
   try {
-    return JSON.parse(localStorage.getItem(progressKey) ?? "{}") as ProgressMap
+    const parsed = JSON.parse(localStorage.getItem(progressKey) ?? "{}")
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+      ? (parsed as ProgressMap)
+      : {}
   } catch {
     return {}
   }
 }
 
 function saveProgress(progress: ProgressMap) {
-  localStorage.setItem(progressKey, JSON.stringify(progress))
+  try {
+    localStorage.setItem(progressKey, JSON.stringify(progress))
+  } catch {
+    // Keep the tracker interactive when a privacy mode disables storage.
+  }
   window.dispatchEvent(new CustomEvent("grapplegraph-progress"))
 }
 
@@ -247,6 +254,8 @@ function renderStackedPages() {
   document.body.classList.add("has-binder-left")
   const strip = document.createElement("div")
   strip.className = "binder-strip binder-strip-left"
+  strip.setAttribute("role", "tablist")
+  strip.setAttribute("aria-label", "Open study pages")
 
   state.tabs.forEach((tab, index) => {
     const item = document.createElement("div")
@@ -254,7 +263,7 @@ function renderStackedPages() {
     item.dataset.index = String(index)
     item.setAttribute("role", "tab")
     item.setAttribute("aria-selected", String(index === state.activeIndex))
-    item.tabIndex = 0
+    item.tabIndex = index === state.activeIndex ? 0 : -1
     if (index === state.activeIndex) item.classList.add("binder-tab-active")
 
     if (container.dataset.showSpines !== "false") {
@@ -276,19 +285,7 @@ function renderStackedPages() {
       saveStackedPageState(nextState)
       navigateToStackedPage(nextState.tabs[index])
     }
-    item.addEventListener("click", activate)
-    item.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return
-      event.preventDefault()
-      activate()
-    })
-
-    const close = document.createElement("button")
-    close.className = "binder-close"
-    close.textContent = "×"
-    close.setAttribute("aria-label", `Close ${tab.title}`)
-    close.addEventListener("click", (event) => {
-      event.stopPropagation()
+    const closeTab = () => {
       const nextState = readNormalizedStackedPageState()
       if (!nextState || nextState.tabs.length < 2) return
       const wasActive = index === nextState.activeIndex
@@ -298,6 +295,47 @@ function renderStackedPages() {
       saveStackedPageState(nextState)
       if (wasActive) navigateToStackedPage(nextState.tabs[nextState.activeIndex])
       else renderStackedPages()
+    }
+    item.addEventListener("click", activate)
+    item.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault()
+        activate()
+        return
+      }
+      if (event.key === "Delete") {
+        event.preventDefault()
+        closeTab()
+        return
+      }
+      const last = state.tabs.length - 1
+      const nextIndex =
+        event.key === "Home"
+          ? 0
+          : event.key === "End"
+            ? last
+            : event.key === "ArrowUp" || event.key === "ArrowLeft"
+              ? (index - 1 + state.tabs.length) % state.tabs.length
+              : event.key === "ArrowDown" || event.key === "ArrowRight"
+                ? (index + 1) % state.tabs.length
+                : undefined
+      if (nextIndex === undefined) return
+      event.preventDefault()
+      const nextState = readNormalizedStackedPageState()
+      if (!nextState?.tabs[nextIndex]) return
+      nextState.activeIndex = nextIndex
+      saveStackedPageState(nextState)
+      navigateToStackedPage(nextState.tabs[nextIndex])
+    })
+
+    const close = document.createElement("button")
+    close.className = "binder-close"
+    close.textContent = "×"
+    close.setAttribute("aria-label", `Close ${tab.title}`)
+    close.tabIndex = -1
+    close.addEventListener("click", (event) => {
+      event.stopPropagation()
+      closeTab()
     })
     item.appendChild(close)
     strip.appendChild(item)
@@ -364,10 +402,10 @@ async function buildExamTracker() {
     shell.innerHTML = `
       <div class="tracker-head">
         <div><p class="eyebrow">Exam requirements</p><h2>${beltLabel}</h2></div>
-        <div class="tracker-tabs" role="tablist" aria-label="Belt exam">
-          <button data-belt="blue" aria-selected="${activeBelt === "blue"}">Blue <span>${groups.blue.length}</span></button>
-          <button data-belt="purple" aria-selected="${activeBelt === "purple"}">Purple <span>${groups.purple.length}</span></button>
-          <button data-belt="brown" aria-selected="${activeBelt === "brown"}">Brown-only <span>${groups.brown.length}</span></button>
+        <div class="tracker-tabs" role="group" aria-label="Belt exam filter">
+          <button data-belt="blue" aria-pressed="${activeBelt === "blue"}">Blue <span>${groups.blue.length}</span></button>
+          <button data-belt="purple" aria-pressed="${activeBelt === "purple"}">Purple <span>${groups.purple.length}</span></button>
+          <button data-belt="brown" aria-pressed="${activeBelt === "brown"}">Brown-only <span>${groups.brown.length}</span></button>
         </div>
       </div>
       <div class="tracker-summary"><div class="progress-rail"><span style="width:${group.length ? (complete / group.length) * 100 : 0}%"></span></div><p><strong>${complete}/${group.length}</strong> done · ${working} working</p></div>
@@ -443,6 +481,44 @@ function buildRequirementProgress() {
   button.innerHTML = `<span aria-hidden="true">${statusIcon(state)}</span><strong>${label}</strong>`
 }
 
+function configureBasesAccessibility() {
+  document.querySelectorAll<HTMLElement>(".bases-view-tabs[role='tablist']").forEach((tablist) => {
+    const tabs = Array.from(tablist.querySelectorAll<HTMLButtonElement>("button[data-view-index]"))
+    const syncState = () => {
+      tabs.forEach((tab) => {
+        const selected = tab.classList.contains("is-active")
+        tab.setAttribute("role", "tab")
+        tab.setAttribute("aria-selected", String(selected))
+        tab.tabIndex = selected ? 0 : -1
+      })
+    }
+
+    tabs.forEach((tab, index) => {
+      if (tab.dataset.keyboardTabs === "true") return
+      tab.dataset.keyboardTabs = "true"
+      tab.addEventListener("click", () => window.setTimeout(syncState, 0))
+      tab.addEventListener("keydown", (event) => {
+        const last = tabs.length - 1
+        const nextIndex =
+          event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? last
+              : event.key === "ArrowLeft" || event.key === "ArrowUp"
+                ? (index - 1 + tabs.length) % tabs.length
+                : event.key === "ArrowRight" || event.key === "ArrowDown"
+                  ? (index + 1) % tabs.length
+                  : undefined
+        if (nextIndex === undefined) return
+        event.preventDefault()
+        tabs[nextIndex].click()
+        tabs[nextIndex].focus()
+      })
+    })
+    syncState()
+  })
+}
+
 function configureExpandedGraph() {
   document.querySelectorAll<HTMLElement>(".graph").forEach((graphRoot) => {
     const localGraph = graphRoot.querySelector<HTMLElement>(".graph-container")
@@ -450,6 +526,11 @@ function configureExpandedGraph() {
     const overlay = graphRoot.querySelector<HTMLElement>(".global-graph-outer")
     const sourceFilters = graphRoot.querySelector<HTMLElement>(":scope > .graph-filters")
     if (!localGraph || !globalGraph || !overlay || !sourceFilters) return
+
+    const dialogTitleId = `expanded-graph-title-${Math.random().toString(36).slice(2)}`
+    overlay.setAttribute("role", "dialog")
+    overlay.setAttribute("aria-modal", "true")
+    overlay.setAttribute("aria-labelledby", dialogTitleId)
 
     try {
       const localConfig = JSON.parse(localGraph.dataset.cfg ?? "{}") as {
@@ -475,7 +556,9 @@ function configureExpandedGraph() {
     heading.className = "global-graph-heading"
     const pageTitle = document.querySelector<HTMLElement>(".article-title")?.textContent?.trim()
     heading.innerHTML = `<p class="eyebrow">Expanded technique map</p><strong></strong><small></small>`
-    heading.querySelector("strong")!.textContent = pageTitle || "Complete atlas"
+    const dialogTitle = heading.querySelector("strong")!
+    dialogTitle.id = dialogTitleId
+    dialogTitle.textContent = pageTitle || "Complete atlas"
 
     const modalCount = heading.querySelector("small")!
     const localCount = graphRoot.querySelector<HTMLElement>(".graph-filter-count")
@@ -484,11 +567,13 @@ function configureExpandedGraph() {
     }
     updateCount()
     if (localCount) {
-      new MutationObserver(updateCount).observe(localCount, {
+      const observer = new MutationObserver(updateCount)
+      observer.observe(localCount, {
         childList: true,
         characterData: true,
         subtree: true,
       })
+      expandedGraphObservers.push(observer)
     }
 
     const filters = sourceFilters.cloneNode(true) as HTMLElement
@@ -506,15 +591,6 @@ function configureExpandedGraph() {
       clone.addEventListener("change", () => {
         original.value = clone.value
         original.dispatchEvent(new Event("change", { bubbles: true }))
-        window.setTimeout(() => {
-          const theme: "light" | "dark" =
-            document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
-          document.dispatchEvent(
-            new CustomEvent<{ theme: "light" | "dark" }>("themechange", {
-              detail: { theme },
-            }),
-          )
-        }, 0)
       })
     })
 
@@ -534,6 +610,7 @@ function configureExpandedGraph() {
 
 let canvasObservers: ResizeObserver[] = []
 let explorerObservers: MutationObserver[] = []
+let expandedGraphObservers: MutationObserver[] = []
 let beltOrderRoots = new WeakSet<HTMLElement>()
 
 function disconnectPageObservers() {
@@ -541,6 +618,8 @@ function disconnectPageObservers() {
   canvasObservers = []
   explorerObservers.forEach((observer) => observer.disconnect())
   explorerObservers = []
+  expandedGraphObservers.forEach((observer) => observer.disconnect())
+  expandedGraphObservers = []
   beltOrderRoots = new WeakSet<HTMLElement>()
 }
 
@@ -621,6 +700,7 @@ function observeBeltProgressionOrder() {
 function schedulePageEnhancements() {
   window.setTimeout(() => {
     buildRequirementProgress()
+    configureBasesAccessibility()
     configureExpandedGraph()
     configureResponsiveCanvases()
     normalizeCanvasLabels()

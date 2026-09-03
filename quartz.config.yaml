@@ -19,11 +19,11 @@ configuration:
       lightMode:
         light: "#f5f9fc"
         lightgray: "#c9dce9"
-        gray: "#708ba1"
+        gray: "#4f6f88"
         darkgray: "#365c7c"
         dark: "#0c3155"
         secondary: "#0867b7"
-        tertiary: "#e77824"
+        tertiary: "#a84b12"
         highlight: rgba(8, 103, 183, 0.11)
         textHighlight: "#f0ad4366"
       darkMode:
@@ -74,8 +74,6 @@ plugins:
   - source: "@quartz-community/description"
     enabled: true
     order: 70
-  - source: "@quartz-community/quartz-fonts"
-    enabled: true
   - source: "@quartz-community/remove-draft"
     enabled: true
   - source: "@quartz-community/alias-redirects"

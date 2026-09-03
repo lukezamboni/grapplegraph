@@ -16,7 +16,7 @@ exam_id: 14
 family: sweep
 start: de-la-riva-guard
 landing: back-control
-finish: armbar
+finish: armbar-from-the-back
 instructor_verified: false
 video_match: parts
 source_exam_id: 14

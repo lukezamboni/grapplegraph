@@ -25,7 +25,7 @@ landing: triangle-control
 
 ## Sequence
 
-[[positions/closed-guard|Closed guard]] → [[submissions/armbar|Armbar]] attempt → [[movements/armbar-to-triangle-transition|Armbar-to-triangle transition]] → [[submissions/triangle|Triangle]]
+[[positions/closed-guard|Closed guard]] → [[submissions/armbar|Armbar]] attempt → [[movements/armbar-to-triangle-transition|Armbar-to-triangle transition]] → [[positions/triangle-control|Triangle control]] → [[submissions/triangle|Triangle]]
 
 ## Study card
 

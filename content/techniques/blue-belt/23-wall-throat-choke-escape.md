@@ -24,7 +24,7 @@ landing: standing
 
 ## Sequence
 
-[[positions/standing-against-a-wall|Standing against a wall]] → two-hand throat choke → [[movements/wall-throat-choke-escape|Wall throat-choke escape]]
+[[positions/standing-against-a-wall|Standing against a wall]] → two-hand throat choke → [[movements/wall-throat-choke-escape|Wall throat-choke escape]] → [[positions/standing|Standing at a safe distance]]
 
 ## Study card
 
