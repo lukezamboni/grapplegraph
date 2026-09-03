@@ -43,6 +43,11 @@ const belts = new Map([
 ])
 const expectedCounts = { blue: 30, purple: 27, "brown-only": 3 }
 const expectedPrefixes = { blue: "BLU", purple: "PUR", "brown-only": "BRO" }
+const expectedFolders = {
+  blue: "blue-belt",
+  purple: "purple-belt",
+  "brown-only": "brown-belt-only",
+}
 
 for (const [belt, notes] of belts) {
   if (notes.length !== expectedCounts[belt]) {
@@ -82,6 +87,20 @@ for (const [belt, notes] of belts) {
 
     if (!String(note.data.title ?? "").startsWith(`${expectedPrefixes[belt]}-${id} · `)) {
       report(note.file, `title must start with ${expectedPrefixes[belt]}-${id} ·`)
+    }
+
+    const folder = path.basename(path.dirname(note.file))
+    if (folder !== expectedFolders[belt]) {
+      report(note.file, `${belt} requirement must be stored in techniques/${expectedFolders[belt]}`)
+    }
+    const expectedAlias = `techniques/${path.basename(note.file, ".md")}`
+    const aliases = Array.isArray(note.data.aliases)
+      ? note.data.aliases
+      : note.data.aliases
+        ? [note.data.aliases]
+        : []
+    if (!aliases.includes(expectedAlias)) {
+      report(note.file, `missing legacy URL alias "${expectedAlias}"`)
     }
 
     const tags = Array.isArray(note.data.tags) ? note.data.tags : []

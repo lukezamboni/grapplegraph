@@ -5,7 +5,7 @@ tags:
 description: Turtle-side control reference for the academy exam sequences.
 ---
 
-The control checkpoint between the arm drag and clock choke in [[techniques/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]].
+The control checkpoint between the arm drag and clock choke in [[techniques/blue-belt/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]].
 
 ## Video study
 

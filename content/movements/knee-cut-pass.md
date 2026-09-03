@@ -6,7 +6,7 @@ tags:
 description: Knee-cut pass reference for the academy exam sequences.
 ---
 
-The top-half passing action in [[techniques/18-half-guard-sweep-to-knee-cut-pass|BLU-18 · Half-guard sweep to knee-cut pass]].
+The top-half passing action in [[techniques/blue-belt/18-half-guard-sweep-to-knee-cut-pass|BLU-18 · Half-guard sweep to knee-cut pass]].
 
 ## Video study
 

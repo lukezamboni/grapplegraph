@@ -4,7 +4,7 @@ description: The control stage between isolating the head and arm and completing
 tags: [concept/position]
 ---
 
-The control position connecting guard attacks to [[submissions/triangle|Triangle choke]] in [[techniques/20-closed-guard-armbar-to-triangle|BLU-20]] and [[techniques/purple-15-spider-guard-sweep-to-triangle|PUR-13]].
+The control position connecting guard attacks to [[submissions/triangle|Triangle choke]] in [[techniques/blue-belt/20-closed-guard-armbar-to-triangle|BLU-20]] and [[techniques/purple-belt/purple-15-spider-guard-sweep-to-triangle|PUR-13]].
 
 ## Video study
 

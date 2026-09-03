@@ -6,7 +6,7 @@ tags:
 description: Triangle reference for the academy exam sequences.
 ---
 
-The finishing submission in [[techniques/20-closed-guard-armbar-to-triangle|BLU-20 · Closed-guard armbar to triangle]] and the related mounted finish in exam 26.
+The finishing submission in [[techniques/blue-belt/20-closed-guard-armbar-to-triangle|BLU-20 · Closed-guard armbar to triangle]] and the related mounted finish in exam 26.
 
 ## Video study
 

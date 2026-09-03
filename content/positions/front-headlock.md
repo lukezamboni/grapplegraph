@@ -4,7 +4,7 @@ description: Head-and-arm control used to connect a guard-pass reaction to an an
 tags: [concept/position]
 ---
 
-A transitional control position in [[techniques/purple-20-anaconda-choke-against-pass|PUR-17 · Anaconda choke against the pass]].
+A transitional control position in [[techniques/purple-belt/purple-20-anaconda-choke-against-pass|PUR-17 · Anaconda choke against the pass]].
 
 ## Video study
 

@@ -16,6 +16,29 @@ function saveProgress(progress: ProgressMap) {
   window.dispatchEvent(new CustomEvent("grapplegraph-progress"))
 }
 
+const techniqueBeltFolders = new Set(["blue-belt", "purple-belt", "brown-belt-only"])
+
+function legacyTechniqueSlug(slug: string) {
+  const parts = slug.split("/")
+  if (parts.length !== 3 || parts[0] !== "techniques" || !techniqueBeltFolders.has(parts[1])) {
+    return undefined
+  }
+  return `techniques/${parts[2]}`
+}
+
+function migrateTechniqueProgress(progress: ProgressMap, slugs: string[]) {
+  let changed = false
+  for (const slug of slugs) {
+    const legacySlug = legacyTechniqueSlug(slug)
+    if (!legacySlug || !progress[legacySlug]) continue
+    progress[slug] ??= progress[legacySlug]
+    delete progress[legacySlug]
+    changed = true
+  }
+  if (changed) localStorage.setItem(progressKey, JSON.stringify(progress))
+  return progress
+}
+
 function cycleState(current?: ProgressState): ProgressState | undefined {
   if (!current) return "working"
   if (current === "working") return "done"
@@ -226,6 +249,10 @@ async function buildExamTracker() {
   Object.values(groups).forEach((group) =>
     group.sort((a, b) => numericTitle(a.title) - numericTitle(b.title)),
   )
+  migrateTechniqueProgress(
+    readProgress(),
+    entries.map((entry) => entry.slug),
+  )
 
   let activeBelt: keyof typeof groups = "blue"
   const shell = document.createElement("div")
@@ -233,7 +260,10 @@ async function buildExamTracker() {
   root.replaceChildren(shell)
 
   const render = () => {
-    const progress = readProgress()
+    const progress = migrateTechniqueProgress(
+      readProgress(),
+      entries.map((entry) => entry.slug),
+    )
     const group = groups[activeBelt]
     const complete = group.filter((entry) => progress[entry.slug] === "done").length
     const working = group.filter((entry) => progress[entry.slug] === "working").length
@@ -305,7 +335,7 @@ function buildRequirementProgress() {
     control
       .querySelector<HTMLButtonElement>(".technique-progress-toggle")!
       .addEventListener("click", () => {
-        const progress = readProgress()
+        const progress = migrateTechniqueProgress(readProgress(), [slug])
         const next = cycleState(progress[slug])
         if (next) progress[slug] = next
         else delete progress[slug]
@@ -314,7 +344,7 @@ function buildRequirementProgress() {
       })
   }
 
-  const state = readProgress()[slug]
+  const state = migrateTechniqueProgress(readProgress(), [slug])[slug]
   control.dataset.state = state ?? "not-started"
   const button = control.querySelector<HTMLButtonElement>(".technique-progress-toggle")!
   const label = stateLabel(state)

@@ -1,12 +1,12 @@
 ---
-title: Leg-cross sweep
-description: A guard sweep against a standing opponent using crossed legs behind the knee.
+title: X-guard kick-forward sweep
+description: An X-guard sweep that kicks the opponent's rear leg forward to generate momentum.
 tags:
   - concept/movement
 ---
 
-A guard sweep against a standing opponent using crossed legs behind the knee.
+From [[positions/x-guard|X-guard]], kick the leg behind the opponent forward to generate momentum and come up into top position.
 
 ## Video study
 
-![Related sweep against a standing opponent](https://www.youtube.com/watch?v=c_6k-pj5Nis) · **Reference:** compare details and sequence order with your professor.
+![X-guard technical stand-up sweep](https://www.youtube.com/watch?v=8JMowLHg3Ws) · **Reference:** compare details and sequence order with your professor.

@@ -6,7 +6,7 @@ tags:
 description: Arm drag reference for the academy exam sequences.
 ---
 
-The closed-guard transition shared by [[techniques/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear naked choke]] and [[techniques/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]].
+The closed-guard transition shared by [[techniques/blue-belt/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear naked choke]] and [[techniques/blue-belt/30-closed-guard-arm-drag-to-clock-choke|BLU-30 · Closed-guard arm drag to clock choke]].
 
 ## Video study
 

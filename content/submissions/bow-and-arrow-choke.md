@@ -5,7 +5,7 @@ tags:
 description: Bow-and-arrow choke reference for the academy exam sequences.
 ---
 
-The finishing submission in [[techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke|BLU-03 · De La Riva sweep to bow-and-arrow choke]].
+The finishing submission in [[techniques/blue-belt/03-de-la-riva-sweep-to-bow-and-arrow-choke|BLU-03 · De La Riva sweep to bow-and-arrow choke]].
 
 ## Video study
 

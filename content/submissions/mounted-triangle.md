@@ -6,7 +6,7 @@ tags:
 description: Mounted triangle reference for the academy exam sequences.
 ---
 
-The finishing submission in [[techniques/26-lasso-flower-sweep-to-mounted-triangle|BLU-26 · Lasso flower sweep to mounted triangle]].
+The finishing submission in [[techniques/blue-belt/26-lasso-flower-sweep-to-mounted-triangle|BLU-26 · Lasso flower sweep to mounted triangle]].
 
 ## Video study
 

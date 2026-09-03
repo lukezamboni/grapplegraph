@@ -6,7 +6,7 @@ tags:
 description: Osoto gari reference for the academy exam sequences.
 ---
 
-The outside-reaping takedown used in [[techniques/01-punch-defence-to-osoto-gari|BLU-01 · Punch defence to Osoto gari]].
+The outside-reaping takedown used in [[techniques/blue-belt/01-punch-defence-to-osoto-gari|BLU-01 · Punch defence to Osoto gari]].
 
 ## Video study
 

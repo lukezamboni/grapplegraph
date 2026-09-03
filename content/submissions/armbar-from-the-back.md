@@ -6,7 +6,7 @@ tags:
 description: Armbar from the back reference for the academy exam sequences.
 ---
 
-The finishing transition in [[techniques/14-de-la-riva-sweep-to-back-armbar|BLU-14 · De La Riva sweep to back armbar]].
+The finishing transition in [[techniques/blue-belt/14-de-la-riva-sweep-to-back-armbar|BLU-14 · De La Riva sweep to back armbar]].
 
 ## Video study
 

@@ -6,7 +6,7 @@ tags:
 description: Armbar-to-triangle transition reference for the academy exam sequences.
 ---
 
-The submission chain drilled in [[techniques/20-closed-guard-armbar-to-triangle|BLU-20 · Closed-guard armbar to triangle]].
+The submission chain drilled in [[techniques/blue-belt/20-closed-guard-armbar-to-triangle|BLU-20 · Closed-guard armbar to triangle]].
 
 ## Video study
 

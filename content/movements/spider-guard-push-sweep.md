@@ -6,7 +6,7 @@ tags:
 description: Spider-guard push sweep reference for the academy exam sequences.
 ---
 
-The primary reversal in [[techniques/04-spider-guard-push-sweep-to-cross-choke|BLU-04 · Spider-guard push sweep to cross choke]].
+The primary reversal in [[techniques/blue-belt/04-spider-guard-push-sweep-to-cross-choke|BLU-04 · Spider-guard push sweep to cross choke]].
 
 ## Video study
 

@@ -6,7 +6,7 @@ tags:
 description: Omoplata sweep reference for the academy exam sequences.
 ---
 
-The transition from shoulder control to top position in [[techniques/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]].
+The transition from shoulder control to top position in [[techniques/blue-belt/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]].
 
 ## Video study
 

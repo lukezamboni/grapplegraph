@@ -6,7 +6,7 @@ tags:
 description: Single-leg takedown reference for the academy exam sequences.
 ---
 
-The standing entry and finish in [[techniques/10-single-leg-to-lapel-choke|BLU-10 · Single-leg takedown to lapel choke]].
+The standing entry and finish in [[techniques/blue-belt/10-single-leg-to-lapel-choke|BLU-10 · Single-leg takedown to lapel choke]].
 
 ## Video study
 

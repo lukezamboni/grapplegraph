@@ -1,6 +1,6 @@
 # GrappleGraph data review
 
-This file records the source-of-truth assumptions used by the catalogue and the details that still need academy confirmation.
+This file records the source-of-truth assumptions and academy clarifications used by the catalogue.
 
 ## Catalogue rules
 
@@ -12,15 +12,18 @@ This file records the source-of-truth assumptions used by the catalogue and the 
 
 Run `npm run audit:content` after changing the catalogue. The audit checks belt counts, numbering, source-number partitioning, required fields and sections, family consistency, concept references, direct video URLs, and unresolved Wikilinks.
 
-## Professor confirmations still needed
+## Confirmed academy details
 
-1. `PUR-04`: What exact mechanics and academy name are intended by “Foot Americana”?
-2. `PUR-10` (source item 11): Which takedown follows the standing arm drag, and what is the exact opponent-lapel choke setup?
-3. `PUR-12` (source item 14): Does “arm lock” specifically mean the armbar shown in the current reference?
-4. `PUR-14` (source item 16): What is the name or setup of the sweep made by crossing the legs behind the standing opponent's knee?
-5. `PUR-20` (source item 23): Which leg is kicked, and in which direction, for the academy's deep-half kick sweep?
-6. `PUR-26` (source item 29): Which choke is required after the Little Bucket pass?
-7. `PUR-27` (source item 30): What is the exact opposite-arm reverse violin-lock configuration?
-8. `BRO-03` (source item 18): Which leg lock is required after the standing guard pass?
+- `PUR-04`: Foot Americana means an arm-controlled figure-four lock applied to the opponent's foot, using Americana-style body mechanics. It is not applied with the attacker's feet.
+- `PUR-10`: The student may choose the takedown and opponent-lapel choke that follow the standing arm drag.
+- `PUR-12`: The sheet's “arm lock” is an armbar.
+- `PUR-14`: The crossed-leg position is X-guard.
+- `PUR-20`: Kick the leg behind the opponent forward to generate momentum.
+- `PUR-26`: The finish is the Little Bucket choke.
+- `PUR-27`: Establish knee on belly, control the opposite arm, and transition to the violin lock on the other arm.
+- `BRO-03`: The student may choose the leg lock; a straight ankle lock is usual.
 
-Additional useful details are the required finishing positions for the rear hair-grab and front bear-hug defences, and the exact back-pummel route in `PUR-08`.
+## Details still worth confirming
+
+- Required finishing positions for the rear hair-grab and front bear-hug defences.
+- The exact back-pummel route in `PUR-08`.

@@ -5,7 +5,7 @@ tags:
 description: Butterfly guard reference for the academy exam sequences.
 ---
 
-The seated guard used to launch the loop choke in [[techniques/27-butterfly-guard-loop-choke|BLU-27 · Butterfly-guard loop choke]].
+The seated guard used to launch the loop choke in [[techniques/blue-belt/27-butterfly-guard-loop-choke|BLU-27 · Butterfly-guard loop choke]].
 
 ## Video study
 

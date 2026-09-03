@@ -6,7 +6,7 @@ tags:
 description: Rear naked choke reference for the academy exam sequences.
 ---
 
-A back-control choke shared by [[techniques/16-mount-to-back-rear-naked-choke|BLU-16 · Mount to back and Rear naked choke]] and [[techniques/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear naked choke]].
+A back-control choke shared by [[techniques/blue-belt/16-mount-to-back-rear-naked-choke|BLU-16 · Mount to back and Rear naked choke]] and [[techniques/blue-belt/29-closed-guard-arm-drag-to-rnc|BLU-29 · Closed-guard arm drag to Rear naked choke]].
 
 ## Video study
 

@@ -5,7 +5,7 @@ tags:
 description: Deep half guard reference for the academy exam sequences.
 ---
 
-The starting guard for [[techniques/09-deep-half-flower-sweep-to-kimura|BLU-09 · Deep-half flower sweep to Kimura]].
+The starting guard for [[techniques/blue-belt/09-deep-half-flower-sweep-to-kimura|BLU-09 · Deep-half flower sweep to Kimura]].
 
 ## Video study
 

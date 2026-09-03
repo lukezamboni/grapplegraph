@@ -1,11 +1,11 @@
 ---
-title: Little bucket pass
+title: Little Bucket pass
 tags:
   - movement/guard-pass
-description: Little bucket pass reference for the academy exam sequences.
+description: Little Bucket pass reference for the academy exam sequences.
 ---
 
-The academy exam sheet calls this the “little bucket.” Confirm the name, grips, direction, and required choke with your professor.
+The Little Bucket pass connects directly to the academy's [[submissions/little-bucket-choke|Little Bucket choke]].
 
 ## Video study
 

@@ -6,7 +6,7 @@ tags:
 description: Straight ankle lock reference for the academy exam sequences.
 ---
 
-The finishing submission in [[techniques/05-standing-guard-pass-to-straight-ankle-lock|BLU-05 · Standing guard pass to straight ankle lock]].
+The finishing submission in [[techniques/blue-belt/05-standing-guard-pass-to-straight-ankle-lock|BLU-05 · Standing guard pass to straight ankle lock]].
 
 ## Video study
 

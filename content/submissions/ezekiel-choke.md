@@ -6,7 +6,7 @@ tags:
 description: Ezekiel choke reference for the academy exam sequences.
 ---
 
-A sleeve-assisted choke shared by [[techniques/06-standing-guard-pass-to-ezekiel-choke|BLU-06 · Standing guard pass to Ezekiel choke]] and [[techniques/15-hook-sweep-to-ezekiel-choke|BLU-15 · Hook sweep to Ezekiel choke]].
+A sleeve-assisted choke shared by [[techniques/blue-belt/06-standing-guard-pass-to-ezekiel-choke|BLU-06 · Standing guard pass to Ezekiel choke]] and [[techniques/blue-belt/15-hook-sweep-to-ezekiel-choke|BLU-15 · Hook sweep to Ezekiel choke]].
 
 ## Video study
 

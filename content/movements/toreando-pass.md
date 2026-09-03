@@ -6,7 +6,7 @@ tags:
 description: Toreando pass reference for the academy exam sequences.
 ---
 
-The open-guard pass in [[techniques/17-toreando-pass-to-lapel-choke|BLU-17 · Toreando pass to lapel choke]].
+The open-guard pass in [[techniques/blue-belt/17-toreando-pass-to-lapel-choke|BLU-17 · Toreando pass to lapel choke]].
 
 ## Video study
 

@@ -6,7 +6,7 @@ tags:
 description: Rear bear-hug escape reference for the academy exam sequences.
 ---
 
-The escape movement practised in [[techniques/12-rear-bear-hug-escape|BLU-12 · Rear bear-hug escape]].
+The escape movement practised in [[techniques/blue-belt/12-rear-bear-hug-escape|BLU-12 · Rear bear-hug escape]].
 
 ## Video study
 

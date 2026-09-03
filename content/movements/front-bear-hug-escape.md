@@ -6,7 +6,7 @@ tags:
 description: Front bear-hug escape reference for the academy exam sequences.
 ---
 
-The escape movement practised in [[techniques/21-front-bear-hug-escape|BLU-21 · Front bear-hug escape]].
+The escape movement practised in [[techniques/blue-belt/21-front-bear-hug-escape|BLU-21 · Front bear-hug escape]].
 
 ## Video study
 

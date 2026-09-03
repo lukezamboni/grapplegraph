@@ -6,7 +6,7 @@ tags:
 description: Punch defence reference for the academy exam sequences.
 ---
 
-The lateral-punch response that begins [[techniques/01-punch-defence-to-osoto-gari|BLU-01 · Punch defence to Osoto gari]].
+The lateral-punch response that begins [[techniques/blue-belt/01-punch-defence-to-osoto-gari|BLU-01 · Punch defence to Osoto gari]].
 
 ## Video study
 

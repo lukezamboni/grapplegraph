@@ -5,7 +5,7 @@ tags:
 description: Turtle reference for the academy exam sequences.
 ---
 
-A defensive reaction that creates the clock-choke opportunity in [[techniques/13-guard-pass-reaction-to-clock-choke|BLU-13 · Guard-pass reaction to clock choke]].
+A defensive reaction that creates the clock-choke opportunity in [[techniques/blue-belt/13-guard-pass-reaction-to-clock-choke|BLU-13 · Guard-pass reaction to clock choke]].
 
 ## Video study
 

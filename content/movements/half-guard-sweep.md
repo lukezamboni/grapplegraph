@@ -6,7 +6,7 @@ tags:
 description: Half-guard sweep reference for the academy exam sequences.
 ---
 
-The bottom-to-top reversal that begins [[techniques/18-half-guard-sweep-to-knee-cut-pass|BLU-18 · Half-guard sweep to knee-cut pass]].
+The bottom-to-top reversal that begins [[techniques/blue-belt/18-half-guard-sweep-to-knee-cut-pass|BLU-18 · Half-guard sweep to knee-cut pass]].
 
 ## Video study
 

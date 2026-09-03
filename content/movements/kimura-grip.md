@@ -6,7 +6,7 @@ tags:
 description: Kimura grip reference for the academy exam sequences.
 ---
 
-The figure-four control used to finish [[techniques/25-closed-guard-kimura|BLU-25 · Kimura from closed guard]].
+The figure-four control used to finish [[techniques/blue-belt/25-closed-guard-kimura|BLU-25 · Kimura from closed guard]].
 
 ## Video study
 

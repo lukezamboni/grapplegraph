@@ -6,7 +6,7 @@ tags:
 description: Standing headlock escape reference for the academy exam sequences.
 ---
 
-The posture and hand-fighting sequence in [[techniques/22-standing-headlock-escape|BLU-22 · Standing headlock escape]].
+The posture and hand-fighting sequence in [[techniques/blue-belt/22-standing-headlock-escape|BLU-22 · Standing headlock escape]].
 
 ## Video study
 

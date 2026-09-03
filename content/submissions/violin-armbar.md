@@ -6,7 +6,7 @@ tags:
 description: Violin armbar reference for the academy exam sequences.
 ---
 
-The armbar variation that finishes [[techniques/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]].
+The armbar variation that finishes [[techniques/blue-belt/08-spider-guard-to-violin-armbar|BLU-08 · Spider guard to violin armbar]].
 
 ## Video study
 

@@ -5,7 +5,7 @@ tags:
 description: Lasso guard reference for the academy exam sequences.
 ---
 
-The starting guard for [[techniques/26-lasso-flower-sweep-to-mounted-triangle|BLU-26 · Lasso flower sweep to mounted triangle]].
+The starting guard for [[techniques/blue-belt/26-lasso-flower-sweep-to-mounted-triangle|BLU-26 · Lasso flower sweep to mounted triangle]].
 
 ## Video study
 

@@ -5,7 +5,7 @@ tags:
 description: De La Riva guard reference for the academy exam sequences.
 ---
 
-The starting guard for [[techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke|BLU-03 · De La Riva sweep to bow-and-arrow choke]] and other De La Riva-family exam sequences.
+The starting guard for [[techniques/blue-belt/03-de-la-riva-sweep-to-bow-and-arrow-choke|BLU-03 · De La Riva sweep to bow-and-arrow choke]] and other De La Riva-family exam sequences.
 
 ## Video study
 

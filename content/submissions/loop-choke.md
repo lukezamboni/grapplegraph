@@ -6,7 +6,7 @@ tags:
 description: Loop choke reference for the academy exam sequences.
 ---
 
-The finishing submission in [[techniques/27-butterfly-guard-loop-choke|BLU-27 · Butterfly-guard loop choke]].
+The finishing submission in [[techniques/blue-belt/27-butterfly-guard-loop-choke|BLU-27 · Butterfly-guard loop choke]].
 
 ## Video study
 

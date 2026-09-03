@@ -2,11 +2,11 @@
 title: Foot Americana
 tags:
   - submission/leg-lock
-description: Foot Americana reference for the academy exam sequences.
+description: An arm-controlled figure-four foot lock using Americana-style body mechanics.
 ---
 
-The exam sheet's term for a rotational foot lock combined with an open-guard leg-lock entry. Confirm exact mechanics and naming with your professor.
+The Foot Americana is performed on the opponent's foot using your arms. Build an Americana-style figure-four grip and use the same kind of connected rotational body mechanics as an arm Americana. It is not an Americana performed with your feet.
 
 ## Video study
 
-![Foot Americana](https://www.youtube.com/watch?v=Ax8EmZ4MGFA) · **Reference:** compare details and sequence order with your professor.
+![Americana no pé / figure-four foot lock](https://www.youtube.com/watch?v=Q3JP46Ld7-8) · **Reference:** compare the entry, control, and finishing direction with your professor.

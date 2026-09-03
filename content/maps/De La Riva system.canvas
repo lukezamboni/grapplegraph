@@ -93,7 +93,7 @@
     {
       "id": "pur-02",
       "type": "file",
-      "file": "techniques/purple-02-de-la-riva-forward-sweep.md",
+      "file": "techniques/purple-belt/purple-02-de-la-riva-forward-sweep.md",
       "subpath": "#Sequence",
       "x": 0,
       "y": 1100,
@@ -104,7 +104,7 @@
     {
       "id": "pur-21",
       "type": "file",
-      "file": "techniques/purple-24-de-la-riva-backward-sweep.md",
+      "file": "techniques/purple-belt/purple-24-de-la-riva-backward-sweep.md",
       "subpath": "#Sequence",
       "x": 620,
       "y": 1100,
@@ -115,7 +115,7 @@
     {
       "id": "blu-03",
       "type": "file",
-      "file": "techniques/03-de-la-riva-sweep-to-bow-and-arrow-choke.md",
+      "file": "techniques/blue-belt/03-de-la-riva-sweep-to-bow-and-arrow-choke.md",
       "subpath": "#Sequence",
       "x": 1240,
       "y": 1100,
@@ -126,7 +126,7 @@
     {
       "id": "blu-14",
       "type": "file",
-      "file": "techniques/14-de-la-riva-sweep-to-back-armbar.md",
+      "file": "techniques/blue-belt/14-de-la-riva-sweep-to-back-armbar.md",
       "subpath": "#Sequence",
       "x": 1860,
       "y": 1100,
@@ -137,7 +137,7 @@
     {
       "id": "blu-28",
       "type": "file",
-      "file": "techniques/28-de-la-riva-lapel-knee-kick-sweep.md",
+      "file": "techniques/blue-belt/28-de-la-riva-lapel-knee-kick-sweep.md",
       "subpath": "#Sequence",
       "x": 2480,
       "y": 1100,

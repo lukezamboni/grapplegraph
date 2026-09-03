@@ -5,7 +5,7 @@ tags:
 description: Standing against a wall reference for the academy exam sequences.
 ---
 
-The constrained starting position for [[techniques/23-wall-throat-choke-escape|BLU-23 · Wall throat-choke escape]].
+The constrained starting position for [[techniques/blue-belt/23-wall-throat-choke-escape|BLU-23 · Wall throat-choke escape]].
 
 ## Video study
 

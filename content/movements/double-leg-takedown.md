@@ -6,7 +6,7 @@ tags:
 description: Double-leg takedown reference for the academy exam sequences.
 ---
 
-The “queda baiana” entry in [[techniques/11-double-leg-to-knee-on-belly-armbar|BLU-11 · Double-leg to Knee-on-belly armbar]].
+The “queda baiana” entry in [[techniques/blue-belt/11-double-leg-to-knee-on-belly-armbar|BLU-11 · Double-leg to Knee-on-belly armbar]].
 
 ## Video study
 
