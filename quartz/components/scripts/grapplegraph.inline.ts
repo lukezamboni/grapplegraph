@@ -17,6 +17,95 @@ function saveProgress(progress: ProgressMap) {
 }
 
 const techniqueBeltFolders = new Set(["blue-belt", "purple-belt", "brown-belt-only"])
+const beltProgression = ["blue", "purple", "brown"] as const
+
+function beltRank(value: string | null | undefined) {
+  const normalized = value?.trim().toLowerCase() ?? ""
+  const rank = beltProgression.findIndex((belt) => normalized.startsWith(belt))
+  return rank === -1 ? Number.MAX_SAFE_INTEGER : rank
+}
+
+function reorderBeltExplorerFolders() {
+  document
+    .querySelectorAll<HTMLUListElement>(".explorer-ul, .folder-outer > ul.content")
+    .forEach((list) => {
+      const children = Array.from(list.children) as HTMLElement[]
+      const beltItems = children.filter((item) => {
+        const label = item.querySelector<HTMLElement>(":scope > .folder-container .folder-title")
+        return beltRank(label?.textContent) !== Number.MAX_SAFE_INTEGER
+      })
+      if (beltItems.length < 2) return
+
+      const orderedBelts = [...beltItems].sort((a, b) => {
+        const aLabel = a.querySelector<HTMLElement>(":scope > .folder-container .folder-title")
+        const bLabel = b.querySelector<HTMLElement>(":scope > .folder-container .folder-title")
+        return beltRank(aLabel?.textContent) - beltRank(bLabel?.textContent)
+      })
+      let beltIndex = 0
+      const orderedChildren = children.map((item) =>
+        beltItems.includes(item) ? orderedBelts[beltIndex++] : item,
+      )
+      if (orderedChildren.every((item, index) => item === children[index])) return
+      orderedChildren.forEach((item) => list.append(item))
+    })
+}
+
+function reorderBeltTableGroups() {
+  document.querySelectorAll<HTMLTableSectionElement>(".bases-table tbody").forEach((body) => {
+    const rows = Array.from(body.children) as HTMLTableRowElement[]
+    const blocks: HTMLTableRowElement[][] = []
+
+    rows.forEach((row) => {
+      if (row.classList.contains("bases-table-group-header") || blocks.length === 0) {
+        blocks.push([row])
+      } else {
+        blocks.at(-1)?.push(row)
+      }
+    })
+
+    const beltBlocks = blocks.filter((block) => {
+      const label = block[0].querySelector<HTMLElement>(".bases-table-group-label")
+      return beltRank(label?.textContent) !== Number.MAX_SAFE_INTEGER
+    })
+    if (beltBlocks.length < 2) return
+
+    const orderedBelts = [...beltBlocks].sort((a, b) => {
+      const aLabel = a[0].querySelector<HTMLElement>(".bases-table-group-label")
+      const bLabel = b[0].querySelector<HTMLElement>(".bases-table-group-label")
+      return beltRank(aLabel?.textContent) - beltRank(bLabel?.textContent)
+    })
+    let beltIndex = 0
+    const orderedBlocks = blocks.map((block) =>
+      beltBlocks.includes(block) ? orderedBelts[beltIndex++] : block,
+    )
+    const orderedRows = orderedBlocks.flat()
+    if (orderedRows.every((row, index) => row === rows[index])) return
+    orderedRows.forEach((row) => body.append(row))
+  })
+}
+
+function rankBeltTableValues() {
+  document.querySelectorAll<HTMLTableElement>(".bases-table").forEach((table) => {
+    const headers = Array.from(table.querySelectorAll<HTMLTableCellElement>("thead th"))
+    const beltColumn = headers.findIndex((header) => header.dataset.column === "formula.belt_label")
+    if (beltColumn === -1) return
+
+    table
+      .querySelectorAll<HTMLTableRowElement>("tbody tr:not(.bases-table-group-header)")
+      .forEach((row) => {
+        const cell = row.cells[beltColumn]
+        const rank = beltRank(cell?.textContent)
+        if (!cell || rank === Number.MAX_SAFE_INTEGER) return
+        cell.dataset.value = `${rank + 1} ${cell.textContent?.trim() ?? ""}`
+      })
+  })
+}
+
+function normalizeBeltProgressionOrder() {
+  reorderBeltExplorerFolders()
+  reorderBeltTableGroups()
+  rankBeltTableValues()
+}
 
 function legacyTechniqueSlug(slug: string) {
   const parts = slug.split("/")
@@ -363,7 +452,9 @@ function configureExpandedGraph() {
     if (!localGraph || !globalGraph || !overlay || !sourceFilters) return
 
     try {
-      const localConfig = JSON.parse(localGraph.dataset.cfg ?? "{}") as { depth?: number }
+      const localConfig = JSON.parse(localGraph.dataset.cfg ?? "{}") as {
+        depth?: number
+      }
       const globalConfig = JSON.parse(globalGraph.dataset.cfg ?? "{}") as Record<string, unknown>
       const slug = document.body.dataset.slug?.replace(/^\/+|\/+$/g, "") ?? "index"
       globalGraph.dataset.cfg = JSON.stringify({
@@ -419,7 +510,9 @@ function configureExpandedGraph() {
           const theme: "light" | "dark" =
             document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
           document.dispatchEvent(
-            new CustomEvent<{ theme: "light" | "dark" }>("themechange", { detail: { theme } }),
+            new CustomEvent<{ theme: "light" | "dark" }>("themechange", {
+              detail: { theme },
+            }),
           )
         }, 0)
       })
@@ -441,12 +534,14 @@ function configureExpandedGraph() {
 
 let canvasObservers: ResizeObserver[] = []
 let explorerObservers: MutationObserver[] = []
+let beltOrderRoots = new WeakSet<HTMLElement>()
 
 function disconnectPageObservers() {
   canvasObservers.forEach((observer) => observer.disconnect())
   canvasObservers = []
   explorerObservers.forEach((observer) => observer.disconnect())
   explorerObservers = []
+  beltOrderRoots = new WeakSet<HTMLElement>()
 }
 
 async function normalizeCanvasLabels() {
@@ -511,6 +606,18 @@ function configureResponsiveCanvases() {
   })
 }
 
+function observeBeltProgressionOrder() {
+  normalizeBeltProgressionOrder()
+
+  document.querySelectorAll<HTMLElement>(".explorer-content, .bases-page").forEach((root) => {
+    if (beltOrderRoots.has(root)) return
+    beltOrderRoots.add(root)
+    const observer = new MutationObserver(normalizeBeltProgressionOrder)
+    observer.observe(root, { childList: true, subtree: true })
+    explorerObservers.push(observer)
+  })
+}
+
 function schedulePageEnhancements() {
   window.setTimeout(() => {
     buildRequirementProgress()
@@ -518,6 +625,7 @@ function schedulePageEnhancements() {
     configureResponsiveCanvases()
     normalizeCanvasLabels()
     prioritizeExamCatalogue()
+    observeBeltProgressionOrder()
   }, 0)
 }
 

@@ -10,6 +10,9 @@ formulas:
   belt_label: |
     if(file.hasTag("exam/blue-belt"), "Blue",
     if(file.hasTag("exam/purple-belt"), "Purple", "Brown-only"))
+  belt_order: |
+    if(file.hasTag("exam/blue-belt"), 1,
+    if(file.hasTag("exam/purple-belt"), 2, 3))
   family_label: |
     if(file.hasTag("family/self-defence"), "Self-defence",
     if(file.hasTag("family/half-guard"), "Half guard",
@@ -53,7 +56,7 @@ views:
       - formula.family_label
       - finish
     sort:
-      - property: formula.belt_label
+      - property: formula.belt_order
         direction: ASC
       - property: exam_id
         direction: ASC
@@ -126,7 +129,7 @@ views:
     sort:
       - property: formula.family_label
         direction: ASC
-      - property: formula.belt_label
+      - property: formula.belt_order
         direction: ASC
       - property: exam_id
         direction: ASC
@@ -144,7 +147,7 @@ views:
     sort:
       - property: formula.video_reference
         direction: ASC
-      - property: formula.belt_label
+      - property: formula.belt_order
         direction: ASC
       - property: exam_id
         direction: ASC
@@ -158,7 +161,7 @@ views:
       - start
       - finish
     sort:
-      - property: formula.belt_label
+      - property: formula.belt_order
         direction: ASC
       - property: exam_id
         direction: ASC
