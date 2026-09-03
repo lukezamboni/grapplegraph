@@ -25,20 +25,12 @@
 
 body {
   background-color: var(--light);
-  background-image:
-    radial-gradient(
-      circle at 12% -8%,
-      color-mix(in srgb, var(--secondary) 14%, transparent),
-      transparent 38rem
-    ),
-    radial-gradient(
-      circle at 1px 1px,
-      color-mix(in srgb, var(--secondary) 13%, transparent) 1px,
-      transparent 1.25px
-    );
-  background-size:
-    auto,
-    24px 24px;
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--light) 92%, var(--secondary) 8%) 0,
+    var(--light) 34rem
+  );
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
