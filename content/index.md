@@ -9,9 +9,9 @@ cssclasses:
 <section class="academy-hero">
   <img src="assets/renzo-gracie-niagara.png" alt="Renzo Gracie Team Niagara Jiu-Jitsu" />
   <div>
-    <p class="eyebrow">Renzo Gracie Niagara · Exam study atlas</p>
-    <h1>See the whole sequence.</h1>
-    <p>Explore how positions, movements, submissions, and exam requirements connect. Use the graph to discover shared mechanics, then track what you are drilling.</p>
+    <p class="eyebrow">Renzo Gracie Niagara · Movement atlas</p>
+    <h1>Every technique has a path.</h1>
+    <p>See where a sequence begins, how it moves, and where it can finish. Explore shared mechanics in the graph, then track what you are drilling.</p>
   </div>
 </section>
 
